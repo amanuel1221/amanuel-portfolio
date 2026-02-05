@@ -1,13 +1,21 @@
 import { useState } from 'react'
 
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+
+
 import './App.css'
 
-function App() 
-{  return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-blue-500">Amanuel Portfolio</h1>
+function App() {
+  return (
+    <div className="App">
+      <h1>My Portfolio</h1>
+      <div className="social-icons">
+        <FaFacebook size={30} color="#1877F2" />
+        <FaGithub size={30} color="#333" />
+        <FaLinkedin size={30} color="#0A66C2" />
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
