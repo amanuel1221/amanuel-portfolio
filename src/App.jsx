@@ -1,21 +1,23 @@
-import { useState } from 'react'
+import HomePage from './pages/HomePage';
+import React from 'react';
+import { Router, Route, Routes } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import NavBar from './components/NavBar';
 
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My Portfolio</h1>
-      <div className="social-icons">
-        <FaFacebook size={30} color="#1877F2" />
-        <FaGithub size={30} color="#333" />
-        <FaLinkedin size={30} color="#0A66C2" />
-      </div>
-    </div>
-  );
+function App() {  
+  return (<>
+    <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+      
+
+    </>
+  )
 }
 
 export default App;
