@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { useLocation } from 'react-router-dom';
-import { HiMenu,  } from "react-icons/hi";
+import { HiMenu  } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import { useState, } from 'react';
 
@@ -39,11 +39,11 @@ const NavBar = () => {
           
         </div>
         <div className=" hamburger-menu md:hidden ">
-            <HiMenu className="text-3xl cursor-pointer text-black" onClick={() => setIsMenuOpen(!isMenuOpen)} />
+            <HiMenu className="text-3xl cursor-pointer text-black" aria-label="Open-menu" onClick={() => setIsMenuOpen(!isMenuOpen)} />
 
             {isMenuOpen && (
                 <div className="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 flex flex-col items-center justify-center z-50">
-                    <HiX className="text-4xl cursor-pointer text-black absolute top-4 right-4" onClick={() => setIsMenuOpen(false)} />
+                    <HiX className="text-4xl cursor-pointer text-black absolute top-4 right-4 " aria-label="Close-menu" onClick={() => setIsMenuOpen(false)} />
                     <ul className="flex flex-col gap-4 list-none text-base font-medium items-center mt-1">
                         <li><HashLink smooth to="/#home" className={hash === "#home" ? "nav-link active" : "nav-link"} onClick={() => setIsMenuOpen(false)}>Home</HashLink></li>
                         <li><HashLink smooth to="/#about" className={hash === "#about" ? "nav-link active" : "nav-link"} onClick={() => setIsMenuOpen(false)}>About</HashLink></li>
