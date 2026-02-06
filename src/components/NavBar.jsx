@@ -13,10 +13,10 @@ const NavBar = () => {
 
   return (
 
-    <section className="h-30 bg-white sticky top-0 md:z-50 md:backdrop-blur bg-white/80 md:dark:bg-gray-900/80 border-b md:border-gray-200 md:dark:border-gray-800">
+    <section className="h-30 bg-white sticky  md:z-50 md:backdrop-blur bg-white/80 md:dark:bg-gray-900/80 md:border-b md:border-gray-200 md:dark:border-gray-800 mt-0 mb-0 ">
       <nav className="flex flex-row justify-between items-center p-4">
-        <div className="logo h-16 w-32 rounded-lg overflow-hidden">
-          <img src="./logo-brand.svg" className="sm:items-center  md:w-full h-16 bg-white" alt="Amanuel Logo" />
+        <div className="logo h-16 w-32 rounded-lg overflow-hidden mt-0 ">
+          <img src="./logo-brand.svg" className="sm:items-center  md:w-full h-16 bg-white rounded-4xl " alt="Amanuel Logo" />
         </div>
         
         <ul className=" hidden md:flex nav-links flex flex-row gap-8 list-none text-lg font-medium items-center">
