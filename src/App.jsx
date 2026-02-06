@@ -9,14 +9,15 @@ import NavBar from './components/NavBar';
 import './App.css'
 
 function App() {  
-  return (<>
-    <NavBar />
+
+  return (<div>
+    <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
       
 
-    </>
+    </div>
   )
 }
 
