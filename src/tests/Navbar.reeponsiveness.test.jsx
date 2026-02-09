@@ -29,7 +29,7 @@ test("checking the hamburger menu functionality on smaller screens", async () =>
   render(
     <MemoryRouter>
       <NavBar />
-    </MemoryRouter>,
+    </MemoryRouter>
   );
   const user = userEvent.setup();
   const menuIcon = screen.getByLabelText("Open-menu");
@@ -48,12 +48,13 @@ test("checking the hamburger menu functionality on smaller screens", async () =>
   expect(closeIcon).not.toBeInTheDocument();
   expect(menuIcon).toBeInTheDocument();
 });
+
 test("test navbar links render with correct paths", () => {
   render(
     <MemoryRouter>
       
       <NavBar />
-    </MemoryRouter>,
+    </MemoryRouter>
   );
   const homeLink = screen.getByRole("link", { name: "Home" });
   const aboutLink = screen.getByRole("link", { name: "About" });
