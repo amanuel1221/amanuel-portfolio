@@ -38,12 +38,12 @@ const AboutMe = () => {
             existing UIs.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-10  m-15 mt-5 p-5">
+        <div className="flex flex-col md:flex-row gap-10   mt-5 p-5">
           <ul className="flex flex-col lg:flex-row gap-8  justify-center items-center">
             {Offer.map((offer, index) => (
               <li
                 key={index}
-                className="flex flex-col items-center bg-white gap-4 w-75 h-65  md:w-120 md:h-65 lg:w-90 lg:65 rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 p-5 pb-20"
+                className="flex flex-col items-center bg-white gap-4   md:w-120 md:h-65 lg:w-90 lg:65 rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 p-5 pb-20"
               >
                 <img
                   src={offer.icon}
