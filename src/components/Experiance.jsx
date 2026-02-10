@@ -53,7 +53,7 @@ const EducationalExperience = () => {
 
               
                 <div
-                  className={`transition-all duration-500 ease-in-out  $                  {
+                  className={`transition-all duration-500 ease-in-out  ${
                     isOpen
                       ? "opacity-0 scale-95 max-h-0 overflow-hidden"
                       : "opacity-100 scale-100 max-h-[500px] mt-4"
@@ -118,8 +118,6 @@ const EducationalExperience = () => {
                     </button>
                   )}
                 </div>
-
-                {/* Details */}
                 <div
                   className={`transition-all duration-500 ease-in-out ${
                     isOpen
@@ -136,8 +134,6 @@ const EducationalExperience = () => {
                     ))}
                   </ul>
                 </div>
-
-                {/* Certificate Image */}
                 {hasCertificate && (
                   <div
                     className={`transition-all duration-500 ease-in-out flex justify-center ${

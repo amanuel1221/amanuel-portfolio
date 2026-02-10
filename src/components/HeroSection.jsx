@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section
       id="home"
       style={{ backgroundColor: "var(--tertiary-blue)" }}
-      className="w-full  flex flex-col lg:flex-row items-center justify-center gap-8 p-0"
+      className="w-full  flex flex-col lg:flex-row items-center justify-center gap-8 p-10 pb-28"
     >
       
       <div className="flex flex-col items-center  md:p-10 ">
