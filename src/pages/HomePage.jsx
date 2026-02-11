@@ -6,6 +6,7 @@ import Skills from '../components/Skills';
 import Experiance from '../components/Experiance';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 const HomePage = () => {
   return (
   <div  className="home-page m-0 p-0 w-full">
@@ -16,6 +17,7 @@ const HomePage = () => {
   <Experiance />
   <Projects/>
   <Contact/>
+  <Footer/>
   </div>
    
   )
