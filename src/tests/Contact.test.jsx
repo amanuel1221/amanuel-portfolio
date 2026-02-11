@@ -104,6 +104,7 @@ test("Test the interactivity when user fill correct form accordingly",async ()=>
   await user.click(btnsend);
   const sucess=screen.getByTestId("sucess-submit");
   expect(sucess).toBeInTheDocument();
+  expect(screen.getByText("Message sent successfully 🚀 I’ll get back to you soon.")).toBeInTheDocument();
   
 
 });
