@@ -127,6 +127,8 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
+              data-testid="github"
+              aria-label="GitHub profile"
             >
               <FaGithub />
             </a>
@@ -136,7 +138,9 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
-            >
+              data-testid="linkedin"
+              aria-label="Linkedin profile"
+           >
               <FaLinkedin />
             </a>
 
@@ -145,6 +149,8 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
+              data-testid="twitter"
+              aria-label="twitter profile"
             >
               <FaTwitter />
             </a>
@@ -154,6 +160,8 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
+              data-testid="hacker-rank"
+              aria-label="hacker-rank profile"
             >
               <SiHackerrank />
             </a>
@@ -161,6 +169,8 @@ const Contact = () => {
             <a
               href="mailto:amanuelamare084@gmail.com"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
+              data-testid="email"
+              aria-label="mailing service"  
             >
               <FaEnvelope />
             </a>
@@ -265,7 +275,7 @@ const Contact = () => {
                   className="w-full px-4 py-2.5 rounded-md border text-sm outline-none resize-none focus:border-blue-500 focus:ring-1 focus:ring-blue-400"
                 />
                 {errors.message && (
-                  <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+                  <p data-testid="error-message" className="text-red-500 text-xs mt-1">{errors.message}</p>
                 )}
               </div>
             </div>
@@ -293,10 +303,10 @@ const Contact = () => {
             </button>
 
             {success && (
-              <p className="text-green-600 text-center text-sm">{success}</p>
+              <p data-testid="sucess-submit" className="text-green-600 text-center text-sm">{success}</p>
             )}
             {errors.submit && (
-              <p className="text-red-500 text-center text-sm"> {errors.submit}  </p>
+              <p data-testid="error-submit" className="text-red-500 text-center text-sm"> {errors.submit}  </p>
             )}
           </form>
         </div>
