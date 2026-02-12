@@ -118,7 +118,7 @@ test("test the accessebility of social icons in the left side ",async ()=>{
   expect(screen.getAllByText(/Have a project in mind/i)[0]).toBeInTheDocument();
   expect(screen.getByText(/Ethiopia/i)).toBeInTheDocument();
   expect(screen.getByText(/Open to opportunities/i)).toBeInTheDocument();
-  expect(screen.getByText(/amanuelamare084@gmail.com/i)).toBeInTheDocument();
+  expect(screen.getByText(/bdu1600905@bdu.edu.et/i)).toBeInTheDocument();
 
 });
 test(" test All social links renderdered and check accessiblity", () => {

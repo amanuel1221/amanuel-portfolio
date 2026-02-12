@@ -1,7 +1,7 @@
 const ProjectExperiance = [
   {
     title: "Frontend Developer — Personal Projects",
-    date: "2020 - Present",
+    date: "2025 - Present",
     place: "Personal Projects",
     status: "Ongoing",
     image: "none",
@@ -14,7 +14,7 @@ const ProjectExperiance = [
   },
   {
     title: "Frontend Developer — Practice & Learning Projects",
-    date: "2019 - 2020",
+    date: "2025 - ongoing",
     place: "Personal Practice",
     status: "Ongoing",
     image: "none",
@@ -26,10 +26,10 @@ const ProjectExperiance = [
   },
   {
     title: "Hackathon Participant — Cursor Hackathons",
-    date: "22-03-2023 - 24-03-2023",
+    date: "01-11-2025 - 02-11-2025",
     place: "Bahir Dar University Hackathon",
     status: "Certified",
-    image: "/assets/images/cursor.jpg", // ✅ public path recommended
+    image: "/assets/images/cursor.jpg",
     descriptions: [
       "Participated in a 48-hour hackathon focused on building a web application",
       "Collaborated with a team to develop an MVP using React and Tailwind CSS",

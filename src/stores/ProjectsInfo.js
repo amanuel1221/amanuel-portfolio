@@ -1,58 +1,60 @@
 const ProjectsInfo = [
   {
-    title: "E-commerce Platform",
+    title: "E-Commerce Platform",
     description:
-      "End-to-end web application development using modern technologies. Built scalable and responsive features.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-    stacks: ["React", "HTML", "CSS", "Vitest"],
-    livedemo: "https://amanuel.com",
-    githubdemo: "https://github.com/amanuel1221",
+      "A modern e-commerce web app with product listing, cart management, favorites, demo checkout, and responsive design. Built with accessibility-first principles.",
+    image: "/assets/images/commerce.jpg",
+    stacks: ["React", "Tailwind CSS", "Zustand", "Vite", "Vitest","Emailjs"],
+    livedemo: "https://e-commerce-49ma.vercel.app",
+    githubdemo: "https://github.com/amanuel1221/e-commerce",
   },
   {
     title: "Portfolio Website",
     description:
-      "Personal portfolio showcasing projects, skills, and experience with modern UI and animations.End-to-end web application development using modern technologies. Built scalable and responsive features. ",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    stacks: ["React", "Tailwind", "CSS"],
-    livedemo: "https://amanuel.com",
-    githubdemo: "https://github.com/amanuel1221",
+      "Personal portfolio showcasing projects, skills, and workflow discipline. Built with React, Tailwind, and animations for good presentation. And Managed with GitHub project boards for traceable commits and organized development.",
+    image: "/assets/images/portfolio.png",
+    stacks: ["React", "Tailwind CSS","Vitest","Emailjs"],
+    livedemo: "https://amanuel1221.vercel.app", 
+    githubdemo: "https://github.com/amanuel1221/portfolio",
+  },
+   {
+    title: "NuuR Safety Platform",
+    description:
+      "Hackathon project for Ethiopian cities: anti-theft alerts, path tracking, and emergency reporting. Full-stack with FastAPI backend and React frontend.In this project My role was as Front End developer",
+    image: "/assets/images/nuur.png",
+    stacks: ["React", "TypeScript", "FastAPI", "PostgreSQL/PostGIS", "Redis"],
+    livedemo: "https://nuurg1.vercel.app",
+    githubdemo: "https://github.com/amanuel1221/Nuur-cursor-hackathon",
   },
   {
-    title: "Dashboard App",
+    title: "E-Movie Center",
     description:
-      "Admin dashboard with charts, authentication, and reusable components.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-    stacks: ["React", "CSS", "Vitest"],
-    livedemo: "https://amanuel.com",
-    githubdemo: "https://github.com/amanuel1221",
+      "Browse movies, TV shows, and actors with search, favorites, and responsive UI. Includes testing.`This product uses the TMDB API but is not endorsed or certified by TMDB`",
+    image: "/assets/images/movie-night.jpg",
+    stacks: ["React", "Vite", "Axios", "Zustand", "Vitest"],
+    livedemo: "https://e-movie-center.vercel.app",
+    githubdemo: "https://github.com/amanuel1221/E-movie-center",
   },
   {
-    title: "Task Manager",
+    title: "Recipe Finder App",
     description:
-      "Task management app with CRUD operations and clean UI.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-    stacks: ["React", "HTML", "CSS"],
-    livedemo: "https://amanuel.com",
-    githubdemo: "https://github.com/amanuel1221",
+      "Search recipes, view details, and save favorites with Firebase Auth + Firestore. Responsive, mobile-first UI with API integration. This app was my first App built for Project Submission at Alx",
+    image: "/assets/images/recipes.jpeg",
+    stacks: ["React", "Tailwind CSS", "Zustand", "Firebase", "TheMealDB API"],
+    livedemo: "https://recipe-finder-app-three-ecru.vercel.app",
+    githubdemo: "https://github.com/amanuel1221/Recipe-finder-app",
   },
+ 
   {
-    title: "Blog Platform",
+    title: "ALX HTML & CSS Practice",
     description:
-      "Modern blog system with responsive layout and clean typography.",
-    image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-    stacks: ["React", "CSS"],
-    livedemo: "https://amanuel.com",
-    githubdemo: "https://github.com/amanuel1221",
+      "Sandbox repo for mastering HTML semantics, CSS layouts, flexbox, grid, and responsive design. Foundation projects from ALX program.",
+    image: "/assets/images/headphone.png",
+    stacks: ["HTML5", "CSS3"],
+    livedemo: "https://alx-html-css-two.vercel.app",
+    githubdemo: "https://github.com/amanuel1221/alx_html_css",
   },
-  {
-    title: "API Tester",
-    description:
-      "Simple API testing tool for frontend developers.",
-    image: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72",
-    stacks: ["React", "Vitest","Html5"],
-    livedemo: "https://amanuel.com",
-    githubdemo: "https://github.com/amanuel1221",
-  },
+  
 ];
 
 export default ProjectsInfo;

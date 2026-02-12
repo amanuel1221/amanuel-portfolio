@@ -100,7 +100,7 @@ const Footer = () => {
       </a>
 
       <a
-        href="mailto:amanuelamare084@gmail.com"
+        href="mailto:bdu1600905@bdu.edu.et"
         className="w-10 h-10 flex items-center justify-center rounded-lg  hover:border-blue-500 hover:text-blue-500 transition-colors duration-300"
         aria-label="Email"
         data-testid="Email"

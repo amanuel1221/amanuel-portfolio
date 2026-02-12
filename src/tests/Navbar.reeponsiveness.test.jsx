@@ -32,7 +32,7 @@ test("checking the hamburger menu functionality on smaller screens", async () =>
     </MemoryRouter>
   );
   const user = userEvent.setup();
-  const menuIcon = screen.getByLabelText("Open-menu");
+  const menuIcon = screen.getByTestId("Open-menu");
   await user.click(menuIcon);
 
   const homeLink = await screen.findAllByText("Home");
@@ -42,7 +42,7 @@ test("checking the hamburger menu functionality on smaller screens", async () =>
   const contactLink = await screen.findAllByText("Contact");
   const getInTouchButton = await screen.findAllByText("Get in Touch →");
 
-  const closeIcon = screen.getByLabelText("Close-menu");
+  const closeIcon = screen.getByTestId("Close-menu");
   expect(closeIcon).toBeInTheDocument();
   await user.click(closeIcon);
   expect(closeIcon).not.toBeInTheDocument();

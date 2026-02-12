@@ -88,7 +88,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-[#f2f6fd] py-24 px-4 flex flex-col items-center">
+    <section  id="contact" className="bg-[#f2f6fd] py-24 px-4 flex flex-col items-center">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold">Let’s Work Together</h1>
         <p className="text-gray-500 mt-3">
@@ -167,7 +167,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="mailto:amanuelamare084@gmail.com"
+              href="mailto:bdu1600905@bdu.edu.et"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="email"
               aria-label="mailing service"  
@@ -176,7 +176,7 @@ const Contact = () => {
             </a>
           </div>
           <p className="text-gray-700 text-sm mt-2 text-center">
-            amanuelamare084@gmail.com
+           bdu1600905@bdu.edu.et
           </p>
 
           <div className="mt-8 flex justify-center">
@@ -207,7 +207,7 @@ const Contact = () => {
         <div className="border rounded-2xl p-8">
           <h2 className="text-center font-semibold mb-8">Lets work together</h2>
 
-          <form data-testid="contact-form" onSubmit={handleSubmit} className="space-y-6">
+          <form  data-testid="contact-form" onSubmit={handleSubmit} className="space-y-6">
             <div className="flex flex-col md:flex-row md:items-center gap-3">
               <label className="md:w-32 text-center md:text-right font-medium">
                 Name:

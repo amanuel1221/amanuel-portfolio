@@ -1,67 +1,126 @@
-import React from 'react';
-import { HashLink } from 'react-router-hash-link';
-import { useLocation } from 'react-router-dom';
-import { HiMenu  } from "react-icons/hi";
-import { HiX } from "react-icons/hi";
-import { useState, } from 'react';
+import React, { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
+import { HiMenu, HiX } from "react-icons/hi";
 
 const NavBar = () => {
-    const { hash } = useLocation();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { hash } = useLocation();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [isMenuOpen]);
+
+ 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setShowNav(false); 
+      } else {
+        setShowNav(true); 
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
+    <header
+      className={`sticky top-0 z-[1000] transition-transform duration-300
+      ${showNav ? "translate-y-0" : "-translate-y-full"}
+      bg-white/80 backdrop-blur-md dark:bg-gray-900/80
+      border-b border-gray-200 dark:border-gray-800`}
+    >
+      <nav className="flex justify-between items-center p-4">
 
-    <section className="h-30 bg-white sticky  md:z-50 md:backdrop-blur bg-white/80 md:dark:bg-gray-900/80 md:border-b md:border-gray-200 md:dark:border-gray-800 mt-0 mb-0 ">
-      <nav className="flex flex-row justify-between items-center p-4">
-        <div className="logo h-16 w-32 rounded-lg overflow-hidden mt-0 ">
-          <img src="./logo-brand.svg" className="sm:items-center  md:w-full h-16 bg-white rounded-4xl " alt="Amanuel Logo" />
+      
+        <div className="h-16 w-32 overflow-hidden">
+          <img
+            src="./logo-brand.svg"
+            className="w-full h-16 object-contain"
+            alt="Amanuel Logo"
+          />
         </div>
-        
-        <ul className=" hidden md:flex nav-links flex flex-row gap-8 list-none text-lg font-medium items-center">
-         <HashLink smooth to="/#home" className={hash === "#home" ? "nav-link active" : "nav-link"}>
-          Home
-        </HashLink>
-          <li><HashLink smooth to="/#about" className={hash === "#about" ? "nav-link active" : "nav-link"}>About</HashLink></li>
-          <li><HashLink smooth to="/#skills" className={hash === "#skills" ? "nav-link active" : "nav-link"}>Skills</HashLink></li>
-          <li><HashLink smooth to="/#projects" className={hash === "#projects" ? "nav-link active" : "nav-link"}>Projects</HashLink></li>
-          <li><HashLink smooth to="/#contact" className={hash === "#contact" ? "nav-link active" : "nav-link"}>Contact</HashLink></li>
+
+        <ul className="hidden md:flex gap-8 text-lg font-medium items-center">
+          <li>
+            <HashLink smooth to="/#home" className={hash === "#home" ? "nav-link active" : "nav-link"}>
+              Home
+            </HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="/#about" className={hash === "#about" ? "nav-link active" : "nav-link"}>
+              About
+            </HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="/#skills" className={hash === "#skills" ? "nav-link active" : "nav-link"}>
+              Skills
+            </HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="/#projects" className={hash === "#projects" ? "nav-link active" : "nav-link"}>
+              Projects
+            </HashLink>
+          </li>
+          <li>
+            <HashLink smooth to="/#contact" className={hash === "#contact" ? "nav-link active" : "nav-link"}>
+              Contact
+            </HashLink>
+          </li>
         </ul>
-        <div className="get-in-touch hidden md:flex">
-          
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">
-                <HashLink smooth to="/#contact" className="">
-              Get in Touch &rarr;
-              </HashLink>
-            </button>
-          
-          
+
+       
+        <div className="hidden md:block">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <HashLink smooth to="/#contact">Get in Touch →</HashLink>
+          </button>
         </div>
-        <div className=" hamburger-menu md:hidden ">
-            <HiMenu className="text-3xl cursor-pointer text-black" aria-label="Open-menu" onClick={() => setIsMenuOpen(!isMenuOpen)} />
 
-            {isMenuOpen && (
-                <div className="fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-900 flex flex-col items-center justify-center z-50">
-                    <HiX className="text-4xl cursor-pointer text-black absolute top-4 right-4 " aria-label="Close-menu" onClick={() => setIsMenuOpen(false)} />
-                    <ul className="flex flex-col gap-4 list-none text-base font-medium items-center mt-1">
-                        <li><HashLink smooth to="/#home" className={hash === "#home" ? "nav-link active" : "nav-link"} onClick={() => setIsMenuOpen(false)}>Home</HashLink></li>
-                        <li><HashLink smooth to="/#about" className={hash === "#about" ? "nav-link active" : "nav-link"} onClick={() => setIsMenuOpen(false)}>About</HashLink></li>
-                        <li><HashLink smooth to="/#skills" className={hash === "#skills" ? "nav-link active" : "nav-link"} onClick={() => setIsMenuOpen(false)}>Skills</HashLink></li>
-                        <li><HashLink smooth to="/#projects" className={hash === "#projects" ? "nav-link active" : "nav-link"} onClick={() => setIsMenuOpen(false)}>Projects</HashLink></li>
-                        <li><HashLink smooth to="/#contact" className={hash === "#contact" ? "nav-link active" : "nav-link"} onClick={() => setIsMenuOpen(false)}>Contact</HashLink></li>
-                    </ul>
-                    <button className="w-full ml-5 mr-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer mt-8" onClick={() => setIsMenuOpen(false)}>
-                        <HashLink smooth to="/#contact" className="">
-                            Get in Touch &rarr;
-                        </HashLink>
-                    </button>
-                </div>
-            )}
-
-          </div>
+        <HiMenu
+         data-testid="Open-menu"
+          className="md:hidden text-3xl cursor-pointer"
+          onClick={() => setIsMenuOpen(true)}
+        />
       </nav>
-    </section>
+
+     
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-[9999] bg-white dark:bg-gray-900 flex flex-col items-center pt-24 px-6 min-h-screen overflow-y-auto">
+
+          <HiX
+          data-testid="Close-menu"
+            className="text-4xl cursor-pointer absolute top-6 right-6"
+            onClick={() => setIsMenuOpen(false)}
+          />
+
+          <ul className="flex flex-col gap-8 text-xl font-medium items-center w-full">
+            <li><HashLink smooth to="/#home" onClick={() => setIsMenuOpen(false)}>Home</HashLink></li>
+            <li><HashLink smooth to="/#about" onClick={() => setIsMenuOpen(false)}>About</HashLink></li>
+            <li><HashLink smooth to="/#skills" onClick={() => setIsMenuOpen(false)}>Skills</HashLink></li>
+            <li><HashLink smooth to="/#projects" onClick={() => setIsMenuOpen(false)}>Projects</HashLink></li>
+            <li><HashLink smooth to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</HashLink></li>
+          </ul>
+
+          <button
+            className="mt-12 w-full max-w-xs bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <HashLink smooth to="/#contact">Get in Touch →</HashLink>
+          </button>
+        </div>
+      )}
+    </header>
   );
 };
 

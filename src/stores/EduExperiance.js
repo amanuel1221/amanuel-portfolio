@@ -4,7 +4,7 @@ const EduExperiance = [
   {
     title: "ALX Software Engineering Program",
     note: "Frontend Development Track",
-    date: "2023 - 2024",
+    date: "2025 - 2026",
     place: "online course at ALX Africa",
     status: "certified",
     image: "/assets/images/frontend.png",
@@ -20,7 +20,7 @@ const EduExperiance = [
   {
     title: "ALX Professional Foundations Program",
     note: "Foundations learn the skill of tech jobs",
-    date: "2022 - 2023",
+    date: "2025 - 2026",
     place: "online course at ALX Africa",
     status: "certified",
     image: "/assets/images/foundation.jpg",
@@ -35,7 +35,7 @@ const EduExperiance = [
   {
     title: " Ethiocoder (Udacity – UAE Sponsored Program)",
     note: "Fundamental Web Development & Artificial Intelligence",
-    date: "2021 - 2022",
+    date: "2024 - 2025",
     place: "online course at Udacity",
     status: "certified",
     image: "/assets/images/udacity.png",
