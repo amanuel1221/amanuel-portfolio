@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import {FaCheckCircle,FaMapMarkerAlt,FaGithub,FaLinkedin,FaTwitter,FaEnvelope,} from "react-icons/fa";
 import { SiHackerrank } from "react-icons/si";
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -14,6 +15,8 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
+  const [showTip, setShowTip] = useState(false);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -132,19 +135,49 @@ const Contact = () => {
             >
               <FaGithub />
             </a>
+<div className="relative inline-block group">
 
-            <a
-              href="https://www.linkedin.com/in/your-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
-              data-testid="linkedin"
-              aria-label="Linkedin profile"
-           >
-              <FaLinkedin />
-            </a>
+  <a
+    href="https://www.linkedin.com/in/your-username"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-10 h-10 flex items-center justify-center border rounded-lg 
+               hover:border-blue-500 hover:text-blue-500 transition"
+    data-testid="linkedin"
+    aria-label="Linkedin profile"
+    onClick={(e) => {
+      e.preventDefault(); // prevent blocked link
+      setShowTip(!showTip); // toggle tooltip on mobile
+    }}
+  >
+    <FaLinkedin />
+  </a>
+<span
+  className={`
+    absolute -top-14 left-1/2 -translate-x-1/2
+    px-4 py-2 text-sm font-medium text-white text-center
+    bg-blue-600/90 backdrop-blur-md rounded-lg shadow-xl
+    transition-all duration-200 pointer-events-none
+    
+    /* Visibility Logic */
+    ${showTip ? "opacity-100 scale-100" : "opacity-0 scale-90"}
+    md:group-hover:opacity-100 md:group-hover:scale-100
 
-            <a
+    /* The Responsive Magic */
+    w-max max-w-[180px]           /* Small screen: Force wrap at 180px */
+    sm:max-w-[250px]              /* Tablets: A bit wider */
+    md:max-w-none md:whitespace-nowrap /* Desktop: One single line */
+  `}
+>
+  LinkedIn is temporarily unavailable — I’d be happy to connect via email.
+  
+  {/* Arrow */}
+  <span className="absolute left-1/2 -translate-x-1/2 top-full 
+                   border-8 border-transparent 
+                   border-t-blue-600/90"></span>
+</span>
+
+</div>         <a
               href="https://x.com/AmanuelAma66386"
               target="_blank"
               rel="noopener noreferrer"
