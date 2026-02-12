@@ -5,7 +5,7 @@ import Projects from "../components/Projects";
 import userEvent from "@testing-library/user-event";
 import { view } from "framer-motion/client";
 
-vi.mock("../stores/ProjectsInf",()=>({
+vi.mock("../stores/ProjectsInfo",()=>({
     default: [
   {
     title: "E-commerce Platform",

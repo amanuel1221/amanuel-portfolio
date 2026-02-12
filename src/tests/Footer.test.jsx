@@ -59,7 +59,7 @@ expect(linkedin).toHaveAttribute("href","https://www.linkedin.com/in/your-userna
 expect(twitter).toHaveAttribute("href","https://x.com/AmanuelAma66386");
 expect(filetext).toHaveAttribute("href","https://substack.com/@amanuelamare");
 expect(msg).toHaveAttribute("href","https://wa.me/251921337037");
-expect(mail).toHaveAttribute("href","mailto:amanuelamare084@gmail.com");
+expect(mail).toHaveAttribute("href","mailto:bdu1600905@bdu.edu.et");
 
 
 expect(github).toHaveAttribute("target","_blank");
@@ -69,7 +69,5 @@ expect(linkedin).toHaveAttribute("target","_blank");
 expect(twitter).toHaveAttribute("target","_blank");
 expect(filetext).toHaveAttribute("target","_blank");
 expect(msg).toHaveAttribute("target","_blank");
-
-
 
 });
