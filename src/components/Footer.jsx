@@ -34,29 +34,8 @@ const Footer = () => {
         aria-label="GitHub profile"
       >
         <Github size={20} />
-      </a>
-      <a
-        href="https://www.figma.com/files/team/1527017293903765142/user/1527017290758443585?fuid=1527017290758443585"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-10 h-10 flex items-center justify-center rounded-lg  hover:border-blue-500 hover:text-blue-500 transition-colors duration-300"
-        aria-label="Figma profile"
-        data-testid="Figma"
-      >
-        <Figma size={20} />
-      </a>
-      <a
-        href="https://facebook.com/manuell211"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-10 h-10 flex items-center justify-center rounded-lg  hover:border-blue-500 hover:text-blue-500 transition-colors duration-300"
-        aria-label="Facebook profile"
-        data-testid="Facebook"
-      >
-        < Facebook size={20} />
-      </a>
-     
- 
+         </a>
+         
  <div className="relative inline-block group">
  
    <a
@@ -99,6 +78,29 @@ const Footer = () => {
  </span>
  
  </div>  
+     
+      <a
+        href="https://www.figma.com/files/team/1527017293903765142/user/1527017290758443585?fuid=1527017290758443585"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-10 h-10 flex items-center justify-center rounded-lg  hover:border-blue-500 hover:text-blue-500 transition-colors duration-300"
+        aria-label="Figma profile"
+        data-testid="Figma"
+      >
+        <Figma size={20} />
+      </a>
+      <a
+        href="https://facebook.com/manuell211"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-10 h-10 flex items-center justify-center rounded-lg  hover:border-blue-500 hover:text-blue-500 transition-colors duration-300"
+        aria-label="Facebook profile"
+        data-testid="Facebook"
+      >
+        < Facebook size={20} />
+      </a>
+     
+
  
 
       <a
