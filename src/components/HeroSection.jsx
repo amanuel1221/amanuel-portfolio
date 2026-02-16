@@ -101,19 +101,23 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Hero Image */}
       <motion.div
-        initial={{ opacity: 0, x: 80 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="hero-image lg:mr-10 relative z-10"
-      >
-        <img
-          src="/assets/images/Amanuel.jpg"
-          alt="Amanuel photo"
-          className="w-40 md:w-60 lg:w-72 aspect-square rounded-full object-cover mx-auto border-4 border-white shadow-lg"
-        />
-      </motion.div>
+  initial={{ opacity: 0, x: 80 }}
+  whileInView={{ opacity: 1, x: 0 }} 
+  viewport={{ once: true }} 
+  transition={{ duration: 0.8, delay: 0.3 }}
+  className="hero-image lg:mr-10 relative z-10"
+>
+  <img
+    src="/assets/images/Amanuel.webp"
+    alt="Amanuel photo"
+    width="288" 
+    height="288"
+    loading="eager" 
+    fetchpriority="high"
+    className="w-40 md:w-60 lg:w-72 aspect-square rounded-full object-cover mx-auto border-4 border-white shadow-lg"
+  />
+</motion.div>
     </section>
   );
 };

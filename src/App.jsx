@@ -1,7 +1,6 @@
 import HomePage from './pages/HomePage';
 import React from 'react';
-import { Router, Route, Routes } from 'react-router-dom';
-import { NavLink, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 
 
