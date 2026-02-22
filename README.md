@@ -1,5 +1,7 @@
 # 🌐 Amanuel's Portfolio
 
+![Lighthouse Score](https://img.shields.io/badge/Lighthouse-99%2F100-brightgreen?style=for-the-badge)
+![Testing](https://img.shields.io/badge/Vitest-Passing-6E9F18?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)
 ![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge)
@@ -13,6 +15,64 @@ Designed to showcase projects, skills, and professional branding with clean, reu
  ## 🔗 Live Demo 
 
  👉 [View Demo](https://amanuel-portfolio-flame.vercel.app)
+
+
+## Performances and Optimizations
+
+ ## ⚡ Performance Comparisons (Before vs. After)
+
+| Initial Build (Unoptimized) | Optimized Production (Vite + React 18) |
+| :---: | :---: |
+| ![Before ](/public/assets/images/before.png) | ![After ](/public/assets/images/mobile_after.png) |
+| *Lighthouse Score: 78* | *Lighthouse Score: 99* |
+
+
+
+## Before Performance
+Status: Initial Development Build
+The application was functional but suffered from high layout shift and delayed interactivity. Initial bundle sizes were unoptimized, leading to slower load times on 3G/4G mobile networks and a lower SEO ranking.
+
+## After Performance
+Status: Optimized Production Build
+Engineered for speed using Vite and React 18. I implemented strategic code-splitting and asset compression, resulting in an instantaneous "app-like" feel. The UI is now fluid, with zero jank during transitions.
+
+## Before Metrics
+Lighthouse Score: 78
+
+Largest Contentful Paint (LCP): 1.9s (Needs Improvement)
+
+Total Blocking Time (TBT): 820ms
+
+Issues: Unused JavaScript, unoptimized heavy images, and render-blocking resources.
+
+## After Optimization Metrics
+Lighthouse Score: 99
+
+Largest Contentful Paint (LCP): 0.8s (Fast)
+
+Total Blocking Time (TBT): 0ms (Perfect)
+
+Optimization Steps: Implemented Lazy Loading, WebP image conversion, and minification of CSS/JS. This ensures the best possible Google Search ranking.
+
+
+
+
+
+## ⚡Metrics Comparison (Before vs. After)
+
+| Initial Build (Unoptimized) | Optimized Production (Vite + React 18) |
+| :---: | :---: |
+| ![Before](/public/assets/images/metric-before.png) | ![After](/public/assets/images/metric-after.png) |
+| *Lighthouse Score: 78* | *Lighthouse Score: 99* |
+
+
+## Testing Show (Reliability)
+Methodology: Unit & Integration Testing
+To ensure performance gains don't break over time, I implemented a robust testing suite using Vitest. This validates that components render correctly, hooks maintain state, and the Contact Form integrates perfectly with EmailJS.
+
+![Hero](/public/assets/images/test.png) 
+
+---
 
 
  ## 🏠 Home Page
