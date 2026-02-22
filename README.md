@@ -56,13 +56,11 @@ Optimization Steps: Implemented Lazy Loading, WebP image conversion, and minific
 
 
 
-
-
 ## ⚡Metrics Comparison (Before vs. After)
 
 | Initial Build (Unoptimized) | Optimized Production (Vite + React 18) |
 | :---: | :---: |
-| ![Before](/public/assets/images/metric-before.png) | ![After](/public/assets/images/metric-after.png) |
+| ![Before](/public/assets/images/metric_before.png) | ![After](/public/assets/images/metric_after.png) |
 | *Lighthouse Score: 78* | *Lighthouse Score: 99* |
 
 
