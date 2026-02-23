@@ -214,7 +214,7 @@ const Contact = () => {
 
           <div className="mt-8 flex justify-center">
             <a
-              href="/Amanuel_CV.pdf"
+              href="/assets/images/Amanuel_cv.pdf"
               download="Amanuel_CV.pdf"
               className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg active:scale-95"
             >
