@@ -6,13 +6,16 @@ const Service = () => {
     <section
       style={{ backgroundColor: "var(--tertiary-blue)" }}
       className="w-full py-24 flex flex-col items-center"
+      id="services"
+      itemScope 
+      itemType="https://schema.org/ItemList"
     >
    
       <div className="text-center mb-14 px-4">
-        <h1 className="text-3xl md:text-4xl font-bold mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2"itemProp="name">
           What I Can Help With
         </h1>
-        <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto">
+        <p className="text-sm md:text-base text-gray-600 max-w-xl mx-auto"itemProp="description">
           Turn your ideas into reality with clean, modern, and scalable frontend
           solutions.
         </p>
@@ -24,7 +27,9 @@ const Service = () => {
           <div
             key={index}
             className="group bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-md hover:shadow-xl transition-all duration-300 h-full"
-          >
+            itemProp="itemListElement" 
+            itemScope 
+            itemType="https://schema.org/Thing">
             
             <div
               style={{ backgroundColor: "var(--primary-blue)" }}
@@ -34,10 +39,10 @@ const Service = () => {
             </div>
 
            
-            <h2 className="text-lg font-semibold mb-3">{service.title}</h2>
+            <h2 className="text-lg font-semibold mb-3"itemProp="name">{service.title}</h2>
 
            
-            <p className="text-sm text-gray-600 leading-relaxed max-w-xs">
+            <p className="text-sm text-gray-600 leading-relaxed max-w-xs"itemProp="description">
               {service.description}
             </p>
           </div>

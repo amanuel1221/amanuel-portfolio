@@ -26,15 +26,18 @@ const Projects = () => {
       id="projects"
       style={{ backgroundColor: "var(--secondary-blue)" }}
       className="py-20 px-6 md:px-16 lg:px-24"
+      itemScope 
+      itemType="https://schema.org/ItemList"
     >
-      {/* Header */}
-      <div className="text-center mb-14 relative">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2">
+     
+      <div className="text-center mb-14 relative" >
+        <h1 className="text-2xl md:text-3xl font-bold mb-2"itemProp="name">
           Featured Projects
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
           A selection of projects that showcase my skills and experience
         </p>
+        <meta itemProp="description" content="Portfolio of Junior Frontend Developer Amanuel Amare focusing on React and Performance." />
 
         {visibleCount < ProjectsInfo.length && (
   <button
@@ -59,20 +62,25 @@ const Projects = () => {
           <div
             key={index}
             className="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden flex flex-col"
-          >
+          itemProp="itemListElement" 
+            itemScope 
+            itemType="https://schema.org/SoftwareSourceCode">
+              <meta itemProp="programmingLanguage" content="JavaScript, React" />
             
             <img
+            itemProp="image"
+            loading="lazy"
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-cover hover:transition-all ease-in-out duration-300 "
             />
 
             <div className="p-6 flex flex-col flex-1 text-center">
-              <h3 className="text-lg font-semibold mb-2">
+              <h3 className="text-lg font-semibold mb-2"itemProp="name">
                 {project.title}
               </h3>
 
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-gray-600 mb-4"itemProp="description">
                 {project.description}
               </p>
 

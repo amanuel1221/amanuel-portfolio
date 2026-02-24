@@ -10,7 +10,9 @@ const EducationalExperience = () => {
   };
 
   return (
-    <section id="experiance" className="py-16 bg-gray-100 w-full">
+    <section id="experiance" className="py-16 bg-gray-100 w-full"
+    itemScope 
+      itemType="https://schema.org/Person" >
       <div className="mb-12">
         <h1 className="text-2xl md:text-3xl font-bold text-center">
           Educational Experience
@@ -33,11 +35,14 @@ const EducationalExperience = () => {
               <div
                 key={index}
                 className="relative bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 overflow-hidden"
+                itemProp="alumniOf" 
+                itemScope 
+                itemType="https://schema.org/EducationalOrganization"
               >
                
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-lg md:text-xl font-semibold">{edu.title}</h3>
+                    <h3 className="text-lg md:text-xl font-semibold"itemProp="name" >{edu.title}</h3>
                     <p className="text-sm text-gray-500">{edu.note}</p>
                   </div>
 
@@ -104,10 +109,12 @@ const EducationalExperience = () => {
               <div
                 key={index}
                 className="relative bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 overflow-hidden"
-              >
+              itemProp="hasCredential" 
+                itemScope 
+                itemType="https://schema.org/EducationalOccupationalCredential">
                
                 <div className="flex justify-between items-start">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <h3 className="text-xl font-semibold"itemProp="name">{project.title}</h3>
 
                   {hasCertificate && (
                     <button

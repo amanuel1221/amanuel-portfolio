@@ -91,9 +91,11 @@ const Contact = () => {
   };
 
   return (
-    <section  id="contact" className="bg-[#f2f6fd] py-24 px-4 flex flex-col items-center">
+    <section  id="contact" className="bg-[#f2f6fd] py-24 px-4 flex flex-col items-center"
+    itemScope 
+      itemType="https://schema.org/ContactPage" >
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold">Let’s Work Together</h1>
+        <h1 className="text-4xl font-bold "itemProp="headline" >Let’s Work Together</h1>
         <p className="text-gray-500 mt-3">
           Have a project in mind or just want to say hello?
         </p>
@@ -114,9 +116,10 @@ const Contact = () => {
           </p>
 
           <div className="mt-8 grid gap-4 text-gray-600">
-            <div className="flex items-center gap-3">
+            
+            <div className="flex items-center gap-3" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
               <FaMapMarkerAlt className="text-blue-500" />
-              <span>Ethiopia</span>
+              <span itemProp="addressCountry" >Ethiopia</span>
             </div>
             <div className="flex items-center gap-3">
               <FaCheckCircle className="text-green-500" />
@@ -124,23 +127,45 @@ const Contact = () => {
             </div>
           </div>
 
+
+
+
           <div className="flex gap-4 mt-10 items-center justify-center">
+            
             <a
               href="https://github.com/amanuel1221"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer me"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="github"
               aria-label="GitHub profile"
             >
               <FaGithub />
             </a>
+            <a
+  href="https://peerlist.io/amanuelamare084"
+  target="_blank"
+  rel="noopener noreferrer me"
+  className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-[#00AA6C] transition group"
+  aria-label="Peerlist profile"
+>
+  <svg 
+    width="20" 
+    height="20" 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    xmlns="http://www.w3.org/2000/svg"
+    className="group-hover:text-[#00AA6C]"
+  >
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6 12.5h-2.5v5h-3v-5H10v3h-3v-6.5h8.5v3.5z"/>
+  </svg>
+</a>
 <div className="relative inline-block group">
 
   <a
     href="https://www.linkedin.com/in/your-username"
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noopener noreferrer me"
     className="w-10 h-10 flex items-center justify-center border rounded-lg 
                hover:border-blue-500 hover:text-blue-500 transition"
     data-testid="linkedin"
@@ -159,7 +184,7 @@ const Contact = () => {
     bg-blue-600/90 backdrop-blur-md rounded-lg shadow-xl
     transition-all duration-200 pointer-events-none
     
-    /* Visibility Logic */
+    
     ${showTip ? "opacity-100 scale-100" : "opacity-0 scale-90"}
     md:group-hover:opacity-100 md:group-hover:scale-100
 
@@ -170,8 +195,7 @@ const Contact = () => {
   `}
 >
   LinkedIn is temporarily unavailable — I’d be happy to connect via email.
-  
-  {/* Arrow */}
+
   <span className="absolute left-1/2 -translate-x-1/2 top-full 
                    border-8 border-transparent 
                    border-t-blue-600/90"></span>
@@ -180,7 +204,7 @@ const Contact = () => {
 </div>         <a
               href="https://x.com/AmanuelAma66386"
               target="_blank"
-              rel="noopener noreferrer"
+             rel="noopener noreferrer me"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="twitter"
               aria-label="twitter profile"
@@ -191,7 +215,7 @@ const Contact = () => {
             <a
               href="https://www.hackerrank.com/settings/account"
               target="_blank"
-              rel="noopener noreferrer"
+             rel="noopener noreferrer me"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="hacker-rank"
               aria-label="hacker-rank profile"
@@ -204,11 +228,13 @@ const Contact = () => {
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="email"
               aria-label="mailing service"  
+              itemProp="email"
             >
               <FaEnvelope />
             </a>
           </div>
-          <p className="text-gray-700 text-sm mt-2 text-center">
+          
+          <p className="text-gray-700 text-sm mt-2 text-center" itemProp="email" >
            bdu1600905@bdu.edu.et
           </p>
 
@@ -261,7 +287,7 @@ const Contact = () => {
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center gap-3">
-              <label className="md:w-32 text-center md:text-right font-medium">
+              <label className="md:w-32 text-center md:text-right font-medium" itemProp="email" >
                 Email:
               </label>
               <div className="flex-1">

@@ -5,7 +5,7 @@ const AboutMe = () => {
     <section
       id="about"
       className="w-full h-auto flex flex-col lg:flex-row items-center justify-center gap-8 m-0"
-    >
+    aria-labelledby="about-heading" >
       <div
         style={{ backgroundColor: "var(--secondary-blue)" }}
         className="w-full flex flex-col items-center p-4 md:p-10 "
@@ -19,13 +19,13 @@ const AboutMe = () => {
           </button>
         </div>
         <div>
-          <ul className="list-disc list-inside space-y-2 text-left text-sm md:text-base">
-            <li>Software Engineering student at Bahir Dar University.</li>
-            <li>
+          <ul className="list-disc list-inside space-y-2 text-left text-sm md:text-base" itemProp="knowsAbout" >
+            <li itemProp="knowsAbout" >Software Engineering student at Bahir Dar University.</li>
+            <li itemProp="knowsAbout" >
               Frontend-focused with React, component-based UI, and routing
             </li>
-            <li>Hackathon experience building MVPs under tight deadlines</li>
-            <li>Continuous learner (ALX, FreeCodeCamp, self-study)</li>
+            <li itemProp="knowsAbout" >Hackathon experience building MVPs under tight deadlines</li>
+            <li itemProp="knowsAbout" >Continuous learner (ALX, FreeCodeCamp, self-study)</li>
           </ul>
         </div>
         <div className="mt-10 mb-10 justify-center items-center text-center">
@@ -38,13 +38,17 @@ const AboutMe = () => {
             existing UIs.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-10   mt-5 p-5">
+        <div className="flex flex-col md:flex-row gap-10   mt-5 p-5"
+          itemProp="hasOfferCatalog"
+          itemScope 
+          itemType="https://schema.org/OfferCatalog">
           <ul className="flex flex-col lg:flex-row gap-8  justify-center items-center">
             {Offer.map((offer, index) => (
               <li
                 key={index}
                 className="flex flex-col items-center bg-white gap-4   md:w-120 md:h-65 lg:w-90 lg:65 rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 p-5 pb-20"
-              >
+              itemProp="itemListElement"
+              itemType="https://schema.org/Offer">
                 <img
                   src={offer.icon}
                   alt={offer.title}
