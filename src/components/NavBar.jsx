@@ -35,9 +35,11 @@ const NavBar = () => {
       itemType="https://schema.org/SiteNavigationElement"
       className={`sticky top-0 z-[1000] transition-transform duration-300
       ${showNav ? "translate-y-0" : "-translate-y-full"}
-      bg-white/80 backdrop-blur-md dark:bg-gray-900/80
+bg-gray-100/70 backdrop-blur-md dark:bg-gray-900/80
       border-b border-gray-200 dark:border-gray-800`}
     >
+
+      
       <nav className="flex justify-between items-center p-4" role="navigation" aria-label="Main Navigation">
         
        
@@ -45,7 +47,7 @@ const NavBar = () => {
           <HashLink to="/#home" itemProp="url">
             <img
               src="./logo-brand.svg"
-              className="w-full h-16 object-contain"
+className="w-full h-12 md:h-14 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
               alt="Amanuel - React Performance Engineer Logo"
               itemProp="logo"
             />
