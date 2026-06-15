@@ -34,11 +34,8 @@ const NavBar = () => {
       itemScope
       itemType="https://schema.org/SiteNavigationElement"
       className={`sticky top-0 z-[1000] transition-transform duration-300
-      ${showNav ? "translate-y-0" : "-translate-y-full"}
-bg-gray-100/70 backdrop-blur-md dark:bg-gray-900/80
-      border-b border-gray-200 dark:border-gray-800`}
-    >
-
+${showNav ? "translate-y-0" : "-translate-y-full"}
+bg-white border-b border-gray-200 shadow-sm`}
       
       <nav className="flex justify-between items-center p-4" role="navigation" aria-label="Main Navigation">
         
