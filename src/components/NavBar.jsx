@@ -36,7 +36,7 @@ const NavBar = () => {
       className={`sticky top-0 z-[1000] transition-transform duration-300
 ${showNav ? "translate-y-0" : "-translate-y-full"}
 bg-white border-b border-gray-200 shadow-sm`}
-      
+      >
       <nav className="flex justify-between items-center p-4" role="navigation" aria-label="Main Navigation">
         
        
