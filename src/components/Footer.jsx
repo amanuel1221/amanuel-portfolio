@@ -3,7 +3,6 @@ import {  Github,Linkedin,Twitter, Figma, Facebook,FileText, Mail,MessageCircle}
 
 
 const Footer = () => {
-  const [showTip, setShowTip] = useState(false);
   return (
     <footer className="bg-gray-50 "
     itemScope 
@@ -42,49 +41,20 @@ const Footer = () => {
         <Github size={20} />
          </a>
          
- <div className="relative inline-block group">
  
    <a
-     href="https://www.linkedin.com/in/your-username"
+     href="https://www.linkedin.com/in/amanuel-amare-684234372"
      target="_blank"
       rel="noopener noreferrer me"
         itemProp="sameAs"
     className="w-10 h-10 flex items-center justify-center rounded-lg  hover:border-blue-500 hover:text-blue-500 transition-colors duration-300"
      data-testid="linkedin"
      aria-label="Linkedin profile"
-     onClick={(e) => {
-       e.preventDefault(); 
-       setShowTip(!showTip); 
-     }}
+   
    >
      <Linkedin size={20}/>
    </a>
- <span
-   className={`
-     absolute -top-14 left-1/2 -translate-x-1/2
-     px-4 py-2 text-sm font-medium text-white text-center
-     bg-blue-600/90 backdrop-blur-md rounded-lg shadow-xl
-     transition-all duration-200 pointer-events-none
-     
-   
-     ${showTip ? "opacity-100 scale-100" : "opacity-0 scale-90"}
-     md:group-hover:opacity-100 md:group-hover:scale-100
- 
-    
-     w-max max-w-[180px]           
-     sm:max-w-[250px]            
-     lg:max-w-none lg:whitespace-nowrap 
-   `}
- >
-   LinkedIn is temporarily unavailable — I’d be happy to connect via email.
-   
- 
-   <span className="absolute left-1/2 -translate-x-1/2 top-full 
-                    border-8 border-transparent 
-                    border-t-blue-600/90"></span>
- </span>
- 
- </div>  
+
      
       <a
         href="https://www.figma.com/files/team/1527017293903765142/user/1527017290758443585?fuid=1527017290758443585"

@@ -1,73 +1,143 @@
-import {render,screen} from "@testing-library/react";
-import {test,expect} from "vitest";
+import { render, screen } from "@testing-library/react";
+import { describe, test, expect } from "vitest";
 import { MemoryRouter } from "react-router-dom";
 import Footer from "../components/Footer";
 
-test("Test the renders of footer and existance of texts",()=>{
-render(<MemoryRouter>
-    <Footer/>
-</MemoryRouter>);
-expect(screen.getByText("Junior Frontend Developer • React & Tailwind CSS")).toBeInTheDocument();
-expect(screen.getByText("© 2026 Amanuel Amare. All rights reserved.")).toBeInTheDocument();
+const renderFooter = () =>
+  render(
+    <MemoryRouter>
+      <Footer />
+    </MemoryRouter>
+  );
 
+describe("Footer", () => {
+  test("renders footer content", () => {
+    renderFooter();
 
-});
-test("Test the accessibility and  existance of the icons and logos ",()=>{
+    expect(
+      screen.getByText("Junior Frontend Developer • React & Tailwind CSS")
+    ).toBeInTheDocument();
 
-    render(<MemoryRouter>
-        <Footer/>
-    </MemoryRouter>);
-const image=screen.getByAltText("logo");
-expect(image).toBeInTheDocument();
-const github=screen.getByRole("link",{name:/github/i});
-const figma=screen.getByRole("link",{name:/figma/i});
-const facebook=screen.getByRole("link",{name:/facebook/i});
-const linkedin=screen.getByRole("link",{name:/linkedin/i});
-const twitter=screen.getByRole("link",{name:/twitter/i});
-const filetext=screen.getByRole("link",{name:/substack profile/i });
-const msg=screen.getByRole("link",{name:/Whatsapp profile/i});
-const mail=screen.getByRole("link",{name:/Email/i});
-expect(github).toBeInTheDocument();
-expect(figma).toBeInTheDocument();
-expect(facebook).toBeInTheDocument();
-expect(linkedin).toBeInTheDocument();
-expect(twitter).toBeInTheDocument();
-expect(filetext).toBeInTheDocument();
-expect(msg).toBeInTheDocument();
-expect(mail).toBeInTheDocument();
+    const year = new Date().getFullYear();
 
+    expect(
+      screen.getByText(
+        new RegExp(`© ${year} Amanuel Amare\\. All rights reserved\\.`, "i")
+      )
+    ).toBeInTheDocument();
+  });
 
-});
+  test("renders logo", () => {
+    renderFooter();
 
-test("Test the existance of paths and opened in the new tab",()=>{
-    render(<MemoryRouter>
-        <Footer/>
-    </MemoryRouter>);
-const github=screen.getByRole("link",{name:/github/i});
-const figma=screen.getByRole("link",{name:/figma/i});
-const facebook=screen.getByRole("link",{name:/facebook/i});
-const linkedin=screen.getByRole("link",{name:/linkedin/i});
-const twitter=screen.getByRole("link",{name:/twitter/i});
-const filetext=screen.getByRole("link",{name:/substack profile/i });
-const msg=screen.getByRole("link",{name:/Whatsapp profile/i});
-const mail=screen.getByRole("link",{name:/Email/i});
+    expect(screen.getByAltText("logo")).toBeInTheDocument();
+  });
 
-expect(github).toHaveAttribute("href","https://github.com/amanuel1221");
-expect(figma).toHaveAttribute("href","https://www.figma.com/files/team/1527017293903765142/user/1527017290758443585?fuid=1527017290758443585");
-expect(facebook).toHaveAttribute("href","https://facebook.com/manuell211");
-expect(linkedin).toHaveAttribute("href","https://www.linkedin.com/in/your-username");
-expect(twitter).toHaveAttribute("href","https://x.com/AmanuelAma66386");
-expect(filetext).toHaveAttribute("href","https://substack.com/@amanuelamare");
-expect(msg).toHaveAttribute("href","https://wa.me/251921337037");
-expect(mail).toHaveAttribute("href","mailto:bdu1600905@bdu.edu.et");
+  test("renders all social links", () => {
+    renderFooter();
 
+    expect(
+      screen.getByRole("link", { name: /github profile/i })
+    ).toBeInTheDocument();
 
-expect(github).toHaveAttribute("target","_blank");
-expect(figma).toHaveAttribute("target","_blank");
-expect(facebook).toHaveAttribute("target","_blank");
-expect(linkedin).toHaveAttribute("target","_blank");
-expect(twitter).toHaveAttribute("target","_blank");
-expect(filetext).toHaveAttribute("target","_blank");
-expect(msg).toHaveAttribute("target","_blank");
+    expect(
+      screen.getByRole("link", { name: /linkedin profile/i })
+    ).toBeInTheDocument();
 
+    expect(
+      screen.getByRole("link", { name: /figma profile/i })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("link", { name: /facebook profile/i })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("link", { name: /twitter profile/i })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("link", { name: /substack profile/i })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("link", { name: /whatsapp profile/i })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("link", { name: /email/i })
+    ).toBeInTheDocument();
+  });
+
+  test("social links have correct urls", () => {
+    renderFooter();
+
+    expect(
+      screen.getByRole("link", { name: /github profile/i })
+    ).toHaveAttribute("href", "https://github.com/amanuel1221");
+
+    expect(
+      screen.getByRole("link", { name: /linkedin profile/i })
+    ).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/amanuel-amare-684234372"
+    );
+
+    expect(
+      screen.getByRole("link", { name: /figma profile/i })
+    ).toHaveAttribute(
+      "href",
+      "https://www.figma.com/files/team/1527017293903765142/user/1527017290758443585?fuid=1527017290758443585"
+    );
+
+    expect(
+      screen.getByRole("link", { name: /facebook profile/i })
+    ).toHaveAttribute("href", "https://facebook.com/manuell211");
+
+    expect(
+      screen.getByRole("link", { name: /twitter profile/i })
+    ).toHaveAttribute("href", "https://x.com/AmanuelAma66386");
+
+    expect(
+      screen.getByRole("link", { name: /substack profile/i })
+    ).toHaveAttribute("href", "https://substack.com/@amanuelamare");
+
+    expect(
+      screen.getByRole("link", { name: /whatsapp profile/i })
+    ).toHaveAttribute("href", "https://wa.me/251921337037");
+
+    expect(
+      screen.getByRole("link", { name: /email/i })
+    ).toHaveAttribute("href", "mailto:bdu1600905@bdu.edu.et");
+  });
+
+  test("external links open in new tab", () => {
+    renderFooter();
+
+    const externalLinks = [
+      screen.getByRole("link", { name: /github profile/i }),
+      screen.getByRole("link", { name: /linkedin profile/i }),
+      screen.getByRole("link", { name: /figma profile/i }),
+      screen.getByRole("link", { name: /facebook profile/i }),
+      screen.getByRole("link", { name: /twitter profile/i }),
+      screen.getByRole("link", { name: /substack profile/i }),
+      screen.getByRole("link", { name: /whatsapp profile/i }),
+    ];
+
+    externalLinks.forEach((link) => {
+      expect(link).toHaveAttribute("target", "_blank");
+      expect(link).toHaveAttribute(
+        "rel",
+        expect.stringContaining("noopener")
+      );
+    });
+  });
+
+  test("email link does not open in new tab", () => {
+    renderFooter();
+
+    const email = screen.getByRole("link", { name: /email/i });
+
+    expect(email).not.toHaveAttribute("target");
+  });
 });

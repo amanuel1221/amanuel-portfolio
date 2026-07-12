@@ -6,6 +6,7 @@ const Service = lazy(() => import('../components/Service'));
 const Skills = lazy(() => import('../components/Skills'));
 const Experiance = lazy(() => import('../components/Experiance'));
 const Projects = lazy(() => import('../components/Projects'));
+const LatestBlogs = lazy(() => import('../components/LatestBlogs'));
 const Contact = lazy(() => import('../components/Contact'));
 const Footer = lazy(() => import('../components/Footer'));
 
@@ -17,9 +18,7 @@ const HomePage = () => {
       itemScope 
       itemType="https://schema.org/Person"
     >
-      {/* This is my Hidden Metadata for AI Extraction for good performance.
-          This gives the AI a "cheat sheet" of your identity immediately.
-      */}
+   
       <div className="sr-only" style={{ display: 'none' }}>
         <h1 itemProp="name">Amanuel</h1>
         <p itemProp="jobTitle">React Performance Engineer</p>
@@ -53,6 +52,9 @@ const HomePage = () => {
         <section id="projects">
           <Projects />
         </section>
+        <section id="blogs">
+  <LatestBlogs />
+</section>
 
         <Contact />
         <Footer />

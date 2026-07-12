@@ -29,7 +29,7 @@ const ProjectExperiance = [
     date: "01-11-2025 - 02-11-2025",
     place: "Bahir Dar University Hackathon",
     status: "Certified",
-    image: "/assets/images/cursor.jpg",
+    image: "/assets/images/cursor.webp",
     descriptions: [
       "Participated in a 48-hour hackathon focused on building a web application",
       "Collaborated with a team to develop an MVP using React and Tailwind CSS",

@@ -1,180 +1,246 @@
-import { screen, render, getByText } from "@testing-library/react";
-import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import Contact from "../components/Contact";
 import { MemoryRouter } from "react-router-dom";
+import { describe, test, expect, vi } from "vitest";
+import Contact from "../components/Contact";
 
 vi.mock("@emailjs/browser", () => ({
   default: {
-    send: vi.fn(() => Promise.resolve())
-  }
+    send: vi.fn(() => Promise.resolve()),
+  },
 }));
 
-test("Check the rendered of contact and existace of section", () => {
-  render(
-    <MemoryRouter>
-      <Contact />
-    </MemoryRouter>,
-  );
-  const title1 = screen.getAllByText("Let’s Work Together");
+describe("Contact Component", () => {
+  test("renders the contact section correctly", () => {
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
 
-  expect(title1[0]).toBeInTheDocument();
-  const description = screen.getByText(
-    "Have a project in mind or just want to say hello?",
-  );
-  expect(description).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /let’s work together/i })
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/have a project in mind or just want to say hello/i)
+    ).toBeInTheDocument();
+  });
+
+  test("renders the contact form", () => {
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByTestId("contact-form")).toBeInTheDocument();
+    expect(screen.getByTestId("input-name")).toBeInTheDocument();
+    expect(screen.getByTestId("input-email")).toBeInTheDocument();
+    expect(screen.getByTestId("input-company")).toBeInTheDocument();
+    expect(screen.getByTestId("input-message")).toBeInTheDocument();
+
+    expect(
+      screen.getByRole("button", { name: /^send$/i })
+    ).toBeInTheDocument();
+  });
+
+  test("shows validation errors when submitting an empty form", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    await user.click(screen.getByRole("button", { name: /^send$/i }));
+
+    expect(
+      screen.getByText(/please tell me your name/i)
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/need your email/i)
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/please say something/i)
+    ).toBeInTheDocument();
+  });
+
+  test("shows validation errors for invalid inputs", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    await user.type(screen.getByTestId("input-name"), "1234");
+    await user.type(screen.getByTestId("input-email"), "wrongemail");
+
+    await user.click(screen.getByRole("button", { name: /^send$/i }));
+
+    expect(
+      screen.getByText(/names usually don't have numbers/i)
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/valid email/i)
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/please say something/i)
+    ).toBeInTheDocument();
+  });
+
+  test("submits successfully with valid data", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    await user.type(screen.getByTestId("input-name"), "Mr Smith");
+    await user.type(
+      screen.getByTestId("input-email"),
+      "example@gmail.com"
+    );
+    await user.type(
+      screen.getByTestId("input-message"),
+      "Hello Amanuel, I need your help."
+    );
+
+    await user.click(screen.getByRole("button", { name: /^send$/i }));
+
+    expect(
+      await screen.findByTestId("sucess-submit")
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/message sent successfully/i)
+    ).toBeInTheDocument();
+  });
+
+  test("renders contact information", () => {
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText(/ethiopia/i)).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/availability: open to opportunities/i)
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/bdu1600905@bdu.edu.et/i)
+    ).toBeInTheDocument();
+  });
+
+  test("renders all social links", () => {
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByTestId("github")).toBeInTheDocument();
+    expect(screen.getByTestId("peerlist")).toBeInTheDocument();
+    expect(screen.getByTestId("linkedin")).toBeInTheDocument();
+    expect(screen.getByTestId("twitter")).toBeInTheDocument();
+    expect(screen.getByTestId("hacker-rank")).toBeInTheDocument();
+    expect(screen.getByTestId("email")).toBeInTheDocument();
+  });
+
+  test("social links have correct hrefs and targets", () => {
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByTestId("github")).toHaveAttribute(
+      "href",
+      "https://github.com/amanuel1221"
+    );
+
+    expect(screen.getByTestId("github")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
+
+    expect(screen.getByTestId("peerlist")).toHaveAttribute(
+      "href",
+      "https://peerlist.io/amanuelamare084"
+    );
+
+    expect(screen.getByTestId("peerlist")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
+
+    expect(screen.getByTestId("linkedin")).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/amanuel-amare-684234372"
+    );
+
+    expect(screen.getByTestId("linkedin")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
+
+    expect(screen.getByTestId("twitter")).toHaveAttribute(
+      "href",
+      "https://x.com/AmanuelAma66386"
+    );
+
+    expect(screen.getByTestId("twitter")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
+
+    expect(screen.getByTestId("hacker-rank")).toHaveAttribute(
+      "href",
+      "https://www.hackerrank.com/settings/account"
+    );
+
+    expect(screen.getByTestId("hacker-rank")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
+
+    expect(screen.getByTestId("email")).toHaveAttribute(
+      "href",
+      "mailto:bdu1600905@bdu.edu.et"
+    );
+  });
+
+  test("download CV button exists", () => {
+    render(
+      <MemoryRouter>
+        <Contact />
+      </MemoryRouter>
+    );
+
+    const cv = screen.getByRole("link", {
+      name: /download cv/i,
+    });
+
+    expect(cv).toBeInTheDocument();
+    expect(cv).toHaveAttribute(
+      "href",
+      "/assets/images/Amanuel_cv.pdf"
+    );
+    expect(cv).toHaveAttribute(
+      "download",
+      "Amanuel_CV.pdf"
+    );
+  });
 });
-test("test the contact form exists and thier validations", async () => {
-  const user = userEvent.setup();
-  render(
-    <MemoryRouter>
-      <Contact />
-    </MemoryRouter>,
-  );
-  const form = screen.getByTestId("contact-form");
-  expect(form).toBeInTheDocument();
-  const inputname = screen.getByTestId("input-name");
-  const inputemail = screen.getByTestId("input-email");
-  const inputcompany = screen.getByTestId("input-company");
-  const inputmessage = screen.getByTestId("input-message");
-  expect(inputname).toBeInTheDocument();
-  expect(inputemail).toBeInTheDocument();
-  expect(inputcompany).toBeInTheDocument();
-  expect(inputmessage).toBeInTheDocument();
- const btnsend = screen.getByRole("button", { name: /Send/i });
-  expect(btnsend).toBeInTheDocument();
-
- 
-
-
-});
-
-test("Test the validation form with empty fields",async()=>{
-    const user=userEvent.setup();
-   render(<MemoryRouter>
-        <Contact/>
-    </MemoryRouter>);
-const btnsend = screen.getByRole("button", { name: /Send/i });
-  expect(btnsend).toBeInTheDocument();
-  
-  await user.click(screen.getByRole("button", { name: /send/i }));
-  const errorname=screen.getByTestId("error-name");
-  const erroremail=screen.getByTestId("error-email");
-  const errormessage=screen.getByTestId("error-message");
-  expect(screen.getByText("Hey 👋 please tell me your name.")).toBeInTheDocument();
-    expect(screen.getByText("I’ll need your email to get back to you 🙂")).toBeInTheDocument();
-      expect(screen.getByText("Please say something, even just a 'Hello Amanuel'")).toBeInTheDocument();
-
-});
-test("Test the form interactions with users by simulation wrong inputs",async()=>{
-   const user=userEvent.setup();
-   render(<MemoryRouter>
-        <Contact/>
-    </MemoryRouter>);
-  const btnsend = screen.getByRole("button", { name: /Send/i });
-  expect(btnsend).toBeInTheDocument();
-  await user.type(screen.getByTestId("input-name"), "1234");
-  await user.type(screen.getByTestId("input-email"), "wrongemail");
-  
-
-  await user.click(screen.getByRole("button", { name: /send/i }));
-  const errorname=screen.getByTestId("error-name");
-  expect(errorname).toBeInTheDocument();
-  expect(screen.getByText("Names usually don't have numbers 😉")).toBeInTheDocument();
-  const erroremail = screen.getByTestId("error-email");
-  expect(erroremail).toBeInTheDocument();
-
-  expect(screen.getByText("Hmm, that doesn’t look like a valid email.")).toBeInTheDocument();
- const errormessage=screen.getByTestId("error-message");
- expect(errormessage).toBeInTheDocument();
- expect(screen.getByText("Please say something, even just a 'Hello Amanuel'")).toBeInTheDocument();
-
-
-});
-test("Test the interactivity when user fill correct form accordingly",async ()=>{
-     const user=userEvent.setup();
-   render(<MemoryRouter>
-        <Contact/>
-    </MemoryRouter>);
-    const btnsend = screen.getByRole("button", { name: /Send/i });
-  expect(btnsend).toBeInTheDocument();
-  await user.type(screen.getByTestId("input-name"), "Mr.Smith");
-  await user.type(screen.getByTestId("input-email"), "exampleamanuel@gmail.com");
-  await user.type(screen.getByTestId("input-message"),"Hello Amanuel i need your help with website");
-  await user.click(btnsend);
-  const sucess=screen.getByTestId("sucess-submit");
-  expect(sucess).toBeInTheDocument();
-  expect(screen.getByText("Message sent successfully 🚀 I’ll get back to you soon.")).toBeInTheDocument();
-  
-
-});
-
-test("test the accessebility of social icons in the left side ",async ()=>{
- const user=userEvent.setup();
-   render(<MemoryRouter>
-        <Contact/>
-    </MemoryRouter>);
-  expect( screen.getByText(/Let’s Work Together/i)).toBeInTheDocument();
-  expect(screen.getAllByText(/Have a project in mind/i)[0]).toBeInTheDocument();
-  expect(screen.getByText(/Ethiopia/i)).toBeInTheDocument();
-  expect(screen.getByText(/Open to opportunities/i)).toBeInTheDocument();
-  expect(screen.getByText(/bdu1600905@bdu.edu.et/i)).toBeInTheDocument();
-
-});
-test(" test All social links renderdered and check accessiblity", () => {
-  render(
-    <MemoryRouter>
-      <Contact />
-    </MemoryRouter>
-  );
-const github = screen.getByTestId("github");
-const linkedin= screen.getByTestId("linkedin");
-const twitter= screen.getByTestId("twitter");
-const hackerrank= screen.getByTestId("hacker-rank");
-const mailing = screen.getByTestId("email");
-expect(github).toBeInTheDocument();
-expect(linkedin).toBeInTheDocument();
-expect(twitter).toBeInTheDocument();
-expect(hackerrank).toBeInTheDocument();
-expect(mailing).toBeInTheDocument();
-  
-const links = screen.getAllByRole("link"); expect(links.length).toBeGreaterThan(3);
-
-});
-test("CV download button exists", () => {
-  render(
-    <MemoryRouter>
-      <Contact />
-    </MemoryRouter>
-  );
-
-  const cvBtn = screen.getByRole("link", { name: /download cv/i,});
-  expect(cvBtn).toBeInTheDocument();
-});
-
-
-test("test the links are opened  in the other new tab", ()=>{
-render(
-    <MemoryRouter>
-      <Contact />
-    </MemoryRouter>
-  );
-const github = screen.getByTestId("github");
-const linkedin= screen.getByTestId("linkedin");
-const twitter= screen.getByTestId("twitter");
-const hackerrank= screen.getByTestId("hacker-rank");
-const mailing = screen.getByTestId("email");
-expect(github).toHaveAttribute("href","https://github.com/amanuel1221");
-expect(github).toHaveAttribute("target","_blank");
-expect(linkedin).toHaveAttribute("href","https://www.linkedin.com/in/your-username");
-expect(linkedin).toHaveAttribute("target","_blank");
-expect(twitter).toHaveAttribute("href","https://x.com/AmanuelAma66386");
-expect(twitter).toHaveAttribute("target","_blank");
-expect(hackerrank).toHaveAttribute("href","https://www.hackerrank.com/settings/account");
-expect(hackerrank).toHaveAttribute("target","_blank");
-
-
-
-
-
-})

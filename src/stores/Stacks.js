@@ -1,67 +1,112 @@
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithub,
+  FaFigma,
+} from "react-icons/fa";
+
+import {
+  SiJavascript,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiVitest,
+  SiPostman,
+  SiVite,
+  SiTestinglibrary,
+} from "react-icons/si";
+
+
 const Stacks = [
   {
-    title: "FrontEnd",
+    title: "Frontend Development",
     stacks: [
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/919/919851.png", // React
+        icon: FaReact,
         name: "React",
       },
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png", // JS
-        name: "JavaScript (ES6)",
+        icon: SiJavascript,
+        name: "JavaScript (ES6+)",
       },
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/732/732212.png", // HTML5
+        icon: FaHtml5,
         name: "HTML5",
       },
-    ],
-    note: "",
-  },
-  {
-    title: "Styling",
-    stacks: [
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/732/732190.png", // CSS3
+        icon: FaCss3Alt,
         name: "CSS3",
       },
+    ],
+    note: "Building modern, responsive, component-based user interfaces",
+  },
+
+  {
+    title: "MERN Stack Development",
+    stacks: [
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png", // Tailwind CSS
+        icon: FaNodeJs,
+        name: "Node.js",
+      },
+      {
+        icon: SiExpress,
+        name: "Express.js",
+      },
+      {
+        icon: SiMongodb,
+        name: "MongoDB",
+      },
+      {
+        icon: SiTailwindcss,
         name: "Tailwind CSS",
       },
     ],
-    note: "Used for styling and responsive designs",
+    note: "Developing REST APIs, authentication, and full-stack applications",
   },
+
   {
-    title: "Testing",
+    title: "Testing & Development Quality",
     stacks: [
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/5968/5968332.png", // Vitest
+        icon: SiVitest,
         name: "Vitest",
       },
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/5968/5968713.png", // React Testing Library
+        icon: SiTestinglibrary,
         name: "React Testing Library",
       },
+      {
+        icon: SiPostman,
+        name: "Postman",
+      },
     ],
-    note: "Used for basic component and interaction testing",
+    note: "Testing components, APIs, and improving application reliability",
   },
+
   {
-    title: "Tools",
+    title: "Tools & Workflow",
     stacks: [
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/2111/2111288.png", // Git
+        icon: FaGitAlt,
         name: "Git",
       },
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/733/733609.png", // GitHub
+        icon: FaGithub,
         name: "GitHub",
       },
       {
-        icon: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png", // Figma
+        icon: FaFigma,
         name: "Figma",
       },
+      {
+        icon: SiVite,
+        name: "Vite",
+      },
     ],
-    note: "",
+    note: "Using modern development tools, version control, and design workflows",
   },
 ];
 

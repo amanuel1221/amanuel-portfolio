@@ -24,7 +24,7 @@ const HeroSection = () => {
       className="relative w-full flex flex-col lg:flex-row items-center justify-center gap-8 p-10 pb-28"
       aria-label="Introduction"
     >
-    
+
       <div aria-hidden="true">
         <motion.div variants={floatVariant} initial="initial" animate="animate" className="absolute top-20 left-10 z-0">
           <FaReact className="text-blue-500 text-6xl opacity-30" />
@@ -41,9 +41,9 @@ const HeroSection = () => {
       </div>
 
       <div className="flex flex-col items-center md:p-10 z-10">
-       
+
         <button
-          style={{backgroundColor:"var(--secondary-blue)"}}
+          style={{ backgroundColor: "var(--secondary-blue)" }}
           className="flex justify-center items-center mb-5 px-6 py-3 rounded-full mt-10"
         >
           <p style={{ color: "var(--text-primary)" }} className="text-white font-bold">
@@ -51,25 +51,25 @@ const HeroSection = () => {
           </p>
         </button>
 
-       
+
         <h1 itemProp="name" className="text-2xl md:text-3xl lg:text-5xl font-bold mt-4 text-center lg:text-left">
           Hi, I am Amanuel Amare
         </h1>
 
-       
-        <p itemProp="jobTitle" className="text-lg md:text-2xl font-semibold mt-2 text-center lg:text-left text-blue-600">
-  Junior Frontend Developer | React Performance Specialist
-</p>
 
-   
+        <p itemProp="jobTitle" className="text-lg md:text-2xl font-semibold mt-2 text-center lg:text-left text-blue-600">
+          MERN Stack & Frontend Developer | React Performance Specialist
+        </p>
+
+
         <div className="max-w-2xl text-center">
           <p className="mt-4 text-base md:text-lg">
-            I specialize in transforming <strong>Figma designs</strong> into <strong>high-performance React applications</strong>. 
-            By leveraging tools like <strong>Tailwind CSS</strong> and <strong>Vite</strong>, I deliver pixel-perfect interfaces with a focus on 
-            <strong> 99+ Lighthouse scores</strong> and robust reliability via <strong>Vitest</strong>.
+            I specialize in building modern, <strong>responsive web applications</strong>  with React <strong>Tailwind CSS, Vite, and the MERN stack.</strong>.
+            I enjoy transforming <strong>Figma designs</strong> into fast, accessible interfaces with clean architecture, reusable components, and <strong> 99+ Lighthouse scores</strong> performance-focused development and robust reliability via <strong>Vitest</strong>.
+
           </p>
           <p className="mt-2 text-sm md:text-base opacity-80">
-            Currently seeking collaborative opportunities to engineer real-world products with a focus on clean UI and reusable components.
+            I'm passionate about continuous learning and currently looking for internship, junior frontend, and freelance opportunities where I can help build real-world products while expanding my skills as a software engineer.
           </p>
         </div>
 
@@ -85,19 +85,19 @@ const HeroSection = () => {
 
       <motion.div
         initial={{ opacity: 0, x: 80 }}
-        whileInView={{ opacity: 1, x: 0 }} 
-        viewport={{ once: true }} 
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3 }}
         className="hero-image lg:mr-10 relative z-10"
       >
-      
+
         <img
           itemProp="image"
           src="/assets/images/Amanuel.webp"
           alt="Amanuel Amare - React Developer Portfolio Photo"
-          width="288" 
+          width="288"
           height="288"
-          loading="eager" 
+          loading="eager"
           fetchpriority="high"
           className="w-40 md:w-60 lg:w-72 aspect-square rounded-full object-cover mx-auto border-4 border-white shadow-lg"
         />

@@ -1,131 +1,144 @@
 import { render, screen } from "@testing-library/react";
-import { test, expect } from "vitest";
+import { test, expect, vi } from "vitest";
 import { MemoryRouter } from "react-router-dom";
+import { FaReact, FaGitAlt, FaGithub, FaNodeJs } from "react-icons/fa";
+import {
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiVitest,
+  SiTestinglibrary,
+  SiPostman,
+  SiFigma,
+} from "react-icons/si";
+
 import Skills from "../components/Skills";
 
 vi.mock("../stores/Stacks", () => ({
   default: [
     {
-      title: "FrontEnd",
+      title: "Frontend Development",
       stacks: [
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/919/919851.png",
-          name: "React",
-        },
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-          name: "JavaScript (ES6)",
-        },
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
-          name: "HTML5",
-        },
+        { icon: FaReact, name: "React" },
+        { icon: SiJavascript, name: "JavaScript (ES6+)" },
+        { icon: SiHtml5, name: "HTML5" },
+        { icon: SiCss3, name: "CSS3" },
       ],
-      note: "",
+      note: "Building modern, responsive, component-based user interfaces",
     },
     {
-      title: "Styling",
+      title: "MERN Stack Development",
       stacks: [
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/732/732190.png",
-          name: "CSS3",
-        },
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png",
-          name: "Tailwind CSS",
-        },
+        { icon: FaNodeJs, name: "Node.js" },
+        { icon: SiTailwindcss, name: "Tailwind CSS" },
       ],
-      note: "Used for styling and responsive designs",
+      note: "Developing REST APIs and full-stack applications",
     },
     {
-      title: "Testing",
+      title: "Testing & Development Quality",
       stacks: [
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/5968/5968332.png",
-          name: "Vitest",
-        },
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/5968/5968713.png",
-          name: "React Testing Library",
-        },
+        { icon: SiVitest, name: "Vitest" },
+        { icon: SiTestinglibrary, name: "React Testing Library" },
+        { icon: SiPostman, name: "Postman" },
       ],
-      note: "Used for basic component and interaction testing",
+      note: "Testing components and APIs",
     },
     {
-      title: "Tools",
+      title: "Tools & Workflow",
       stacks: [
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/2111/2111288.png",
-          name: "Git",
-        },
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/733/733609.png",
-          name: "GitHub",
-        },
-        {
-          icon: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
-          name: "Figma",
-        },
+        { icon: FaGitAlt, name: "Git" },
+        { icon: FaGithub, name: "GitHub" },
+        { icon: SiFigma, name: "Figma" },
       ],
-      note: "",
+      note: "Modern development workflow",
     },
   ],
 }));
 
-test("test the rendering of Skills component and titles correctly", () => {
+test("renders section heading", () => {
   render(
     <MemoryRouter>
       <Skills />
-    </MemoryRouter>,
+    </MemoryRouter>
   );
-  const header = screen.getByText("Tech Stack");
-  expect(header).toBeInTheDocument();
-  const title1 = screen.getByText("FrontEnd");
 
-  const title2 = screen.getByText("Testing");
-  const title3 = screen.getByText("Styling");
-  const title4 = screen.getByText("Tools");
-  expect(title1).toBeInTheDocument();
-  expect(title2).toBeInTheDocument();
-  expect(title3).toBeInTheDocument();
-  expect(title4).toBeInTheDocument();
+  expect(screen.getByText("Tech Stack")).toBeInTheDocument();
 });
-test("test the accessebility of image icons", () => {
-  render(
-    <MemoryRouter>
-      <Skills />
-    </MemoryRouter>,
-  );
-  const icon1 = screen.getByAltText("Figma");
-  const icon2 = screen.getByAltText("GitHub");
-  const icon3 = screen.getByAltText("Git");
-  const icon4 = screen.getByAltText("Tailwind CSS");
-  const icon5 = screen.getByAltText("React Testing Library");
-  const icon6 = screen.getByAltText("Vitest");
-  const icon7 = screen.getByAltText("HTML5");
-  const icon8 = screen.getByAltText("JavaScript (ES6)");
-  const icon9 = screen.getByAltText("React");
 
-  expect(icon1).toBeInTheDocument();
-  expect(icon2).toBeInTheDocument();
-  expect(icon3).toBeInTheDocument();
-  expect(icon4).toBeInTheDocument();
-  expect(icon5).toBeInTheDocument();
-  expect(icon6).toBeInTheDocument();
-  expect(icon7).toBeInTheDocument();
-  expect(icon8).toBeInTheDocument();
-  expect(icon9).toBeInTheDocument();
-});
-test("test the rendering of stack notes", () => {
+test("renders all stack titles", () => {
   render(
     <MemoryRouter>
       <Skills />
-    </MemoryRouter>,
+    </MemoryRouter>
   );
-  const note1 = screen.getByText("Used for styling and responsive designs");
-  const note2 = screen.getByText(
-    "Used for basic component and interaction testing",
+
+  expect(screen.getByText("Frontend Development")).toBeInTheDocument();
+  expect(screen.getByText("MERN Stack Development")).toBeInTheDocument();
+  expect(
+    screen.getByText("Testing & Development Quality")
+  ).toBeInTheDocument();
+  expect(screen.getByText("Tools & Workflow")).toBeInTheDocument();
+});
+
+test("renders technologies", () => {
+  render(
+    <MemoryRouter>
+      <Skills />
+    </MemoryRouter>
   );
-  expect(note1).toBeInTheDocument();
-  expect(note2).toBeInTheDocument();
+
+  expect(screen.getByText("React")).toBeInTheDocument();
+  expect(screen.getByText("JavaScript (ES6+)")).toBeInTheDocument();
+  expect(screen.getByText("HTML5")).toBeInTheDocument();
+  expect(screen.getByText("CSS3")).toBeInTheDocument();
+
+  expect(screen.getByText("Node.js")).toBeInTheDocument();
+  expect(screen.getByText("Tailwind CSS")).toBeInTheDocument();
+
+  expect(screen.getByText("Vitest")).toBeInTheDocument();
+  expect(screen.getByText("React Testing Library")).toBeInTheDocument();
+  expect(screen.getByText("Postman")).toBeInTheDocument();
+
+  expect(screen.getByText("Git")).toBeInTheDocument();
+  expect(screen.getByText("GitHub")).toBeInTheDocument();
+  expect(screen.getByText("Figma")).toBeInTheDocument();
+});
+
+test("renders notes", () => {
+  render(
+    <MemoryRouter>
+      <Skills />
+    </MemoryRouter>
+  );
+
+  expect(
+    screen.getByText(
+      "Building modern, responsive, component-based user interfaces"
+    )
+  ).toBeInTheDocument();
+
+  expect(
+    screen.getByText("Developing REST APIs and full-stack applications")
+  ).toBeInTheDocument();
+
+  expect(
+    screen.getByText("Testing components and APIs")
+  ).toBeInTheDocument();
+
+  expect(
+    screen.getByText("Modern development workflow")
+  ).toBeInTheDocument();
+});
+
+test("renders CTA button", () => {
+  render(
+    <MemoryRouter>
+      <Skills />
+    </MemoryRouter>
+  );
+
+  expect(
+    screen.getByRole("link", { name: /view my projects/i })
+  ).toBeInTheDocument();
 });

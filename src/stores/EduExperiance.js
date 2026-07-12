@@ -7,7 +7,7 @@ const EduExperiance = [
     date: "2025 - 2026",
     place: "online course at ALX Africa",
     status: "certified",
-    image: "/assets/images/frontend.png",
+    image: "/assets/images/frontend.webp",
     descriptions: [
       "Frontend development using HTML, CSS, JavaScript, Tailwind CSS, and React",
       "Component-based architecture and modern UI development",
@@ -23,7 +23,7 @@ const EduExperiance = [
     date: "2025 - 2026",
     place: "online course at ALX Africa",
     status: "certified",
-    image: "/assets/images/foundation.jpg",
+    image: "/assets/images/foundation.webp",
     descriptions: [
       "Professional communication and teamwork in tech environments",
       "Problem-solving and critical thinking",
@@ -38,7 +38,7 @@ const EduExperiance = [
     date: "2024 - 2025",
     place: "online course at Udacity",
     status: "certified",
-    image: "/assets/images/udacity.png",
+    image: "/assets/images/udacity.webp",
     descriptions: [
       "Web development fundamentals using HTML, CSS, and JavaScript",
       "Introduction to Artificial Intelligence concepts",
