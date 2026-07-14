@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import HeroSection from '../components/HeroSection';
 import AboutMe from '../components/AboutMe'; 
+const Stats = lazy(() => import('../components/Stats'));
 
 const Service = lazy(() => import('../components/Service'));
 const Skills = lazy(() => import('../components/Skills'));
@@ -29,6 +30,7 @@ const HomePage = () => {
 
  
       <HeroSection />
+      <Stats/>
       
     
       <section id="about-amanuel" aria-labelledby="about-heading">
