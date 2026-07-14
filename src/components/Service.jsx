@@ -17,7 +17,6 @@ const Service = () => {
       itemType="https://schema.org/ItemList"
     >
 
-      {/* Header */}
       <div className="text-center mb-16 px-5">
 
         <span
@@ -70,7 +69,6 @@ const Service = () => {
 
 
 
-      {/* Service Cards */}
       <div
         className="
           grid

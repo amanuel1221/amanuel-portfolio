@@ -10,7 +10,6 @@ const Skills = () => {
       itemScope
       itemType="https://schema.org/ItemList"
     >
-      {/* Header */}
       <div className="text-center mb-16 px-4">
         <span className="inline-block px-4 py-1.5 mb-4 rounded-full bg-blue-100 text-blue-600 text-sm font-semibold">
           My Technologies
@@ -33,7 +32,6 @@ const Skills = () => {
       </div>
 
 
-      {/* Skills Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl px-5">
 
         {Stacks.map((stack, index) => (
@@ -57,7 +55,6 @@ const Skills = () => {
             itemType="https://schema.org/ItemList"
           >
 
-            {/* Card Title */}
             <div className="flex items-center justify-between mb-8">
 
               <h2
@@ -91,7 +88,6 @@ const Skills = () => {
             </div>
 
 
-            {/* Skills List */}
             <div className="space-y-4">
 
               {stack.stacks.map((item, i) => (
@@ -114,7 +110,6 @@ const Skills = () => {
                 >
 
 
-                  {/* Icon */}
                   <div
                     className="
                       w-12
@@ -148,7 +143,6 @@ const Skills = () => {
                   </div>
 
 
-                  {/* Skill Name */}
                   <div>
 
                     <p
@@ -177,7 +171,6 @@ const Skills = () => {
             </div>
 
 
-            {/* Description */}
             {stack.note && (
 
               <div

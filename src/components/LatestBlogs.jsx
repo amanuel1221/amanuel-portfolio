@@ -71,7 +71,6 @@ const LatestBlogs = () => {
 
 
 
-        {/* Cards */}
 
         <div
           className="
@@ -102,7 +101,6 @@ const LatestBlogs = () => {
             >
 
 
-              {/* Image */}
 
               <a
                 href={blog.url}
@@ -139,8 +137,7 @@ const LatestBlogs = () => {
 
 
 
-              {/* Content */}
-
+=
               <div className="p-6">
 
 
@@ -174,7 +171,6 @@ const LatestBlogs = () => {
 
 
 
-                {/* Meta */}
 
                 <div
                   className="
@@ -208,7 +204,6 @@ const LatestBlogs = () => {
 
 
 
-                {/* Read Button */}
 
                 <a
                   href={blog.url}
