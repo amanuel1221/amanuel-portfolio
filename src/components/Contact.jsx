@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import {FaCheckCircle,FaMapMarkerAlt,FaGithub,FaLinkedin,FaTwitter,FaEnvelope,} from "react-icons/fa";
+import { FaCheckCircle, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter, FaEnvelope, } from "react-icons/fa";
 import { SiHackerrank } from "react-icons/si";
 
 
@@ -27,20 +27,20 @@ const Contact = () => {
 
     if (!formData.name.trim()) {
       newErrors.name = "Hey 👋 please tell me your name.";
-    }else if (/\d/.test(formData.name)) {
-    newErrors.name = "Names usually don't have numbers 😉";
-  }
-    
+    } else if (/\d/.test(formData.name)) {
+      newErrors.name = "Names usually don't have numbers 😉";
+    }
+
 
     if (!formData.email.trim()) {
-  newErrors.email = "I’ll need your email to get back to you 🙂";
-} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-  newErrors.email = "Hmm, that doesn’t look like a valid email.";
-}
+      newErrors.email = "I’ll need your email to get back to you 🙂";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Hmm, that doesn’t look like a valid email.";
+    }
 
     if (!formData.message.trim()) {
-  newErrors.message = "Please say something, even just a 'Hello Amanuel' ";
-}
+      newErrors.message = "Please say something, even just a 'Hello Amanuel' ";
+    }
 
     return newErrors;
   };
@@ -90,11 +90,11 @@ const Contact = () => {
   };
 
   return (
-    <section  id="contact" className="bg-[#f2f6fd] py-24 px-4 flex flex-col items-center"
-    itemScope 
+    <section id="contact" className="bg-[#f2f6fd] py-24 px-4 flex flex-col items-center"
+      itemScope
       itemType="https://schema.org/ContactPage" >
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold "itemProp="headline" >Let’s Work Together</h1>
+        <h1 className="text-4xl font-bold " itemProp="headline" >Let’s Work Together</h1>
         <p className="text-gray-500 mt-3">
           Have a project in mind or just want to say hello?
         </p>
@@ -115,7 +115,7 @@ const Contact = () => {
           </p>
 
           <div className="mt-8 grid gap-4 text-gray-600">
-            
+
             <div className="flex items-center gap-3" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
               <FaMapMarkerAlt className="text-blue-500" />
               <span itemProp="addressCountry" >Ethiopia</span>
@@ -130,7 +130,7 @@ const Contact = () => {
 
 
           <div className="flex gap-4 mt-10 items-center justify-center">
-            
+
             <a
               href="https://github.com/amanuel1221"
               target="_blank"
@@ -141,40 +141,44 @@ const Contact = () => {
             >
               <FaGithub />
             </a>
-           <a
-  href="https://peerlist.io/amanuelamare084"
-  target="_blank"
-  rel="noopener noreferrer me"
-  data-testid="peerlist"
-  aria-label="Peerlist profile"
->
-  <svg 
-    width="20" 
-    height="20" 
-    viewBox="0 0 24 24" 
-    fill="currentColor" 
-    xmlns="http://www.w3.org/2000/svg"
-    className="group-hover:text-[#00AA6C]"
-  >
-    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6 12.5h-2.5v5h-3v-5H10v3h-3v-6.5h8.5v3.5z"/>
-  </svg>
-</a>
- <a
-  href="https://www.linkedin.com/in/amanuel-amare-684234372"
-  target="_blank"
-  rel="noopener noreferrer me"
-  data-testid="linkedin"
-  aria-label="Linkedin profile"
->
-<FaLinkedin />          
-  </a>
-    
-  
+            <a
+              href="https://peerlist.io/amanuelamare084"
+              className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
 
-         <a
+              target="_blank"
+              rel="noopener noreferrer me"
+              data-testid="peerlist"
+              aria-label="Peerlist profile"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                className="group-hover:text-[#00AA6C]"
+              >
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6 12.5h-2.5v5h-3v-5H10v3h-3v-6.5h8.5v3.5z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/amanuel-amare-684234372"
+              className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
+
+              target="_blank"
+              rel="noopener noreferrer me"
+              data-testid="linkedin"
+              aria-label="Linkedin profile"
+            >
+              <FaLinkedin />
+            </a>
+
+
+
+            <a
               href="https://x.com/AmanuelAma66386"
               target="_blank"
-             rel="noopener noreferrer me"
+              rel="noopener noreferrer me"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="twitter"
               aria-label="twitter profile"
@@ -185,7 +189,7 @@ const Contact = () => {
             <a
               href="https://www.hackerrank.com/settings/account"
               target="_blank"
-             rel="noopener noreferrer me"
+              rel="noopener noreferrer me"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="hacker-rank"
               aria-label="hacker-rank profile"
@@ -197,21 +201,21 @@ const Contact = () => {
               href="mailto:bdu1600905@bdu.edu.et"
               className="w-10 h-10 flex items-center justify-center border rounded-lg hover:border-blue-500 hover:text-blue-500 transition"
               data-testid="email"
-              aria-label="mailing service"  
+              aria-label="mailing service"
               itemProp="email"
             >
               <FaEnvelope />
             </a>
           </div>
-          
+
           <p className="text-gray-700 text-sm mt-2 text-center" itemProp="email" >
-           bdu1600905@bdu.edu.et
+            bdu1600905@bdu.edu.et
           </p>
 
           <div className="mt-8 flex justify-center">
             <a
-              href="/assets/images/Amanuel_cv.pdf"
-              download="Amanuel_CV.pdf"
+              href="/assets/images/Amanuel-Amare-Resume.pdf"
+              download="Amanuel_Resume.pdf"
               className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg active:scale-95"
             >
               <svg
@@ -236,14 +240,14 @@ const Contact = () => {
         <div className="border rounded-2xl p-8">
           <h2 className="text-center font-semibold mb-8">Lets work together</h2>
 
-          <form  data-testid="contact-form" onSubmit={handleSubmit} className="space-y-6">
+          <form data-testid="contact-form" onSubmit={handleSubmit} className="space-y-6">
             <div className="flex flex-col md:flex-row md:items-center gap-3">
               <label className="md:w-32 text-center md:text-right font-medium">
                 Name:
               </label>
               <div className="flex-1">
                 <input
-                  data-testid="input-name" 
+                  data-testid="input-name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -251,7 +255,7 @@ const Contact = () => {
                   className="w-full px-4 py-2.5 rounded-md border text-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-400"
                 />
                 {errors.name && (
-                  <p  data-testid="error-name" className="text-red-500 text-xs mt-1">{errors.name}</p>
+                  <p data-testid="error-name" className="text-red-500 text-xs mt-1">{errors.name}</p>
                 )}
               </div>
             </div>
@@ -328,7 +332,7 @@ const Contact = () => {
                   </svg>
                   Sending...
                 </>
-              ) : (  "Send")}
+              ) : ("Send")}
             </button>
 
             {success && (
