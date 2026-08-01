@@ -90,17 +90,17 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-[#f2f6fd] py-24 px-4 flex flex-col items-center"
+    <section id="contact" className="bg-[#f2f6fd] py-16 sm:py-20 md:py-24 px-4 sm:px-6 flex flex-col items-center"
       itemScope
       itemType="https://schema.org/ContactPage" >
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold " itemProp="headline" >Let’s Work Together</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold " itemProp="headline" >Let’s Work Together</h1>
         <p className="text-gray-500 mt-3">
           Have a project in mind or just want to say hello?
         </p>
       </div>
 
-      <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-10 p-6 md:p-12">
+      <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-6 md:gap-10 p-4 sm:p-6 md:p-12">
         <div className="border border-blue-400 rounded-2xl p-6">
           <h2 className="text-xl font-semibold text-gray-700 text-center">
             Have a project in mind or need help with a website?
@@ -129,7 +129,7 @@ const Contact = () => {
 
 
 
-          <div className="flex gap-4 mt-10 items-center justify-center">
+          <div className="flex flex-wrap gap-3 mt-10 items-center justify-center">
 
             <a
               href="https://github.com/amanuel1221"

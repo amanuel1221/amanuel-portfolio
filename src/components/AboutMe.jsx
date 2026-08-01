@@ -4,22 +4,22 @@ const AboutMe = () => {
   return (
     <section
       id="about"
-      className="w-full h-auto flex flex-col lg:flex-row items-center justify-center gap-8 m-0"
+      className="w-full h-auto flex flex-col lg:flex-row items-center justify-center gap-8 m-0 overflow-x-hidden"
     aria-labelledby="about-heading" >
       <div
         style={{ backgroundColor: "var(--secondary-blue)" }}
-        className="w-full flex flex-col items-center p-4 md:p-10 "
+        className="w-full flex flex-col items-center px-4 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10"
       >
         <div className="w-content mt-20 mb-10 ">
           <button
             style={{ backgroundColor: "var(--tertiary-blue)" }}
-            className="w-30 h-10 flex justify-center items-center mb-5 text-blue-700 font-bold md:text-2xl rounded-xl"
+            className="w-28 sm:w-30 h-10 flex justify-center items-center mb-5 text-blue-700 font-bold md:text-2xl rounded-xl"
           >
             About Me
           </button>
         </div>
         <div>
-          <ul className="list-disc list-inside space-y-2 text-left text-sm md:text-base" itemProp="knowsAbout" >
+          <ul className="list-disc list-inside space-y-2 text-left text-sm md:text-base max-w-2xl" itemProp="knowsAbout" >
             <li itemProp="knowsAbout" >Software Engineering student at Bahir Dar University.</li>
             <li itemProp="knowsAbout" >
               Frontend-focused with React, component-based UI, and routing
@@ -28,7 +28,7 @@ const AboutMe = () => {
             <li itemProp="knowsAbout" >Continuous learner (ALX, FreeCodeCamp, self-study)</li>
           </ul>
         </div>
-        <div className="mt-10 mb-10 justify-center items-center text-center">
+        <div className="mt-10 mb-10 justify-center items-center text-center px-4 sm:px-6">
           <p>
             I’m a frontend developer focused on building clean, responsive web
             interfaces using React.
@@ -38,15 +38,15 @@ const AboutMe = () => {
             existing UIs.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-10   mt-5 p-5"
+        <div className="flex flex-col md:flex-row gap-4 sm:gap-6 lg:gap-10 mt-5 p-2 sm:p-5 w-full"
           itemProp="hasOfferCatalog"
           itemScope 
           itemType="https://schema.org/OfferCatalog">
-          <ul className="flex flex-col lg:flex-row gap-8  justify-center items-center">
+          <ul className="flex flex-col lg:flex-row gap-4 sm:gap-8 justify-center items-stretch w-full">
             {Offer.map((offer, index) => (
               <li
                 key={index}
-                className="flex flex-col items-center bg-white gap-4   md:w-120 md:h-65 lg:w-90 lg:65 rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 p-5 pb-20"
+                className="flex flex-col items-center bg-white gap-3 w-full max-w-sm md:max-w-none rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 p-5 pb-12"
               itemProp="itemListElement"
               itemType="https://schema.org/Offer">
                 <img

@@ -21,21 +21,21 @@ const HeroSection = () => {
     <section
       id="home"
       style={{ backgroundColor: "var(--tertiary-blue)" }}
-      className="relative w-full flex flex-col lg:flex-row items-center justify-center gap-8 p-10 pb-28"
+      className="relative w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:py-14 pb-20 sm:pb-24 lg:pb-28 overflow-hidden"
       aria-label="Introduction"
     >
 
-      <div aria-hidden="true">
-        <motion.div variants={floatVariant} initial="initial" animate="animate" className="absolute top-20 left-10 z-0">
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div variants={floatVariant} initial="initial" animate="animate" className="absolute top-20 left-10 z-0 hidden sm:block">
           <FaReact className="text-blue-500 text-6xl opacity-30" />
         </motion.div>
-        <motion.div variants={floatVariant} initial="initial" animate="animate" transition={{ delay: 1 }} className="absolute top-40 right-20 z-0">
+        <motion.div variants={floatVariant} initial="initial" animate="animate" transition={{ delay: 1 }} className="absolute top-40 right-20 z-0 hidden sm:block">
           <SiTailwindcss className="text-sky-600 text-6xl opacity-30" />
         </motion.div>
-        <motion.div variants={floatVariant} initial="initial" animate="animate" transition={{ delay: 2 }} className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-0">
+        <motion.div variants={floatVariant} initial="initial" animate="animate" transition={{ delay: 2 }} className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-0 hidden sm:block">
           <FaJsSquare className="text-yellow-500 text-6xl opacity-30" />
         </motion.div>
-        <motion.div variants={floatVariant} initial="initial" animate="animate" transition={{ delay: 3 }} className="absolute bottom-20 right-1/3 z-0">
+        <motion.div variants={floatVariant} initial="initial" animate="animate" transition={{ delay: 3 }} className="absolute bottom-20 right-1/3 z-0 hidden sm:block">
           <SiVitest className="text-green-500 text-6xl opacity-30" />
         </motion.div>
       </div>
@@ -73,11 +73,11 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center mt-6 mb-4 gap-10 md:gap-40">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer transition-all">
+        <div className="flex flex-col sm:flex-row justify-center items-center mt-6 mb-4 gap-3 sm:gap-4 md:gap-10 lg:gap-40 w-full sm:w-auto">
+          <button className="w-full sm:w-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer transition-all">
             <HashLink itemProp="url" smooth to="/#contact">Get in Touch &rarr;</HashLink>
           </button>
-          <button className="bg-white hover:bg-gray-100 text-blue-500 font-bold py-2 px-4 rounded cursor-pointer hover:scale-105 transition-transform duration-300 shadow-sm">
+          <button className="w-full sm:w-auto bg-white hover:bg-gray-100 text-blue-500 font-bold py-2 px-4 rounded cursor-pointer hover:scale-105 transition-transform duration-300 shadow-sm">
             <HashLink itemProp="url" smooth to="/#projects">View My Work &rarr;</HashLink>
           </button>
         </div>

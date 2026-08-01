@@ -10,8 +10,21 @@ const NavBar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
-    return () => (document.body.style.overflow = "auto");
+    const originalOverflow = document.body.style.overflow;
+    const originalHeight = document.body.style.height;
+
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100%";
+    } else {
+      document.body.style.overflow = originalOverflow || "auto";
+      document.body.style.height = originalHeight || "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow || "auto";
+      document.body.style.height = originalHeight || "auto";
+    };
   }, [isMenuOpen]);
 
   useEffect(() => {
@@ -37,14 +50,14 @@ const NavBar = () => {
 ${showNav ? "translate-y-0" : "-translate-y-full"}
 bg-white border-b border-gray-200 shadow-sm`}
       >
-      <nav className="flex justify-between items-center p-4" role="navigation" aria-label="Main Navigation">
+      <nav className="flex justify-between items-center px-3 py-3 sm:px-4 md:p-4" role="navigation" aria-label="Main Navigation">
         
        
-        <div className="h-16 w-32 overflow-hidden">
+        <div className="h-12 w-24 sm:h-14 sm:w-28 md:h-16 md:w-32 flex-shrink-0 overflow-hidden">
           <HashLink to="/#home" itemProp="url">
             <img
               src="./logo-brand.svg"
-className="w-full h-12 md:h-14 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
               alt="Amanuel - React Performance Engineer Logo"
               itemProp="logo"
             />
@@ -96,24 +109,24 @@ className="w-full h-12 md:h-14 object-contain opacity-90 hover:opacity-100 trans
 
   
       {isMenuOpen && (
-        <div className="fixed inset-0 z-[9999] bg-white dark:bg-gray-900 flex flex-col items-center pt-24 px-6 min-h-screen overflow-y-auto animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-[9999] bg-slate-50 text-slate-900 flex flex-col items-center pt-24 px-6 min-h-screen overflow-y-auto animate-in fade-in duration-200 shadow-inner">
           <HiX
             data-testid="Close-menu"
-            className="text-4xl cursor-pointer absolute top-6 right-6"
+            className="text-4xl cursor-pointer absolute top-6 right-6 text-slate-700 hover:text-blue-600"
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close Menu"
           />
 
           <ul className="flex flex-col gap-8 text-xl font-medium items-center w-full">
-            <li itemProp="name"><HashLink itemProp="url" smooth to="/#home" onClick={() => setIsMenuOpen(false)}>Home</HashLink></li>
-            <li itemProp="name"><HashLink itemProp="url" smooth to="/#about" onClick={() => setIsMenuOpen(false)}>About</HashLink></li>
-            <li itemProp="name"><HashLink itemProp="url" smooth to="/#skills" onClick={() => setIsMenuOpen(false)}>Skills</HashLink></li>
-            <li itemProp="name"><HashLink itemProp="url" smooth to="/#projects" onClick={() => setIsMenuOpen(false)}>Projects</HashLink></li>
-            <li itemProp="name"><HashLink itemProp="url" smooth to="/#contact" onClick={() => setIsMenuOpen(false)}>Contact</HashLink></li>
+            <li itemProp="name"><HashLink itemProp="url" smooth to="/#home" onClick={() => setIsMenuOpen(false)} className="text-slate-800 hover:text-blue-600 transition-colors">Home</HashLink></li>
+            <li itemProp="name"><HashLink itemProp="url" smooth to="/#about" onClick={() => setIsMenuOpen(false)} className="text-slate-800 hover:text-blue-600 transition-colors">About</HashLink></li>
+            <li itemProp="name"><HashLink itemProp="url" smooth to="/#skills" onClick={() => setIsMenuOpen(false)} className="text-slate-800 hover:text-blue-600 transition-colors">Skills</HashLink></li>
+            <li itemProp="name"><HashLink itemProp="url" smooth to="/#projects" onClick={() => setIsMenuOpen(false)} className="text-slate-800 hover:text-blue-600 transition-colors">Projects</HashLink></li>
+            <li itemProp="name"><HashLink itemProp="url" smooth to="/#contact" onClick={() => setIsMenuOpen(false)} className="text-slate-800 hover:text-blue-600 transition-colors">Contact</HashLink></li>
           </ul>
 
           <button
-            className="mt-12 w-full max-w-xs bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded"
+            className="mt-12 w-full max-w-xs bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded shadow-md"
             onClick={() => setIsMenuOpen(false)}
           >
             <HashLink itemProp="url" smooth to="/#contact">Get in Touch →</HashLink>

@@ -25,7 +25,7 @@ const Projects = () => {
     <section
       id="projects"
       style={{ backgroundColor: "var(--secondary-blue)" }}
-      className="py-20 px-6 md:px-16 lg:px-24"
+      className="py-16 px-4 sm:px-6 md:px-16 lg:px-24"
       itemScope 
       itemType="https://schema.org/ItemList"
     >
@@ -57,7 +57,7 @@ const Projects = () => {
       </div>
 
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
         {visibleProjects.map((project, index) => (
           <div
             key={index}
@@ -95,13 +95,13 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="mt-auto flex justify-center gap-3 md:gap-8 w-full">
-                <button className="md:w-35">
+              <div className="mt-auto flex flex-col sm:flex-row justify-center gap-3 md:gap-8 w-full">
+                <button className="w-full sm:w-auto">
                 <a
                   href={project.livedemo}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 md:gap-4 text-sm bg-blue-600 text-white px-4 py-2 md:px-6 md:py-2 rounded-md hover:bg-blue-700 transition hover:cursor-pointer"
+                  className="flex items-center justify-center gap-2 md:gap-4 text-sm bg-blue-600 text-white px-4 py-2 md:px-6 md:py-2 rounded-md hover:bg-blue-700 transition hover:cursor-pointer w-full"
                 >
                   🔗 Live Demo
                 </a>
@@ -111,7 +111,7 @@ const Projects = () => {
                   href={project.githubdemo}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 text-sm border border-gray-300 px-4 py-2 md:px-6 md:py-2 rounded-md hover:bg-gray-100 transition hover:cursor-pointer"
+                  className="flex items-center justify-center gap-2 text-sm border border-gray-300 px-4 py-2 md:px-6 md:py-2 rounded-md hover:bg-gray-100 transition hover:cursor-pointer w-full"
                 >
                   🐙 GitHub
                 </a>

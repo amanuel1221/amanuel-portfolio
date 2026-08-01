@@ -23,7 +23,7 @@ const EducationalExperience = () => {
       </div>
 
      
-      <div className="px-6 md:px-12 mb-16">
+      <div className="px-4 sm:px-6 md:px-12 mb-16">
         <h2 className="text-xl md:text-2xl font-semibold mb-6">Educational Experience</h2>
 
         <div className="flex flex-col gap-6">
@@ -34,13 +34,13 @@ const EducationalExperience = () => {
             return (
               <div
                 key={index}
-                className="relative bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 overflow-hidden"
+                className="relative bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 sm:p-6 overflow-hidden"
                 itemProp="alumniOf" 
                 itemScope 
                 itemType="https://schema.org/EducationalOrganization"
               >
                
-                <div className="flex justify-between items-start">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
                   <div>
                     <h3 className="text-lg md:text-xl font-semibold"itemProp="name" >{edu.title}</h3>
                     <p className="text-sm text-gray-500">{edu.note}</p>
@@ -49,7 +49,7 @@ const EducationalExperience = () => {
                   {hasCertificate && (
                     <button
                       onClick={() => toggleCertificate(index)}
-                      className="text-xs font-medium text-blue-500 hover:text-blue-700 transition hover:cursor-pointer"
+                      className="self-start sm:self-auto text-xs font-medium text-blue-500 hover:text-blue-700 transition hover:cursor-pointer whitespace-nowrap"
                     >
                       {isOpen ? "Back to details" : edu.status}
                     </button>
@@ -97,7 +97,7 @@ const EducationalExperience = () => {
       </div>
 
 
-      <div className="px-6 md:px-12">
+      <div className="px-4 sm:px-6 md:px-12">
         <h2 className="text-xl md:text-2xl font-semibold mb-6">Project Experience</h2>
 
         <div className="flex flex-col gap-6">
@@ -108,18 +108,18 @@ const EducationalExperience = () => {
             return (
               <div
                 key={index}
-                className="relative bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 overflow-hidden"
+                className="relative bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 sm:p-6 overflow-hidden"
               itemProp="hasCredential" 
                 itemScope 
                 itemType="https://schema.org/EducationalOccupationalCredential">
                
-                <div className="flex justify-between items-start">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3">
                   <h3 className="text-xl font-semibold"itemProp="name">{project.title}</h3>
 
                   {hasCertificate && (
                     <button
                       onClick={() => toggleCertificate(index)}
-                      className="text-xs font-medium text-blue-500 hover:text-blue-700 transition hover:cursor-pointer"
+                      className="self-start sm:self-auto text-xs font-medium text-blue-500 hover:text-blue-700 transition hover:cursor-pointer whitespace-nowrap"
                     >
                       {isOpen ? "Back to details" : project.status}
                     </button>
