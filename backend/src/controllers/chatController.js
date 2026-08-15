@@ -4,22 +4,26 @@ const chat = async (req, res) => {
   try {
     const { message } = req.body;
 
-    if (!message || typeof message !== "string") {
+    // 1. Validate incoming input
+    if (!message || typeof message !== "string" || !message.trim()) {
       return res.status(400).json({
-        message: "Please provide a valid message.",
+        reply: "Please provide a valid message.",
       });
     }
 
-    const reply = await askGemini(message);
+    // 2. Fetch AI response from service
+    const reply = await askGemini(message.trim());
 
-    res.status(200).json({
+    // 3. Return successful response
+    return res.status(200).json({
       reply,
     });
   } catch (error) {
-    console.error("AI chat error:", error);
+    console.error("AI chat controller error:", error);
 
-    res.status(500).json({
-      message: "Something went wrong. Please try again later.",
+    // 4. Return 500 error code for server/unhandled exceptions
+    return res.status(500).json({
+      reply: "Sorry, I couldn't answer that right now. Please try again.",
     });
   }
 };
