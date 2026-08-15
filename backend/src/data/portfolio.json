@@ -1,80 +1,271 @@
 {
   "personal": {
     "name": "Amanuel Amare",
-    "role": "Software Engineering Student and Junior Full-Stack Developer",
-    "location": "Ethiopia",
-    "bio": "I am a Software Engineering student passionate about building modern web applications and learning new technologies."
+    "title": "MERN Stack & Frontend Developer",
+    "subtitle": "React Performance Specialist • JavaScript • Node.js • Vitest Testing • Optimization",
+    "location": "Bahir Dar, Ethiopia",
+    "bio": "Amanuel Amare is a Software Engineering student at Bahir Dar University and a MERN Stack & Frontend Developer focused on building high-performance, reliable, and user-focused web applications.",
+    "email": "bdu1600905@bdu.edu.et",
+    "phone": "+251 921 337 037"
+  },
+
+  "socials": {
+    "github": "https://github.com/amanuel1221",
+    "linkedin": "https://linkedin.com/in/amanuel-amare-684234372",
+    "portfolio": "https://amanuel-portfolio-flame.vercel.app"
   },
 
   "education": [
     {
       "institution": "Bahir Dar University",
-      "degree": "BSc Software Engineering",
-      "status": "Currently studying"
+      "degree": "Bachelor of Science in Software Engineering",
+      "duration": "2025–2029",
+      "status": "Currently studying",
+      "location": "Bahir Dar, Ethiopia"
+    }
+  ],
+
+  "programs": [
+    {
+      "name": "ALX Software Engineering Program",
+      "status": "Completed"
+    },
+    {
+      "name": "ALX Professional Foundations",
+      "status": "Completed"
+    },
+    {
+      "name": "Ethiocoder",
+      "provider": "Udacity / UAE Sponsored Program",
+      "status": "Completed"
     }
   ],
 
   "skills": {
     "frontend": [
-      "HTML",
-      "CSS",
-      "JavaScript",
       "React",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
       "Tailwind CSS",
-      "Vite"
+      "Zustand",
+      "Context API",
+      "React Router",
+      "Vite",
+      "Framer Motion"
     ],
+
     "backend": [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Mongoose"
+      "Mongoose",
+      "REST APIs",
+      "JWT Authentication",
+      "bcrypt",
+      "Cloudinary"
     ],
+
+    "testing": [
+      "Vitest",
+      "React Testing Library",
+      "Supertest",
+      "Unit Testing",
+      "Integration Testing"
+    ],
+
+    "telegram": [
+      "Telegram Mini Apps",
+      "Telegram Bots",
+      "Telegram membership verification",
+      "PDF resource management"
+    ],
+
     "tools": [
       "Git",
       "GitHub",
+      "GitHub Projects",
+      "Postman",
       "Figma",
-      "Vercel"
+      "MongoDB Atlas",
+      "Vercel",
+      "Render",
+      "Lighthouse"
     ]
   },
 
   "projects": [
     {
-      "name": "E-Commerce Platform",
-      "description": "A modern e-commerce web application.",
+      "name": "Aman Blog & Portfolio Ecosystem",
+      "category": "Full-Stack Web Application",
+      "description": "A secure full-stack publishing ecosystem with authentication, administrative functionality, rich text management, Cloudinary uploads, and automated frontend and backend testing.",
       "technologies": [
         "React",
-        "JavaScript"
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Vitest",
+        "React Testing Library",
+        "Supertest",
+        "Tailwind CSS",
+        "Cloudinary"
+      ],
+      "testing": {
+        "testFiles": 51,
+        "passedAssertions": 398
+      },
+      "github": "https://github.com/amanuel1221/aman-blog",
+      "live": "https://aman-blog-seven.vercel.app"
+    },
+
+    {
+      "name": "Telegram Academy PDF Reader",
+      "category": "Telegram Mini App",
+      "description": "A Telegram Mini App created for a private online academy. The application checks Telegram membership and allows authorized users to access and read PDF learning materials inside the Mini App rather than exposing the learning resources through an external public reader.",
+      "technologies": [
+        "React",
+        "Telegram Mini Apps",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Cloudinary"
       ]
     },
+
     {
-      "name": "E-Movie Center",
-      "description": "A movie browsing web application.",
+      "name": "Telegram PDF Library Bot",
+      "category": "Telegram Bot",
+      "description": "A Telegram bot created to manage and provide access to PDF learning resources for the academy library.",
       "technologies": [
-        "React",
-        "JavaScript"
+        "Node.js",
+        "Telegram Bot API",
+        "MongoDB"
       ]
     },
+
     {
-      "name": "Recipe Finder",
-      "description": "A web application for discovering recipes.",
+      "name": "NuuR Safety Platform",
+      "category": "Hackathon Project",
+      "description": "A collaborative urban safety platform designed around incident mapping, emergency notifications, reporting workflows, and user location functionality.",
       "technologies": [
         "React",
-        "JavaScript"
-      ]
+        "TypeScript",
+        "Tailwind CSS",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "github": "https://github.com/amanuel1221/Nuur-cursor-hackathon",
+      "live": "https://nuurg1.vercel.app"
+    },
+
+    {
+      "name": "Developer Portfolio V2",
+      "category": "Frontend Project",
+      "description": "A performance-focused developer portfolio built with React and Vite. The project was optimized to improve Lighthouse performance from an earlier baseline of 78 to 99 on mobile and 100 on desktop.",
+      "technologies": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Vitest",
+        "EmailJS"
+      ],
+      "github": "https://github.com/amanuel1221/amanuel-portfolio",
+      "live": "https://amanuel-portfolio-flame.vercel.app"
+    },
+
+    {
+      "name": "Scalable E-Commerce Engine",
+      "category": "Frontend Web Application",
+      "description": "A lightweight e-commerce frontend using Zustand for state management, modular product filtering, responsive cart functionality, and Firebase authentication.",
+      "technologies": [
+        "React",
+        "Zustand",
+        "Vite",
+        "Tailwind CSS",
+        "Vitest",
+        "Firebase"
+      ],
+      "github": "https://github.com/amanuel1221/e-commerce",
+      "live": "https://e-commerce-49ma.vercel.app"
     }
   ],
 
-  "goals": [
-    "Become a strong full-stack software engineer",
-    "Improve backend engineering skills",
-    "Learn AI engineering",
-    "Build real-world software projects"
+  "achievements": [
+    {
+      "title": "Automated Testing",
+      "description": "Built full-stack automated test suites containing 51 test files and 398 passed assertions using Vitest, React Testing Library, and Supertest."
+    },
+    {
+      "title": "Web Performance",
+      "description": "Optimized web applications to achieve 99 mobile and 100 desktop Lighthouse performance scores."
+    },
+    {
+      "title": "GitHub Contributions",
+      "description": "Maintained more than 999 GitHub contributions across more than 30 public repositories."
+    },
+    {
+      "title": "Cursor Hackathon",
+      "description": "Co-authored and shipped the NuuR Safety Platform during the Cursor Hackathon."
+    }
   ],
 
-  "contact": {
-    "github": "",
-    "linkedin": "",
-    "portfolio": "",
-    "email": ""
+  "experience": [
+    {
+      "role": "MERN Stack Developer",
+      "type": "Independent Engineering Projects",
+      "duration": "2026–Present",
+      "description": "Develops full-stack applications using React, Node.js, Express.js, MongoDB, authentication, testing, and performance optimization."
+    },
+    {
+      "role": "Frontend Engineer",
+      "project": "NuuR Safety Platform",
+      "type": "Cursor Hackathon",
+      "duration": "2026",
+      "description": "Worked on responsive React and TypeScript interfaces for emergency reporting and location-based workflows while integrating with a FastAPI and PostgreSQL backend."
+    }
+  ],
+
+  "languages": [
+    {
+      "name": "English",
+      "level": "Professional Working Proficiency"
+    },
+    {
+      "name": "Amharic",
+      "level": "Native"
+    }
+  ],
+
+  "career": {
+    "currentDirection": "Full-Stack Development",
+    "longTermDirection": "AI Engineering",
+    "goals": [
+      "Become a strong full-stack software engineer",
+      "Improve backend engineering skills",
+      "Build scalable and reliable software",
+      "Gain professional software engineering experience",
+      "Work on freelance development projects",
+      "Pursue software engineering internships",
+      "Eventually transition into AI Engineering"
+    ]
+  },
+
+  "availability": [
+    "Freelance web development",
+    "Frontend development opportunities",
+    "Junior full-stack development opportunities",
+    "Software engineering internships",
+    "Collaborative software projects"
+  ],
+
+  "stats": {
+    "passedTests": 398,
+    "testFiles": 51,
+    "githubContributions": "999+",
+    "publicRepositories": "30+",
+    "mobileLighthouse": 99,
+    "desktopLighthouse": 100
   }
 }
