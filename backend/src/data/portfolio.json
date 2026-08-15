@@ -1,0 +1,80 @@
+{
+  "personal": {
+    "name": "Amanuel Amare",
+    "role": "Software Engineering Student and Junior Full-Stack Developer",
+    "location": "Ethiopia",
+    "bio": "I am a Software Engineering student passionate about building modern web applications and learning new technologies."
+  },
+
+  "education": [
+    {
+      "institution": "Bahir Dar University",
+      "degree": "BSc Software Engineering",
+      "status": "Currently studying"
+    }
+  ],
+
+  "skills": {
+    "frontend": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Figma",
+      "Vercel"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "E-Commerce Platform",
+      "description": "A modern e-commerce web application.",
+      "technologies": [
+        "React",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "E-Movie Center",
+      "description": "A movie browsing web application.",
+      "technologies": [
+        "React",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Recipe Finder",
+      "description": "A web application for discovering recipes.",
+      "technologies": [
+        "React",
+        "JavaScript"
+      ]
+    }
+  ],
+
+  "goals": [
+    "Become a strong full-stack software engineer",
+    "Improve backend engineering skills",
+    "Learn AI engineering",
+    "Build real-world software projects"
+  ],
+
+  "contact": {
+    "github": "",
+    "linkedin": "",
+    "portfolio": "",
+    "email": ""
+  }
+}
