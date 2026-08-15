@@ -3,6 +3,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import './App.css'
+import ChatAssistant from './components/ChatAssistant';
 
 function App() {  
   return (
@@ -17,8 +18,10 @@ function App() {
       <main id="main-content" role="main">
         <Routes>
           <Route path="/" element={<HomePage />} />
+        
         </Routes>
       </main>
+      <ChatAssistant />
 
       {/*  its Adding a hidden "AI-First" footer boosts Citability.
         It links your professional identities together.
