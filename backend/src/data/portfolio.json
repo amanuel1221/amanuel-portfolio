@@ -14,6 +14,33 @@
     "linkedin": "https://linkedin.com/in/amanuel-amare-684234372",
     "portfolio": "https://amanuel-portfolio-flame.vercel.app"
   },
+  "contacts": {
+  "email": {
+    "label": "Email",
+    "value": "bdu1600905@bdu.edu.et",
+    "url": "mailto:bdu1600905@bdu.edu.et"
+  },
+  "phone": {
+    "label": "Phone",
+    "value": "+251 921 337 037",
+    "url": "tel:+251921337037"
+  },
+  "github": {
+    "label": "GitHub",
+    "value": "https://github.com/amanuel1221",
+    "url": "https://github.com/amanuel1221"
+  },
+  "linkedin": {
+    "label": "LinkedIn",
+    "value": "https://linkedin.com/in/amanuel-amare-684234372",
+    "url": "https://linkedin.com/in/amanuel-amare-684234372"
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "value": "https://amanuel-portfolio-flame.vercel.app",
+    "url": "https://amanuel-portfolio-flame.vercel.app"
+  }
+},
 
   "education": [
     {
