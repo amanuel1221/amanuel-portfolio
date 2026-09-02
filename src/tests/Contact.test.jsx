@@ -236,11 +236,11 @@ describe("Contact Component", () => {
     expect(cv).toBeInTheDocument();
     expect(cv).toHaveAttribute(
       "href",
-      "/assets/images/Amanuel_cv.pdf"
+      "/assets/images/Amanuel-Amare-Resume.pdf"
     );
     expect(cv).toHaveAttribute(
       "download",
-      "Amanuel_CV.pdf"
+      "Amanuel_Resume.pdf"
     );
   });
 });
