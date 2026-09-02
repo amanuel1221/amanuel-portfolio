@@ -74,6 +74,7 @@
       "Vite",
       "Framer Motion"
     ],
+
     "backend": [
       "Node.js",
       "Express.js",
@@ -84,6 +85,7 @@
       "bcrypt",
       "Cloudinary"
     ],
+
     "testing": [
       "Vitest",
       "React Testing Library",
@@ -91,23 +93,31 @@
       "Unit Testing",
       "Integration Testing"
     ],
+
     "pwa": [
-      "Progressive Web App concepts",
+      "Progressive Web App (PWA) concepts",
       "Service Workers",
       "Offline caching",
+      "Cached resource management",
       "Low-connectivity experiences",
-      "Installable web applications"
+      "Installable web applications",
+      "App-like web experiences"
     ],
+
     "email": [
       "Email integration",
-      "Transactional email workflows"
+      "Transactional email workflows",
+      "Account-related email notifications",
+      "Automated email notifications"
     ],
+
     "telegram": [
       "Telegram Mini Apps",
       "Telegram Bots",
       "Telegram membership verification",
       "PDF resource management"
     ],
+
     "tools": [
       "Git",
       "GitHub",
@@ -125,21 +135,34 @@
     {
       "name": "Aman Blog & Portfolio Ecosystem",
       "category": "Full-Stack Web Application",
-      "description": "A secure full-stack blogging and portfolio ecosystem built with authentication, administrative functionality, rich text content management, Cloudinary media uploads, email integration, PWA functionality, and automated frontend and backend testing.",
+
+      "description": "A secure full-stack blogging and portfolio ecosystem with authentication, administrative functionality, rich text content management, Cloudinary media uploads, email integration, Progressive Web App functionality, offline support, low-connectivity support, and automated frontend and backend testing.",
+
       "features": [
         "User registration and authentication",
         "JWT-based authentication",
         "Administrative content management",
         "Rich text content management",
         "Cloudinary image and media uploads",
-        "Email integration for account-related workflows",
-        "Email notification when a new user creates an account",
+
+        "Email integration",
+        "Transactional email workflows",
+        "Automated email notification when a new user creates an account",
+        "Account-related email workflows",
+
         "Progressive Web App functionality",
-        "Offline caching for previously available content",
-        "Low-connectivity support through cached resources",
-        "Installable app-like experience",
-        "Automated frontend and backend testing"
+        "Service worker support",
+        "Offline caching",
+        "Cached resource access",
+        "Low-connectivity support",
+        "Previously cached content remains accessible when connectivity is limited",
+        "Installable web application",
+        "App-like experience on supported devices",
+
+        "Automated frontend testing",
+        "Automated backend testing"
       ],
+
       "technologies": [
         "React",
         "Node.js",
@@ -152,12 +175,15 @@
         "Tailwind CSS",
         "Cloudinary",
         "PWA",
+        "Service Workers",
         "Email Integration"
       ],
+
       "testing": {
         "testFiles": 51,
         "passedAssertions": 398
       },
+
       "github": "https://github.com/amanuel1221/aman-blog",
       "live": "https://aman-blog-seven.vercel.app"
     },
@@ -165,13 +191,16 @@
     {
       "name": "Telegram Academy PDF Reader",
       "category": "Telegram Mini App",
+
       "description": "A Telegram Mini App created for a private online academy. The application verifies Telegram membership and allows authorized users to access and read PDF learning materials directly inside the Mini App rather than exposing the resources through an external public reader.",
+
       "features": [
         "Telegram membership verification",
         "Authorized resource access",
         "In-app PDF reading",
         "Private learning resource management"
       ],
+
       "technologies": [
         "React",
         "Telegram Mini Apps",
@@ -186,12 +215,15 @@
     {
       "name": "Telegram PDF Library Bot",
       "category": "Telegram Bot",
+
       "description": "A Telegram bot created to manage and provide access to PDF learning resources for an academy library.",
+
       "features": [
         "PDF resource management",
         "Telegram-based resource access",
         "Learning library management"
       ],
+
       "technologies": [
         "Node.js",
         "Telegram Bot API",
@@ -202,13 +234,16 @@
     {
       "name": "NuuR Safety Platform",
       "category": "Hackathon Project",
+
       "description": "A collaborative urban safety platform designed around incident mapping, emergency notifications, reporting workflows, and user location functionality.",
+
       "features": [
         "Incident mapping",
         "Emergency notifications",
         "Incident reporting workflows",
         "Location-based functionality"
       ],
+
       "technologies": [
         "React",
         "TypeScript",
@@ -216,6 +251,7 @@
         "FastAPI",
         "PostgreSQL"
       ],
+
       "github": "https://github.com/amanuel1221/Nuur-cursor-hackathon",
       "live": "https://nuurg1.vercel.app"
     },
@@ -223,13 +259,16 @@
     {
       "name": "Developer Portfolio V2",
       "category": "Frontend Project",
+
       "description": "A performance-focused developer portfolio built with React and Vite. The project was optimized to improve Lighthouse performance from an earlier baseline of 78 to 99 on mobile and 100 on desktop.",
+
       "features": [
         "Responsive portfolio interface",
         "Performance optimization",
         "Lighthouse performance optimization",
         "Frontend automated testing"
       ],
+
       "technologies": [
         "React",
         "Vite",
@@ -237,6 +276,7 @@
         "Vitest",
         "EmailJS"
       ],
+
       "github": "https://github.com/amanuel1221/amanuel-portfolio",
       "live": "https://amanuel-portfolio-flame.vercel.app"
     },
@@ -244,13 +284,16 @@
     {
       "name": "Scalable E-Commerce Engine",
       "category": "Frontend Web Application",
+
       "description": "A lightweight e-commerce frontend using Zustand for state management, modular product filtering, responsive cart functionality, and Firebase authentication.",
+
       "features": [
         "Product filtering",
         "Responsive shopping cart",
         "Client-side state management",
         "User authentication"
       ],
+
       "technologies": [
         "React",
         "Zustand",
@@ -259,6 +302,7 @@
         "Vitest",
         "Firebase"
       ],
+
       "github": "https://github.com/amanuel1221/e-commerce",
       "live": "https://e-commerce-49ma.vercel.app"
     }
@@ -288,7 +332,7 @@
       "role": "MERN Stack Developer",
       "type": "Independent Engineering Projects",
       "duration": "2026–Present",
-      "description": "Develops full-stack applications using React, Node.js, Express.js, MongoDB, authentication, testing, email integrations, PWA concepts, and performance optimization."
+      "description": "Develops full-stack applications using React, Node.js, Express.js, MongoDB, authentication, testing, email integrations, PWA concepts, offline caching, low-connectivity experiences, and performance optimization."
     },
     {
       "role": "Frontend Engineer",
@@ -313,6 +357,7 @@
   "career": {
     "currentDirection": "Full-Stack Development",
     "longTermDirection": "AI Engineering",
+
     "goals": [
       "Become a strong full-stack software engineer",
       "Improve backend engineering skills",

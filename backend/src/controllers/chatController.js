@@ -1,29 +1,76 @@
-const { askGemini } = require("../services/geminiService");
+const { askGeminiStream } = require("../services/geminiService");
 
 const chat = async (req, res) => {
   try {
     const { message } = req.body;
 
-    // 1. Validate incoming input
-    if (!message || typeof message !== "string" || !message.trim()) {
+
+    if (
+      !message ||
+      typeof message !== "string" ||
+      !message.trim()
+    ) {
       return res.status(400).json({
         reply: "Please provide a valid message.",
       });
     }
 
-    // 2. Fetch AI response from service
-    const reply = await askGemini(message.trim());
+    res.status(200);
 
-    // 3. Return successful response
-    return res.status(200).json({
-      reply,
-    });
+    res.setHeader(
+      "Content-Type",
+      "text/plain; charset=utf-8"
+    );
+
+    res.setHeader(
+      "Cache-Control",
+      "no-cache, no-transform"
+    );
+
+    res.setHeader(
+      "Connection",
+      "keep-alive"
+    );
+
+    res.setHeader(
+      "X-Accel-Buffering",
+      "no"
+    );
+
+    await askGeminiStream(
+      message.trim(),
+      (chunk) => {
+        if (!res.writableEnded) {
+          res.write(chunk);
+        }
+      }
+    );
+
+    if (!res.writableEnded) {
+      res.end();
+    }
+
   } catch (error) {
-    console.error("AI chat controller error:", error);
+    console.error(
+      "AI chat controller error:",
+      error
+    );
 
-    // 4. Return 500 error code for server/unhandled exceptions
+    if (res.headersSent) {
+      if (!res.writableEnded) {
+        res.write(
+          "\n\nSorry, something went wrong while generating the response. Please try again. 👋"
+        );
+
+        res.end();
+      }
+
+      return;
+    }
+
     return res.status(500).json({
-      reply: "Sorry, I couldn't answer that right now. Please try again.",
+      reply:
+        "Sorry, I couldn't answer that right now. Please try again in a moment.",
     });
   }
 };
