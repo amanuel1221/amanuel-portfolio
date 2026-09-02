@@ -2,7 +2,7 @@ const ProjectsInfo = [
   {
     title: "Aman Blog — Full-Stack MERN Blog Platform",
     description:
-      "A full-stack developer blog platform built with the MERN stack. Includes user authentication, blog management, comments, reactions, admin dashboard, analytics, contact messaging, and REST API integration. Built with clean architecture, testing practices, and deployment workflows.",
+      "A full-stack developer blog platform built with the MERN stack. Includes user authentication, blog management, comments, reactions, admin dashboard, analytics, contact messaging, email integration, and REST API integration. Enhanced with PWA capabilities, service workers, offline support, and intelligent caching strategies for a faster and more reliable experience.",
     image: "/assets/images/HomePage.webp",
     stacks: [
       "React",
@@ -13,6 +13,10 @@ const ProjectsInfo = [
       "Mongoose",
       "JWT",
       "Vitest",
+      "Nodemailer",
+      "PWA",
+      "Service Workers",
+      "Caching",
     ],
     livedemo: "https://aman-blog-seven.vercel.app",
     githubdemo: "https://github.com/amanuel1221/aman-blog",
@@ -38,13 +42,15 @@ const ProjectsInfo = [
   {
     title: "Portfolio Website",
     description:
-      "Personal portfolio showcasing projects, skills, and development journey. Built with React, Tailwind CSS, animations, testing, and optimized performance. Managed using GitHub workflows and project boards.",
+      "Personal developer portfolio showcasing projects, skills, and development journey. Built with React, Tailwind CSS, animations, testing, and performance optimization. Includes an AI-powered assistant integrated with an AI API to provide intelligent, portfolio-aware responses about my skills, projects, and experience.",
     image: "/assets/images/portfolio.webp",
     stacks: [
       "React",
       "Tailwind CSS",
       "Vitest",
       "EmailJS",
+      "AI Integration",
+      "AI Assistant",
     ],
     livedemo: "https://amanuel-portfolio-flame.vercel.app",
     githubdemo: "https://github.com/amanuel1221/amanuel-portfolio",

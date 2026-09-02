@@ -6,6 +6,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
+  FaEnvelope,
 } from "react-icons/fa";
 
 import {
@@ -17,8 +18,9 @@ import {
   SiPostman,
   SiVite,
   SiTestinglibrary,
+  SiCloudinary,
+  SiPwa,
 } from "react-icons/si";
-
 
 const Stacks = [
   {
@@ -40,12 +42,16 @@ const Stacks = [
         icon: FaCss3Alt,
         name: "CSS3",
       },
+      {
+        icon: SiTailwindcss,
+        name: "Tailwind CSS",
+      },
     ],
-    note: "Building modern, responsive, component-based user interfaces",
+    note: "Building modern, responsive, and component-based user interfaces",
   },
 
   {
-    title: "MERN Stack Development",
+    title: "Backend & Database",
     stacks: [
       {
         icon: FaNodeJs,
@@ -60,15 +66,15 @@ const Stacks = [
         name: "MongoDB",
       },
       {
-        icon: SiTailwindcss,
-        name: "Tailwind CSS",
+        icon: SiPostman,
+        name: "Postman",
       },
     ],
-    note: "Developing REST APIs, authentication, and full-stack applications",
+    note: "Developing REST APIs, authentication, database systems, and server-side applications",
   },
 
   {
-    title: "Testing & Development Quality",
+    title: "Testing & Integration",
     stacks: [
       {
         icon: SiVitest,
@@ -79,15 +85,19 @@ const Stacks = [
         name: "React Testing Library",
       },
       {
-        icon: SiPostman,
-        name: "Postman",
+        icon: SiCloudinary,
+        name: "Cloudinary",
+      },
+      {
+        icon: FaEnvelope,
+        name: "Nodemailer",
       },
     ],
-    note: "Testing components, APIs, and improving application reliability",
+    note: "Testing applications and integrating media, email, and third-party services",
   },
 
   {
-    title: "Tools & Workflow",
+    title: "Tools & Development",
     stacks: [
       {
         icon: FaGitAlt,
@@ -106,7 +116,7 @@ const Stacks = [
         name: "Vite",
       },
     ],
-    note: "Using modern development tools, version control, and design workflows",
+    note: "Using modern development tools, version control, design workflows, and fast build systems",
   },
 ];
 

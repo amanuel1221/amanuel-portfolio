@@ -61,15 +61,26 @@ const HeroSection = () => {
           MERN Stack & Frontend Developer | React Performance Specialist
         </p>
 
-
         <div className="max-w-2xl text-center">
           <p className="mt-4 text-base md:text-lg">
-            I specialize in building modern, <strong>responsive web applications</strong>  with React <strong>Tailwind CSS, Vite, and the MERN stack.</strong>.
-            I enjoy transforming <strong>Figma designs</strong> into fast, accessible interfaces with clean architecture, reusable components, and <strong> 99+ Lighthouse scores</strong> performance-focused development and robust reliability via <strong>Vitest</strong>.
-
+            I specialize in building modern,{" "}
+            <strong>responsive web applications</strong> with React,{" "}
+            <strong>Tailwind CSS, Vite, and the MERN stack</strong>. I enjoy
+            transforming <strong>Figma designs</strong> into fast, accessible
+            interfaces with clean architecture, reusable components, and{" "}
+            <strong>99+ Lighthouse performance</strong>. I also work with{" "}
+            <strong>PWA concepts</strong>, including offline caching and
+            low-connectivity experiences, as well as{" "}
+            <strong>email integrations</strong> for automated and
+            account-related workflows. I focus on robust reliability through{" "}
+            <strong>Vitest</strong> and automated testing.
           </p>
+
           <p className="mt-2 text-sm md:text-base opacity-80">
-            I'm passionate about continuous learning and currently looking for internship, junior frontend, and freelance opportunities where I can help build real-world products while expanding my skills as a software engineer.
+            I'm passionate about continuous learning and currently looking for
+            internship, junior frontend, and freelance opportunities where I can
+            help build real-world products while expanding my skills as a software
+            engineer.
           </p>
         </div>
 

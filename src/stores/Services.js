@@ -1,38 +1,34 @@
 import {
-  FaReact,
-  FaLaptopCode,
   FaCode,
-  FaFigma,
+  FaReact,
+  FaCloud,
+  FaEnvelope,
 } from "react-icons/fa";
-
 
 const Services = [
   {
-    title: "Full-Stack MERN Development",
+    title: "Full-Stack Web Development",
     description:
-      "Building full-stack web applications using MongoDB, Express.js, React, and Node.js with REST APIs, authentication, database integration, and scalable application architecture.",
+      "Building complete web applications with MongoDB, Express.js, React, and Node.js, including REST APIs, authentication, database integration, and scalable application architecture.",
     icon: FaCode,
   },
-
   {
-    title: "Responsive Website Development",
+    title: "Frontend & UI Development",
     description:
-      "Creating fast, mobile-first websites with clean UI, responsive layouts, and optimized user experiences for portfolios, landing pages, and business websites.",
-    icon: FaLaptopCode,
-  },
-
-  {
-    title: "React Application Development",
-    description:
-      "Developing interactive React applications with reusable components, state management, API integration, authentication, forms, and frontend testing using Vitest.",
+      "Creating modern, responsive interfaces with React and Tailwind CSS, transforming Figma designs into clean reusable components while focusing on accessibility, performance, and user experience.",
     icon: FaReact,
   },
-
   {
-    title: "UI Implementation & Frontend Improvements",
+    title: "Cloud & Media Integration",
     description:
-      "Transforming Figma designs into responsive interfaces, fixing frontend issues, improving accessibility, and optimizing performance and usability.",
-    icon: FaFigma,
+      "Integrating Cloudinary and modern cloud services for secure image and media uploads, optimized delivery, transformations, and efficient media management, including PWA and offline capabilities.",
+    icon: FaCloud,
+  },
+  {
+    title: "API & Email Integration",
+    description:
+      "Connecting applications with external APIs and email services for contact forms, welcome emails, notifications, automated communication, and other third-party integrations.",
+    icon: FaEnvelope,
   },
 ];
 
