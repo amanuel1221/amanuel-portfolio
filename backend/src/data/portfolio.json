@@ -4,43 +4,36 @@
     "title": "MERN Stack & Frontend Developer",
     "subtitle": "React Performance Specialist • JavaScript • Node.js • Vitest Testing • Optimization",
     "location": "Bahir Dar, Ethiopia",
-    "bio": "Amanuel Amare is a Software Engineering student at Bahir Dar University and a MERN Stack & Frontend Developer focused on building high-performance, reliable, and user-focused web applications.",
-    "email": "bdu1600905@bdu.edu.et",
-    "phone": "+251 921 337 037"
+    "bio": "Amanuel Amare is a Software Engineering student at Bahir Dar University and a MERN Stack & Frontend Developer focused on building high-performance, reliable, and user-focused web applications."
   },
 
-  "socials": {
-    "github": "https://github.com/amanuel1221",
-    "linkedin": "https://linkedin.com/in/amanuel-amare-684234372",
-    "portfolio": "https://amanuel-portfolio-flame.vercel.app"
-  },
   "contacts": {
-  "email": {
-    "label": "Email",
-    "value": "bdu1600905@bdu.edu.et",
-    "url": "mailto:bdu1600905@bdu.edu.et"
+    "email": {
+      "label": "Email",
+      "value": "bdu1600905@bdu.edu.et",
+      "url": "mailto:bdu1600905@bdu.edu.et"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+251 921 337 037",
+      "url": "tel:+251921337037"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "https://github.com/amanuel1221",
+      "url": "https://github.com/amanuel1221"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "https://linkedin.com/in/amanuel-amare-684234372",
+      "url": "https://linkedin.com/in/amanuel-amare-684234372"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "value": "https://amanuel-portfolio-flame.vercel.app",
+      "url": "https://amanuel-portfolio-flame.vercel.app"
+    }
   },
-  "phone": {
-    "label": "Phone",
-    "value": "+251 921 337 037",
-    "url": "tel:+251921337037"
-  },
-  "github": {
-    "label": "GitHub",
-    "value": "https://github.com/amanuel1221",
-    "url": "https://github.com/amanuel1221"
-  },
-  "linkedin": {
-    "label": "LinkedIn",
-    "value": "https://linkedin.com/in/amanuel-amare-684234372",
-    "url": "https://linkedin.com/in/amanuel-amare-684234372"
-  },
-  "portfolio": {
-    "label": "Portfolio",
-    "value": "https://amanuel-portfolio-flame.vercel.app",
-    "url": "https://amanuel-portfolio-flame.vercel.app"
-  }
-},
 
   "education": [
     {
@@ -81,7 +74,6 @@
       "Vite",
       "Framer Motion"
     ],
-
     "backend": [
       "Node.js",
       "Express.js",
@@ -92,7 +84,6 @@
       "bcrypt",
       "Cloudinary"
     ],
-
     "testing": [
       "Vitest",
       "React Testing Library",
@@ -100,14 +91,23 @@
       "Unit Testing",
       "Integration Testing"
     ],
-
+    "pwa": [
+      "Progressive Web App concepts",
+      "Service Workers",
+      "Offline caching",
+      "Low-connectivity experiences",
+      "Installable web applications"
+    ],
+    "email": [
+      "Email integration",
+      "Transactional email workflows"
+    ],
     "telegram": [
       "Telegram Mini Apps",
       "Telegram Bots",
       "Telegram membership verification",
       "PDF resource management"
     ],
-
     "tools": [
       "Git",
       "GitHub",
@@ -125,7 +125,21 @@
     {
       "name": "Aman Blog & Portfolio Ecosystem",
       "category": "Full-Stack Web Application",
-      "description": "A secure full-stack publishing ecosystem with authentication, administrative functionality, rich text management, Cloudinary uploads, and automated frontend and backend testing.",
+      "description": "A secure full-stack blogging and portfolio ecosystem built with authentication, administrative functionality, rich text content management, Cloudinary media uploads, email integration, PWA functionality, and automated frontend and backend testing.",
+      "features": [
+        "User registration and authentication",
+        "JWT-based authentication",
+        "Administrative content management",
+        "Rich text content management",
+        "Cloudinary image and media uploads",
+        "Email integration for account-related workflows",
+        "Email notification when a new user creates an account",
+        "Progressive Web App functionality",
+        "Offline caching for previously available content",
+        "Low-connectivity support through cached resources",
+        "Installable app-like experience",
+        "Automated frontend and backend testing"
+      ],
       "technologies": [
         "React",
         "Node.js",
@@ -136,7 +150,9 @@
         "React Testing Library",
         "Supertest",
         "Tailwind CSS",
-        "Cloudinary"
+        "Cloudinary",
+        "PWA",
+        "Email Integration"
       ],
       "testing": {
         "testFiles": 51,
@@ -149,7 +165,13 @@
     {
       "name": "Telegram Academy PDF Reader",
       "category": "Telegram Mini App",
-      "description": "A Telegram Mini App created for a private online academy. The application checks Telegram membership and allows authorized users to access and read PDF learning materials inside the Mini App rather than exposing the learning resources through an external public reader.",
+      "description": "A Telegram Mini App created for a private online academy. The application verifies Telegram membership and allows authorized users to access and read PDF learning materials directly inside the Mini App rather than exposing the resources through an external public reader.",
+      "features": [
+        "Telegram membership verification",
+        "Authorized resource access",
+        "In-app PDF reading",
+        "Private learning resource management"
+      ],
       "technologies": [
         "React",
         "Telegram Mini Apps",
@@ -164,7 +186,12 @@
     {
       "name": "Telegram PDF Library Bot",
       "category": "Telegram Bot",
-      "description": "A Telegram bot created to manage and provide access to PDF learning resources for the academy library.",
+      "description": "A Telegram bot created to manage and provide access to PDF learning resources for an academy library.",
+      "features": [
+        "PDF resource management",
+        "Telegram-based resource access",
+        "Learning library management"
+      ],
       "technologies": [
         "Node.js",
         "Telegram Bot API",
@@ -176,6 +203,12 @@
       "name": "NuuR Safety Platform",
       "category": "Hackathon Project",
       "description": "A collaborative urban safety platform designed around incident mapping, emergency notifications, reporting workflows, and user location functionality.",
+      "features": [
+        "Incident mapping",
+        "Emergency notifications",
+        "Incident reporting workflows",
+        "Location-based functionality"
+      ],
       "technologies": [
         "React",
         "TypeScript",
@@ -191,6 +224,12 @@
       "name": "Developer Portfolio V2",
       "category": "Frontend Project",
       "description": "A performance-focused developer portfolio built with React and Vite. The project was optimized to improve Lighthouse performance from an earlier baseline of 78 to 99 on mobile and 100 on desktop.",
+      "features": [
+        "Responsive portfolio interface",
+        "Performance optimization",
+        "Lighthouse performance optimization",
+        "Frontend automated testing"
+      ],
       "technologies": [
         "React",
         "Vite",
@@ -206,6 +245,12 @@
       "name": "Scalable E-Commerce Engine",
       "category": "Frontend Web Application",
       "description": "A lightweight e-commerce frontend using Zustand for state management, modular product filtering, responsive cart functionality, and Firebase authentication.",
+      "features": [
+        "Product filtering",
+        "Responsive shopping cart",
+        "Client-side state management",
+        "User authentication"
+      ],
       "technologies": [
         "React",
         "Zustand",
@@ -243,7 +288,7 @@
       "role": "MERN Stack Developer",
       "type": "Independent Engineering Projects",
       "duration": "2026–Present",
-      "description": "Develops full-stack applications using React, Node.js, Express.js, MongoDB, authentication, testing, and performance optimization."
+      "description": "Develops full-stack applications using React, Node.js, Express.js, MongoDB, authentication, testing, email integrations, PWA concepts, and performance optimization."
     },
     {
       "role": "Frontend Engineer",
