@@ -1,10 +1,10 @@
 {
   "personal": {
     "name": "Amanuel Amare",
-    "title": "MERN Stack & Frontend Developer",
-    "subtitle": "React Performance Specialist • JavaScript • Node.js • Vitest Testing • Optimization",
+    "title": "Full-Stack Developer",
+    "subtitle": "React • Node.js • Testing • Performance • AI Integration",
     "location": "Bahir Dar, Ethiopia",
-    "bio": "Amanuel Amare is a Software Engineering student at Bahir Dar University and a MERN Stack & Frontend Developer focused on building high-performance, reliable, and user-focused web applications."
+    "bio": "A Software Engineering student and Full-Stack Developer focused on building fast, reliable, tested, and user-focused web applications. Experienced with React, Node.js, MongoDB, automated testing, authentication, PWA and offline experiences, third-party integrations, performance optimization, and AI-powered application features."
   },
 
   "contacts": {
@@ -72,7 +72,9 @@
       "Context API",
       "React Router",
       "Vite",
-      "Framer Motion"
+      "Framer Motion",
+      "Responsive Web Development",
+      "Frontend Performance Optimization"
     ],
 
     "backend": [
@@ -80,10 +82,12 @@
       "Express.js",
       "MongoDB",
       "Mongoose",
-      "REST APIs",
+      "REST API Development",
       "JWT Authentication",
+      "Google OAuth",
       "bcrypt",
-      "Cloudinary"
+      "Cloudinary",
+      "API Integration"
     ],
 
     "testing": [
@@ -91,31 +95,60 @@
       "React Testing Library",
       "Supertest",
       "Unit Testing",
-      "Integration Testing"
+      "Integration Testing",
+      "Frontend Testing",
+      "Backend API Testing",
+      "Automated Regression Testing"
+    ],
+
+    "ai": [
+      "Google Gemini API",
+      "AI Assistant Integration",
+      "AI-Powered Application Features",
+      "Keyword-Based Intent Detection",
+      "Local Response Routing",
+      "Conversation History Handling",
+      "Context-Aware Responses",
+      "Frequently Asked Question Caching",
+      "AI Response Optimization",
+      "Portfolio-Aware AI Assistants"
     ],
 
     "pwa": [
-      "Progressive Web App (PWA) concepts",
+      "Progressive Web Apps",
       "Service Workers",
-      "Offline caching",
-      "Cached resource management",
-      "Low-connectivity experiences",
-      "Installable web applications",
-      "App-like web experiences"
+      "Offline Caching",
+      "Cache Strategies",
+      "Cached Resource Management",
+      "Low-Connectivity Experiences",
+      "Installable Web Applications",
+      "App-Like Web Experiences"
     ],
 
     "email": [
-      "Email integration",
-      "Transactional email workflows",
-      "Account-related email notifications",
-      "Automated email notifications"
+      "Gmail SMTP",
+      "Nodemailer",
+      "Transactional Email",
+      "Automated Account Emails",
+      "Registration Email Notifications",
+      "Email Workflow Integration"
     ],
 
     "telegram": [
       "Telegram Mini Apps",
       "Telegram Bots",
-      "Telegram membership verification",
-      "PDF resource management"
+      "Telegram Membership Verification",
+      "Authorized Resource Access",
+      "PDF Resource Management"
+    ],
+
+    "performance": [
+      "Lighthouse Optimization",
+      "Frontend Performance Optimization",
+      "Loading Performance",
+      "Client-Side Caching",
+      "Request Optimization",
+      "Performance-Oriented React Development"
     ],
 
     "tools": [
@@ -131,23 +164,68 @@
     ]
   },
 
+  "services": [
+    {
+      "name": "React Frontend Development",
+      "description": "Build responsive, maintainable React applications with reusable components, modern state management, and performance-focused frontend architecture."
+    },
+    {
+      "name": "Full-Stack Web Development",
+      "description": "Build complete web applications using React, Node.js, Express.js, MongoDB, REST APIs, authentication, and third-party integrations."
+    },
+    {
+      "name": "Web Performance Optimization",
+      "description": "Analyze and improve frontend performance, loading behavior, resource usage, rendering efficiency, and Lighthouse performance."
+    },
+    {
+      "name": "Automated Testing",
+      "description": "Build and maintain frontend and backend automated test suites using Vitest, React Testing Library, and Supertest."
+    },
+    {
+      "name": "Authentication Integration",
+      "description": "Implement application authentication workflows using JWT and Google OAuth, including protected application functionality."
+    },
+    {
+      "name": "PWA Development",
+      "description": "Build installable web applications with service workers, caching, offline functionality, and improved low-connectivity experiences."
+    },
+    {
+      "name": "AI Feature Integration",
+      "description": "Integrate AI capabilities such as Gemini-powered assistants, contextual responses, local routing, conversation history, and response caching into web applications."
+    },
+    {
+      "name": "Email Integration",
+      "description": "Integrate transactional email workflows for registration notifications, account-related emails, and automated application communication."
+    },
+    {
+      "name": "API and Third-Party Integrations",
+      "description": "Connect web applications with external APIs, cloud services, email platforms, media services, and platform-specific integrations."
+    },
+    {
+      "name": "Telegram Application Development",
+      "description": "Build Telegram Mini Apps and bots for authenticated resource access, membership verification, and learning-resource workflows."
+    }
+  ],
+
   "projects": [
     {
       "name": "Aman Blog & Portfolio Ecosystem",
       "category": "Full-Stack Web Application",
 
-      "description": "A secure full-stack blogging and portfolio ecosystem with authentication, administrative functionality, rich text content management, Cloudinary media uploads, email integration, Progressive Web App functionality, offline support, low-connectivity support, and automated frontend and backend testing.",
+      "description": "A full-stack blogging and portfolio ecosystem with authentication, authorization, rich text content management, media uploads, transactional email, PWA functionality, offline caching, and automated frontend and backend testing.",
 
       "features": [
         "User registration and authentication",
         "JWT-based authentication",
+        "Google OAuth login and signup",
+        "Protected application functionality",
         "Administrative content management",
         "Rich text content management",
         "Cloudinary image and media uploads",
 
-        "Email integration",
+        "Gmail and Nodemailer email integration",
         "Transactional email workflows",
-        "Automated email notification when a new user creates an account",
+        "Automated email notification after user registration",
         "Account-related email workflows",
 
         "Progressive Web App functionality",
@@ -160,7 +238,9 @@
         "App-like experience on supported devices",
 
         "Automated frontend testing",
-        "Automated backend testing"
+        "Automated backend API testing",
+        "Unit testing",
+        "Integration testing"
       ],
 
       "technologies": [
@@ -168,15 +248,18 @@
         "Node.js",
         "Express.js",
         "MongoDB",
+        "Mongoose",
         "JWT",
+        "Google OAuth",
         "Vitest",
         "React Testing Library",
         "Supertest",
         "Tailwind CSS",
         "Cloudinary",
+        "Gmail",
+        "Nodemailer",
         "PWA",
-        "Service Workers",
-        "Email Integration"
+        "Service Workers"
       ],
 
       "testing": {
@@ -192,13 +275,14 @@
       "name": "Telegram Academy PDF Reader",
       "category": "Telegram Mini App",
 
-      "description": "A Telegram Mini App created for a private online academy. The application verifies Telegram membership and allows authorized users to access and read PDF learning materials directly inside the Mini App rather than exposing the resources through an external public reader.",
+      "description": "A Telegram Mini App created for a private online academy. The application verifies Telegram membership and allows authorized users to access and read PDF learning materials directly inside the Mini App instead of exposing the resources through a public external reader.",
 
       "features": [
         "Telegram membership verification",
         "Authorized resource access",
         "In-app PDF reading",
-        "Private learning resource management"
+        "Private learning resource management",
+        "Protected learning content"
       ],
 
       "technologies": [
@@ -221,7 +305,8 @@
       "features": [
         "PDF resource management",
         "Telegram-based resource access",
-        "Learning library management"
+        "Learning library management",
+        "Resource delivery through Telegram"
       ],
 
       "technologies": [
@@ -235,22 +320,25 @@
       "name": "NuuR Safety Platform",
       "category": "Hackathon Project",
 
-      "description": "A collaborative urban safety platform designed around incident mapping, emergency notifications, reporting workflows, and user location functionality.",
+      "description": "A collaborative urban safety platform designed around incident mapping, emergency notifications, reporting workflows, and location-based functionality.",
 
       "features": [
         "Incident mapping",
         "Emergency notifications",
         "Incident reporting workflows",
-        "Location-based functionality"
+        "Location-based functionality",
+        "Responsive user interfaces"
       ],
 
       "technologies": [
         "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "FastAPI",
-        "PostgreSQL"
+        "Tailwind CSS"
       ],
+
+      "backendIntegration": {
+        "description": "Collaborated with a backend built using FastAPI and PostgreSQL.",
+        "status": "Collaborative integration experience"
+      },
 
       "github": "https://github.com/amanuel1221/Nuur-cursor-hackathon",
       "live": "https://nuurg1.vercel.app"
@@ -258,22 +346,43 @@
 
     {
       "name": "Developer Portfolio V2",
-      "category": "Frontend Project",
+      "category": "Performance-Focused Frontend Project",
 
-      "description": "A performance-focused developer portfolio built with React and Vite. The project was optimized to improve Lighthouse performance from an earlier baseline of 78 to 99 on mobile and 100 on desktop.",
+      "description": "A performance-focused developer portfolio built with React and Vite, featuring automated frontend testing and an AI assistant called Redat powered by Google Gemini. The project combines local response routing, frequently asked question caching, conversation history, and portfolio-aware context to improve response efficiency and user experience.",
 
       "features": [
         "Responsive portfolio interface",
-        "Performance optimization",
+        "Frontend performance optimization",
         "Lighthouse performance optimization",
-        "Frontend automated testing"
+        "Automated frontend testing",
+
+        "Redat AI assistant",
+        "Google Gemini integration",
+        "Keyword-based local intent detection",
+        "Local response routing",
+        "Frequently asked question caching",
+        "Conversation history handling",
+        "Context-aware responses",
+        "Portfolio-aware AI responses",
+        "Reduced unnecessary AI model requests"
       ],
+
+      "performance": {
+        "previousMobileLighthouse": 78,
+        "optimizedMobileLighthouse": 99,
+        "optimizedDesktopLighthouse": 100
+      },
 
       "technologies": [
         "React",
         "Vite",
+        "JavaScript",
         "Tailwind CSS",
         "Vitest",
+        "Google Gemini",
+        "AI Integration",
+        "Caching",
+        "Framer Motion",
         "EmailJS"
       ],
 
@@ -282,16 +391,17 @@
     },
 
     {
-      "name": "Scalable E-Commerce Engine",
+      "name": "React E-Commerce Application",
       "category": "Frontend Web Application",
 
-      "description": "A lightweight e-commerce frontend using Zustand for state management, modular product filtering, responsive cart functionality, and Firebase authentication.",
+      "description": "A lightweight e-commerce frontend using Zustand for state management, modular product filtering, responsive cart functionality, Firebase authentication, and automated frontend testing.",
 
       "features": [
         "Product filtering",
         "Responsive shopping cart",
         "Client-side state management",
-        "User authentication"
+        "User authentication",
+        "Automated frontend testing"
       ],
 
       "technologies": [
@@ -318,6 +428,22 @@
       "description": "Optimized web applications to achieve 99 mobile and 100 desktop Lighthouse performance scores."
     },
     {
+      "title": "AI Application Integration",
+      "description": "Built Redat, a Gemini-powered portfolio assistant combining local keyword routing, cached frequently asked questions, conversation history, and portfolio-aware responses."
+    },
+    {
+      "title": "Authentication Integration",
+      "description": "Implemented JWT authentication and Google OAuth login/signup as part of a full-stack web application."
+    },
+    {
+      "title": "PWA and Offline Experiences",
+      "description": "Implemented service-worker-based caching and installable PWA functionality to support cached resource access during limited connectivity."
+    },
+    {
+      "title": "Transactional Email Integration",
+      "description": "Integrated Gmail and Nodemailer to automate account-related email workflows, including registration notifications."
+    },
+    {
       "title": "GitHub Contributions",
       "description": "Maintained more than 999 GitHub contributions across more than 30 public repositories."
     },
@@ -329,17 +455,17 @@
 
   "experience": [
     {
-      "role": "MERN Stack Developer",
+      "role": "Full-Stack Developer",
       "type": "Independent Engineering Projects",
       "duration": "2026–Present",
-      "description": "Develops full-stack applications using React, Node.js, Express.js, MongoDB, authentication, testing, email integrations, PWA concepts, offline caching, low-connectivity experiences, and performance optimization."
+      "description": "Develops full-stack web applications using React, Node.js, Express.js, MongoDB, authentication, automated testing, email integrations, PWA functionality, offline caching, performance optimization, and AI-powered application features."
     },
     {
       "role": "Frontend Engineer",
       "project": "NuuR Safety Platform",
       "type": "Cursor Hackathon",
       "duration": "2026",
-      "description": "Worked on responsive React and TypeScript interfaces for emergency reporting and location-based workflows while integrating with a FastAPI and PostgreSQL backend."
+      "description": "Worked on responsive React interfaces for emergency reporting and location-based workflows and collaborated on integration with a backend built using FastAPI and PostgreSQL."
     }
   ],
 
@@ -360,8 +486,13 @@
 
     "goals": [
       "Become a strong full-stack software engineer",
-      "Improve backend engineering skills",
+      "Improve backend engineering and system design skills",
       "Build scalable and reliable software",
+      "Develop deeper TypeScript skills",
+      "Learn Next.js",
+      "Strengthen database and backend architecture knowledge",
+      "Learn advanced AI application development",
+      "Explore RAG, vector databases, and AI agents",
       "Gain professional software engineering experience",
       "Work on freelance development projects",
       "Pursue software engineering internships",
@@ -369,11 +500,28 @@
     ]
   },
 
+  "learningNext": [
+    "TypeScript",
+    "Next.js",
+    "Advanced backend architecture",
+    "Redis and distributed caching",
+    "System design",
+    "RAG systems",
+    "Vector databases",
+    "AI agents",
+    "LLM evaluation",
+    "Advanced AI application engineering"
+  ],
+
   "availability": [
     "Freelance web development",
     "Frontend development opportunities",
     "Junior full-stack development opportunities",
     "Software engineering internships",
+    "AI-integrated web application projects",
+    "Performance optimization projects",
+    "Testing and quality improvement projects",
+    "PWA and offline-first web applications",
     "Collaborative software projects"
   ],
 
