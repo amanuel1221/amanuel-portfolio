@@ -1,9 +1,41 @@
 const { askGeminiStream } = require("../services/geminiService");
 
+const {
+  getLocalPortfolioAnswer,
+} = require("../services/localPortfolioService");
+
+const {
+  getCachedResponse,
+  setCachedResponse,
+} = require("../utils/aiCache");
+
+const sanitizeHistory = (history) => {
+  if (!Array.isArray(history)) {
+    return [];
+  }
+
+  return history
+    .filter(
+      (item) =>
+        item &&
+        (item.role === "user" ||
+          item.role === "assistant") &&
+        typeof item.content === "string" &&
+        item.content.trim()
+    )
+    .slice(-6)
+    .map((item) => ({
+      role: item.role,
+      content: item.content.trim().slice(0, 1000),
+    }));
+};
+
 const chat = async (req, res) => {
   try {
-    const { message } = req.body;
-
+    const {
+      message,
+      history,
+    } = req.body;
 
     if (
       !message ||
@@ -14,6 +46,21 @@ const chat = async (req, res) => {
         reply: "Please provide a valid message.",
       });
     }
+
+    const cleanMessage = message.trim();
+
+
+    if (cleanMessage.length > 1000) {
+      return res.status(400).json({
+        reply:
+          "Please keep your message under 1000 characters.",
+      });
+    }
+
+
+    const cleanHistory =
+      sanitizeHistory(history);
+
 
     res.status(200);
 
@@ -37,19 +84,56 @@ const chat = async (req, res) => {
       "no"
     );
 
-    await askGeminiStream(
-      message.trim(),
-      (chunk) => {
-        if (!res.writableEnded) {
-          res.write(chunk);
+
+    const localAnswer =
+      getLocalPortfolioAnswer(
+        cleanMessage
+      );
+
+    if (localAnswer) {
+      res.write(localAnswer);
+      res.end();
+
+      return;
+    }
+
+    const cachedResponse =
+      getCachedResponse(
+        cleanMessage
+      );
+
+    if (cachedResponse) {
+      res.write(cachedResponse);
+      res.end();
+
+      return;
+    }
+    const fullResponse =
+      await askGeminiStream(
+        cleanMessage,
+        cleanHistory,
+        (chunk) => {
+          if (!res.writableEnded) {
+            res.write(chunk);
+          }
         }
-      }
-    );
+      );
+
+   
+    if (
+      fullResponse &&
+      typeof fullResponse === "string" &&
+      fullResponse.trim()
+    ) {
+      setCachedResponse(
+        cleanMessage,
+        fullResponse
+      );
+    }
 
     if (!res.writableEnded) {
       res.end();
     }
-
   } catch (error) {
     console.error(
       "AI chat controller error:",
@@ -67,7 +151,6 @@ const chat = async (req, res) => {
 
       return;
     }
-
     return res.status(500).json({
       reply:
         "Sorry, I couldn't answer that right now. Please try again in a moment.",
