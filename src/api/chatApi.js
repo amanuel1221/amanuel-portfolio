@@ -1,15 +1,11 @@
 const API_URL = `${import.meta.env.VITE_API_URL}/api/chat`;
 
-/**
- * Streams the assistant response from the backend.
- *
- * onChunk(text)
- *   Called every time new text arrives from Gemini.
- *
- * onDone()
- *   Called when the response is complete.
- */
-export const sendChatMessage = async (message, onChunk, onDone) => {
+export const sendChatMessage = async (
+  message,
+  history = [],
+  onChunk,
+  onDone
+) => {
   try {
     const response = await fetch(API_URL, {
       method: "POST",
@@ -19,6 +15,7 @@ export const sendChatMessage = async (message, onChunk, onDone) => {
       },
       body: JSON.stringify({
         message: message.trim(),
+        history,
       }),
     });
 
@@ -27,19 +24,22 @@ export const sendChatMessage = async (message, onChunk, onDone) => {
 
       try {
         const data = await response.json();
+
         errorMessage =
           data.reply ||
           data.message ||
           errorMessage;
       } catch {
-        // Response wasn't JSON.
+        // Response was not JSON.
       }
 
       throw new Error(errorMessage);
     }
 
     if (!response.body) {
-      throw new Error("Streaming is not supported by this browser.");
+      throw new Error(
+        "Streaming is not supported by this browser."
+      );
     }
 
     const reader = response.body.getReader();
@@ -67,7 +67,7 @@ export const sendChatMessage = async (message, onChunk, onDone) => {
       }
     }
 
-    // Flush any remaining decoder content.
+    // Flush any remaining decoder data.
     const remaining = decoder.decode();
 
     if (remaining) {
