@@ -1,335 +1,576 @@
-# 🌐 Amanuel's Portfolio
+# Amanuel's Portfolio
 
 ![Lighthouse Score](https://img.shields.io/badge/Lighthouse-99%2F100-brightgreen?style=for-the-badge)
 ![Testing](https://img.shields.io/badge/Vitest-Passing-6E9F18?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)
 ![Deployment](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge)
 
+A modern developer portfolio built with **React, Vite, and Tailwind CSS**, designed to showcase my projects, technical skills, services, and engineering experience.
 
-A modern, responsive developer portfolio built with **React**, **Vite**, and **Tailwind CSS**. 
-Designed to showcase projects, skills, and professional branding with clean, reusable components.
+The project focuses on **frontend performance, responsive UI, accessibility, testing, reusable architecture, and AI integration**.
 
- ---
-
- ## 🔗 Live Demo 
-
- 👉 [View Demo](https://amanuel-portfolio-flame.vercel.app)
-
-
-## Performances and Optimizations
-
- ## ⚡ Performance Comparisons (Before vs. After)
-
-| Initial Build (Unoptimized) | Optimized Production (Vite + React 18) |
-| :---: | :---: |
-| ![Before ](/public/assets/images/before.png) | ![After ](/public/assets/images/mobile_after.png) |
-| *Lighthouse Score: 78* | *Lighthouse Score: 99* |
-
-
-
-## Before Performance
-Status: Initial Development Build
-The application was functional but suffered from high layout shift and delayed interactivity. Initial bundle sizes were unoptimized, leading to slower load times on 3G/4G mobile networks and a lower SEO ranking.
-
-## After Performance
-Status: Optimized Production Build
-Engineered for speed using Vite and React 18. I implemented strategic code-splitting and asset compression, resulting in an instantaneous "app-like" feel. The UI is now fluid, with zero jank during transitions.
-
-## Before Metrics
-Lighthouse Score: 78
-
-Largest Contentful Paint (LCP): 1.9s (Needs Improvement)
-
-Total Blocking Time (TBT): 820ms
-
-Issues: Unused JavaScript, unoptimized heavy images, and render-blocking resources.
-
-## After Optimization Metrics
-Lighthouse Score: 99
-
-Largest Contentful Paint (LCP): 0.8s (Fast)
-
-Total Blocking Time (TBT): 0ms (Perfect)
-
-Optimization Steps: Implemented Lazy Loading, WebP image conversion, and minification of CSS/JS. This ensures the best possible Google Search ranking.
-
-
-
-## ⚡Metrics Comparison (Before vs. After)
-
-| Initial Build (Unoptimized) | Optimized Production (Vite + React 18) |
-| :---: | :---: |
-| ![Before](/public/assets/images/metric_before.png) | ![After](/public/assets/images/metric_after.png) |
-| *Lighthouse Score: 78* | *Lighthouse Score: 99* |
-
-
-## Testing Show (Reliability)
-Methodology: Unit & Integration Testing
-To ensure performance gains don't break over time, I implemented a robust testing suite using Vitest. This validates that components render correctly, hooks maintain state, and the Contact Form integrates perfectly with EmailJS.
-
-![Hero](/public/assets/images/test.png) 
+It also includes **Redat**, an AI-powered portfolio assistant that combines structured personal data, local response routing, caching, conversation context, and Gemini-powered responses to provide visitors with fast, portfolio-aware answers.
 
 ---
 
+## Live Demo
 
- ## 🏠 Home Page
-  The homepage introduces the portfolio with a clean hero section, navigation, and highlights of featured projects.
-
-![Hero](/public/assets/images/Home-pagep1.png) 
-
-
---- 
-
-## 📂 Projects Section 
-- Showcases featured applications with screenshots, descriptions, and live/demo links. 
-- Built with **reusable React components** for scalability. 
-- Includes hover animations, responsive cards, and quick access to GitHub repositories. 
-
-![Projects](/public/assets/images/Projectsp1.png) 
-
---- 
-
-## 🛠️ Services Section 
-Highlights the professional services offered: 
-
-- **Web Development** – Modern, scalable apps with React, Vite, Tailwind CSS. 
-- **UI/UX Design** – Polished interfaces with accessibility and responsive layouts. 
-- **API Integration** – Django REST APIs, third‑party services, and secure workflows. 
-- **Testing & Reliability** – Vitest integration for unit and integration tests. 
-- **Contact Automation** – EmailJS for direct communication via contact forms. 
-
-![Services](/public/assets/images/Servicesp1.png)
-
---- 
-
-## 📞 Contact Section
-
-Interactive contact form powered by **EmailJS**.  
-Users can send messages directly without leaving the site.
-
-### ✉️ Contact Flow
-
-- Fill out the form with name, email, and message.  
-- EmailJS delivers the message instantly.  
-- Confirmation feedback shown to the user.  
+**[View Portfolio](https://amanuel-portfolio-flame.vercel.app)**
 
 ---
 
-### ✅ Success Case
-Shows the confirmation message when the contact form is submitted successfully.
+## What This Project Demonstrates
 
-![CONTACT SUCCESS GIF](/public/assets/images/success-contact.gif)
+* React component architecture
+* Performance optimization and Lighthouse profiling
+* Responsive and accessible UI development
+* Automated frontend testing with Vitest
+* AI integration with Gemini
+* Portfolio-aware AI responses
+* Local response routing and caching
+* Conversational context and chat history
+* EmailJS contact automation
+* Vercel production deployment
 
----
+> **Build it → Test it → Measure it → Optimize it.**
 
-### ❌ Failure Case
-Shows the error feedback when the contact form fails (e.g., invalid email, server issue).
+# Performance Engineering
 
-![CONTACT FAIL GIF](/public/assets/images/failcontact.gif)
+Performance was a major engineering goal of this portfolio.
 
----
+The initial version scored **78 on Lighthouse**. After profiling the application and optimizing rendering, assets, and loading behavior, the production build reached **99**.
 
-## 📱 Mobile-Friendly
-Interactions pf my portfolio is fully responsive and optimized for mobile devices. 
-Here are some GIFs showcasing the interactions: 
+## Before vs. After
 
-### Interactions 
-- Collapsible mobile menu with smooth animations 
-- Active link highlighting and accessibility labels 
-![Mobile Navbar GIF](/public/assets/images/mobile-interaction.gif) 
+| Metric     | Before |    After |
+| ---------- | -----: | -------: |
+| Lighthouse |     78 |   **99** |
+| LCP        |   1.9s | **0.8s** |
+| TBT        |  820ms |  **0ms** |
 
----
+|                   Initial Performance                   |                     Optimized Performance                    |
+| :-----------------------------------------------------: | :----------------------------------------------------------: |
+| ![Before Performance](/public/assets/images/before.png) | ![After Performance](/public/assets/images/mobile_after.png) |
 
-## DeskTop Interaction
-Interactions of my portfolio in Desktop with hover and clickable links check.
-- Active link highlighting and accessibility labels 
+## Optimization Work
 
-![Desktop Interaction Gif](/public/assets/images/interaction-portfolio.gif) 
+* Lazy loading and code splitting
+* Image optimization and WebP conversion
+* Reduced unnecessary JavaScript
+* Improved asset loading
+* React rendering optimization
+* Responsive image handling
+* CSS and JavaScript minification
+* Reduced unnecessary work during initial page load
+
+## Performance Approach
+
+```text
+Identify Bottleneck
+       ↓
+Measure
+       ↓
+Optimize
+       ↓
+Measure Again
+       ↓
+Verify Improvement
+```
+
+Performance decisions were based on measurable results rather than visual perception alone.
+
+|                       Initial Metrics                      |                     Optimized Metrics                    |
+| :--------------------------------------------------------: | :------------------------------------------------------: |
+| ![Before Metrics](/public/assets/images/metric_before.png) | ![After Metrics](/public/assets/images/metric_after.png) |
 
 
 
-## ⚙️ Tech Stacks & Badges
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
-![EmailJS](https://img.shields.io/badge/EmailJS-FF5A5F?style=for-the-badge&logo=gmail&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+# Redat — AI Portfolio Assistant
+
+**Redat** is an AI-powered assistant integrated into the portfolio to help visitors explore my projects, skills, services, experience, and technical background through a conversational interface.
+
+The assistant uses a **hybrid response strategy** instead of sending every question directly to the AI model.
+
+## Response Architecture
+
+```text
+User Question
+      ↓
+Question Analysis
+      ↓
+Local Routing
+      ↓
+Known Portfolio Request?
+   ┌───┴────┐
+  Yes      No
+   ↓        ↓
+Personal   Gemini
+Data /     AI
+Cache       ↓
+   ↓      Generated
+Fast       Response
+Response      ↓
+   └────┬─────┘
+        ↓
+   Chat Interface
+```
+
+## Key Engineering Concepts
+
+### Local Response Routing
+
+Frequently requested information can be identified locally using keyword-based routing.
+
+Examples include questions about:
+
+* Projects
+* Skills
+* Services
+* Education
+* Experience
+* Testing
+* Performance work
+
+This avoids unnecessary AI requests for information that the application already knows.
+
+### Personal Data Context
+
+Redat uses structured portfolio data as its knowledge source, allowing responses to be based on my actual projects, technologies, services, and experience.
+
+This makes the assistant **portfolio-aware rather than a generic chatbot**.
+
+### Response Caching
+
+Frequently requested responses can be cached so repeated questions can be answered faster without repeatedly generating the same response.
+
+```text
+First Request
+     ↓
+Generate / Retrieve Response
+     ↓
+Store in Cache
+     ↓
+Return Response
+
+Repeated Request
+     ↓
+Cache Hit
+     ↓
+Fast Response
+```
+
+### Conversation Context
+
+Redat maintains relevant conversation history so follow-up questions can be understood in the context of previous messages.
+
+### Gemini Fallback
+
+When a question cannot be efficiently handled by local routing or cached information, the request can be passed to **Gemini** for AI-generated responses.
+
+This creates a balance between:
+
+**Fast local responses + cached data + AI flexibility**
+
+> The goal was to integrate AI as part of the application's architecture, while reducing unnecessary model requests and keeping common portfolio questions fast.
 
 
-## 🛠 Tech Stack
+# Core Features
 
-- **Frontend:** HTML5 + CSS3 + React + Vite  
-- **Styling:** Tailwind CSS + Framer Motion (animations)  
-- **State Management:** React Contexts
-- **Email Service:** EmailJS (contact automation)  
-- **Icons:** Lucide React and React icons fa
-- **Hosting:** Vercel  
-- **Data:** Static JSON  
-- **Testing:** Vitest unit tests
-## 💻 Installation & Setup
+## Portfolio Experience
+
+* Responsive homepage and navigation
+* Project showcase with live and source-code links
+* Services and technical skills
+* Education and experience sections
+* Interactive UI with Framer Motion
+* Responsive mobile navigation
+* Accessible interactive elements
+* Contact form with submission feedback
+
+## AI-Powered Portfolio Assistant
+
+* Redat conversational AI assistant
+* Portfolio-aware responses
+* Local keyword-based response routing
+* Personal data lookup
+* Response caching for frequently requested information
+* Gemini fallback for questions requiring AI generation
+* Conversation history and contextual responses
+
+## Contact Automation
+
+The contact form uses **EmailJS** to deliver messages without requiring a dedicated email backend.
+
+```text
+Contact Form
+     ↓
+Validation
+     ↓
+EmailJS
+     ↓
+Email Delivery
+     ↓
+Success / Error Feedback
+```
+
+## Responsive Interaction
+
+The interface is designed around both desktop and mobile experiences:
+
+* Responsive layouts
+* Mobile navigation
+* Active navigation states
+* Hover and interaction states
+* Smooth transitions
+* Touch-friendly controls
+* Loading and error feedback
+
+## Production-Focused Frontend
+
+The portfolio is built with reusable React components and focuses on:
+
+* Maintainable component structure
+* Performance-conscious rendering
+* Accessibility
+* Responsive design
+* Testable UI behavior
+* Production deployment
+
+
+# Screenshots
+
+## Home Page
+
+<p align="center">
+  <img src="/public/assets/images/Home-pagep1.png" width="900" alt="Portfolio Home Page">
+</p>
+
+## Projects
+
+<p align="center">
+  <img src="/public/assets/images/Projectsp1.png" width="900" alt="Portfolio Projects Section">
+</p>
+
+## Services
+
+<p align="center">
+  <img src="/public/assets/images/Servicesp1.png" width="900" alt="Portfolio Services Section">
+</p>
+
+## Contact
+
+<p align="center">
+  <img src="/public/assets/images/success-contact.gif" width="900" alt="Successful Contact Form Submission">
+</p>
+
+## Mobile Interaction
+
+<p align="center">
+  <img src="/public/assets/images/mobile-interaction.gif" width="700" alt="Mobile Portfolio Interaction">
+</p>
+
+## Desktop Interaction
+
+<p align="center">
+  <img src="/public/assets/images/interaction-portfolio.gif" width="900" alt="Desktop Portfolio Interaction">
+</p>
+
+# Testing & Quality
+
+The portfolio uses **Vitest** for automated frontend testing.
+
+Testing focuses on important user-facing behavior and helps catch regressions when components or application logic are changed.
+
+![Frontend Test Results](/public/assets/images/test.png)
+
+## What Is Tested
+
+* Navbar interactions and accessibility
+* Project rendering and external links
+* Contact form behavior
+* Success and failure states
+* Footer links
+* Context-dependent components
+* Component rendering and user interactions
+* Dependency and state mocking
+
+## Testing Approach
+
+Tests are written around **user behavior rather than implementation details**.
+
+```text
+Component
+    ↓
+User Interaction
+    ↓
+Expected Behavior
+    ↓
+Vitest Verification
+```
+
+Testing also helped identify issues caused by missing context, dependencies, and test data. These were resolved by providing the required application state and properly mocking external dependencies.
 
 ```bash
-
-# 1. Clone repo
-git clone https://github.com/amanuel1221/amanuel-portfolio.git
-cd amanuel-portfolio
-
-# 2. Install dependencies
-npm install
-
-# 3. Add environment variables (.env) for EmailJS
-VITE_EMAILJS_SERVICE_ID=your Emailjs Sevice Id xxxx
-VITE_EMAILJS_TEMPLATE_ID=your Emailjs Template Id xxxx 
-VITE_EMAILJS_PUBLIC_KEY= your Emailjs Public Id xxxx
-
-# 4. Start dev server
-npm run dev
-
-# 5. Open app
-
-http://localhost:5173
-
-🧪 Testing
-
-bash
-# install the vitest using 
-npm install vitest
-
-# Run all tests
 npm run test
+```
 
-Coverage:
+> Testing is part of the development workflow, not something added only after the feature is finished.
 
-Navbar Tests: Active link styling, accessibility labels, hover animations
+# Tech Stack
 
-ProjectCard Tests: Rendering, responsive layout, links to GitHub/demo, and Live Demo
+| Category        | Technologies                                                                 |
+| --------------- | ---------------------------------------------------------------------------- |
+| Frontend        | React, JavaScript, HTML5, CSS3                                               |
+| Build Tool      | Vite                                                                         |
+| Styling         | Tailwind CSS                                                                 |
+| Animation       | Framer Motion                                                                |
+| State & Data    | React Context, Static JSON                                                   |
+| AI              | Gemini API, Redat AI Assistant                                               |
+| AI Architecture | Local Routing, Personal Data Context, Response Caching, Conversation History |
+| Email           | EmailJS                                                                      |
+| Testing         | Vitest                                                                       |
+| Icons           | Lucide React, React Icons                                                    |
+| Deployment      | Vercel                                                                       |
+| Development     | Git, GitHub                                                                  |
 
-ContactForm Tests: EmailJS integration, success/fail feedback
+## Architecture Focus
 
-Footer Tests: Social icons, hover states, accessibility
+The project combines a traditional React frontend with an AI-assisted interaction layer:
 
-Testing Experience:
+```text
+React Application
+       │
+       ├── UI Components
+       ├── Portfolio Data
+       ├── State Management
+       ├── Performance Layer
+       └── Redat AI Assistant
+                │
+                ├── Local Routing
+                ├── Cached Responses
+                ├── Personal Context
+                └── Gemini
+```
 
-Debugged initial failures due to missing contects and store datas
 
-Learned how to mock context and pass proper test data
+# Project Structure
 
-After debugging, all tests pass successfully ✅
-
-📂 Project Structure
-css
+```text
 amanuel-portfolio/
-├─ public/
-├─ src/
-│  ├─ components/
-│  │   ├─ Navbar.jsx
-│  │   ├─ Footer.jsx
-│  │   ├─ Project.jsx
-│  │   ├─ Contact.jsx
-│  │   ├─ Services.jsx
-│  │   └─ HeroSection.jsx
-│  ├─ pages/
-│  │   ├─ Home.jsx
-│  │   
-│  ├
-│  ├
-│  ├─ store/
-│  │   ├─ offer.js
-│  │   ├─ services.js
-│  │   ├─ projectExperiance.js
-│  │   ├─ Services.js
-│  │   └─ EduExperiance.js
-│  │   ├─ Projects.js
-│  │  
-│  ├─ App.jsx
-│  └─ main.jsx
-├─ package.json
-├─ tailwind.config.js
-├─ vite.config.js
-└─ README.md
-⚡ Usage
-Browse homepage with hero, projects, and services
+├── public/
+│   └── assets/
+│       └── images/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── store/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+```
 
-Explore featured projects with live/demo links
+## Frontend Architecture
 
-View offered services (Web Dev, UI/UX)
+The application is organized around reusable React components and separated application concerns.
 
-Submit contact form (EmailJS) with success/fail feedback
+```text id="rj8x2m"
+React Application
+       │
+       ├── Pages
+       │
+       ├── Reusable Components
+       │
+       ├── State / Store
+       │
+       ├── Portfolio Data
+       │
+       └── Services
+              │
+              ├── EmailJS
+              │
+              └── Redat AI
+                     │
+                     ├── Local Routing
+                     ├── Personal Data
+                     ├── Cache
+                     └── Gemini
+```
 
-Enjoy responsive design and smooth animations (Framer Motion)
+This structure keeps UI components reusable while separating application state, external services, portfolio data, and AI-related logic.
 
-🧠 What I Learned
+The architecture also makes it easier to optimize individual parts of the application without coupling the entire interface together.
 
-Reusable Components: Navbar, ProjectCard, ServiceCard, Footer
 
-EmailJS: Setup, environment variables, success/fail handling
+# Development Workflow
 
-UI Libraries: Tailwind CSS, Lucide icons, Framer Motion animations
+I approached the portfolio as an engineering project rather than only a visual design exercise.
 
-Accessibility: ARIA labels, semantic markup, screen‑reader support
+```text id="p9k4zs"
+Plan
+  ↓
+Design
+  ↓
+Implement
+  ↓
+Test
+  ↓
+Measure
+  ↓
+Optimize
+  ↓
+Refactor
+  ↓
+Deploy
+```
 
-Testing: Mocking context, handling hooks, UI & state validation
+## Engineering Process
 
-Deployment: Vercel builds, domain setup, environment variables
+### Feature Development
 
-🧩 Challenges & Solutions
-Responsive layout issues → Fixed with Tailwind breakpoints
+Build reusable React components → integrate application logic → test user behavior → refine the implementation.
 
-EmailJS failures → Correct IDs & .env setup
+### AI Integration
 
-Navbar hover bugs → Debugged imports & animation timing
+Structure portfolio data → identify predictable requests → route common questions locally → use cached responses when available → fall back to Gemini when AI generation is needed.
 
-Testing failures → Mocked store/contexts properly, passed test data → all tests pass ✅
+### Performance
 
-🔧 Future Improvements
-Blog section with Substack integration
+Profile the application → identify bottlenecks → optimize assets and rendering → measure Lighthouse metrics → verify the improvement.
 
-Dark mode variants with polished transitions
+### Quality
 
-More detailed project cards with workflow screenshots
+Write tests for important user flows → mock external dependencies when necessary → fix regressions → keep the implementation maintainable.
 
-Admin dashboard for managing portfolio content
+### Production
 
-Persistent contact messages in backend database
+```text id="r5e3jw"
+GitHub
+   ↓
+Vercel
+   ↓
+Production Portfolio
+   ├── React Application
+   ├── Redat AI Assistant
+   └── EmailJS Contact System
+```
 
-🤝 Contributing
-bash
-# Fork the repo
-git checkout -b feature/your-feature
-git commit -m "Add feature"
-git push origin feature/your-feature
-Open a pull request 🚀
+The overall approach is simple:
 
-📄 License
+> **Build with purpose, test the behavior, measure the result, and improve the implementation.**
+
+
+
+# Getting Started
+
+## Prerequisites
+
+Make sure you have installed:
+
+* Node.js
+* npm
+* Git
+
+## Installation
+
+```bash
+git clone https://github.com/amanuel1221/amanuel-portfolio.git
+cd amanu​​el-portfolio
+npm install
+```
+
+## Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+## Run Locally
+
+```bash
+npm run dev
+```
+
+The development server will start with Vite.
+
+## Run Tests
+
+```bash
+npm run test
+```
+
+## Production Build
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+
+# What I Learned
+
+Building this portfolio helped me strengthen my frontend engineering skills while introducing more advanced application concepts.
+
+### Engineering Lessons
+
+* Designing reusable React components and application structure
+* Profiling and optimizing real frontend performance
+* Using Lighthouse to measure improvements instead of relying on visual perception
+* Writing maintainable tests with Vitest
+* Integrating AI into an existing application rather than treating it as a separate feature
+* Using local routing and caching to reduce unnecessary AI requests
+* Providing structured personal data as context for AI responses
+* Managing conversation history and contextual interactions
+* Integrating third-party services such as EmailJS
+* Building responsive and accessible interfaces
+* Debugging production-oriented frontend issues
+
+The biggest lesson was that adding a feature is only part of engineering. **Performance, testing, maintainability, and the way different systems work together are equally important.**
+
+
+# Future Improvements
+
+* [ ] Expand Redat with more advanced portfolio-aware interactions
+* [ ] Improve AI response caching and invalidation
+* [ ] Add more automated UI and accessibility testing
+* [ ] Expand project case studies with technical deep dives
+* [ ] Add backend-powered portfolio content management
+* [ ] Improve offline and PWA capabilities
+* [ ] Continue optimizing frontend performance
+* [ ] Gradually migrate parts of the project to TypeScript
+* [ ] Add CI-based testing and build verification
+
+# License
+
 This project is licensed under the MIT License.
 
-🌟 Acknowledgements
-React
+---
 
-Vite
+# Author
 
-Tailwind CSS
+**Amanuel Amare**
 
-Vitest
+Full Stack Developer focused on **performance, testing, AI integration, and maintainable web applications**.
 
-EmailJS
+### Links
 
-Framer Motion
+* **GitHub:** https://github.com/amanuel1221
+* **Portfolio:** https://amanuel-portfolio-flame.vercel.app
+* **LinkedIn:** https://www.linkedin.com/in/amanuel-amare-684234372
 
-Lucide Icons
+---
 
-⭐ Support
+Built with React, performance engineering, testing, and a focus on continuous improvement.
 
-If you like this project, consider giving it a star ⭐
-
-
-👨‍💻 Author
-
-Amanuel
-
-Aspiring Frontend Developer passionate about building modern web experiences and continuously learning.
