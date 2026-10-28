@@ -295,6 +295,30 @@
         "Cloudinary"
       ]
     },
+    {
+      "name": "Wude Coffee — Cafe Website",
+      "category": "Business Website",
+      "description": "A modern, mobile-friendly website for Wude Coffee, a local cafe in Bahir Dar, Ethiopia. The site gives the business a polished online presence and helps customers discover the cafe and browse its menu. Its visual direction combines a warm coffee-inspired palette, clear navigation, responsive layouts, and search-engine optimization.",
+      "features": [
+        "Responsive layout for mobile, tablet, and desktop",
+        "Dedicated menu page for browsing cafe offerings",
+        "Coffee-inspired visual identity and typography",
+        "Mobile-friendly navigation",
+        "Search-engine optimization foundations",
+        "Links that help visitors discover and contact the business",
+        "Deployed website accessible through a custom domain"
+      ],
+      "technologies": [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Vite",
+        "Responsive Web Design",
+        "SEO"
+      ],
+      "github": "https://github.com/amanuel1221/wude-coffee",
+      "live": "https://wudecoffee.com/menu"
+    },
 
     {
       "name": "Telegram PDF Library Bot",
