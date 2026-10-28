@@ -6,233 +6,136 @@ const Skills = () => {
     <section
       id="skills"
       style={{ backgroundColor: "var(--secondary-blue)" }}
-      className="w-full py-24 flex flex-col items-center"
+      className="flex w-full flex-col items-center py-20 sm:py-24"
       itemScope
       itemType="https://schema.org/ItemList"
     >
-      <div className="text-center mb-16 px-4">
-        <span className="inline-block px-4 py-1.5 mb-4 rounded-full bg-blue-100 text-blue-600 text-sm font-semibold">
+      <div className="mb-12 max-w-2xl px-5 text-center sm:mb-14">
+        <span className="mb-4 inline-flex rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700">
           My Technologies
         </span>
 
-        <h1
-          className="font-extrabold text-3xl md:text-4xl text-gray-900"
+        <h2
+          className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
           itemProp="name"
         >
           Tech Stack
-        </h1>
+        </h2>
 
         <p
-          className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mt-5 leading-relaxed"
+          className="mx-auto mt-4 max-w-xl text-sm leading-7 text-gray-600 sm:text-base"
           itemProp="description"
         >
-          Technologies and tools I use to build scalable, responsive, and
-          modern web applications with clean code and great user experience.
+          Technologies and tools I use to build responsive, reliable, and
+          maintainable web applications with a focus on performance and user
+          experience.
         </p>
       </div>
 
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl px-5">
-
-        {Stacks.map((stack, index) => (
+      <div className="grid w-full max-w-6xl grid-cols-1 gap-6 px-5 md:grid-cols-2 md:gap-7">
+        {Stacks.map((stack) => (
           <article
-            key={index}
+            key={stack.title}
             className="
-              group
-              bg-white
-              rounded-3xl
-              p-8
-              border
-              border-gray-100
-              shadow-sm
-              hover:shadow-2xl
-              hover:-translate-y-2
-              transition-all
-              duration-500
+              rounded-2xl border border-gray-200/80 bg-white
+              p-5 shadow-sm
+              transition-colors duration-200
+              hover:border-blue-200 hover:shadow-md
+              sm:p-7
             "
             itemProp="itemListElement"
             itemScope
             itemType="https://schema.org/ItemList"
           >
-
-            <div className="flex items-center justify-between mb-8">
-
-              <h2
-                className="
-                  text-xl
-                  font-bold
-                  text-gray-900
-                  group-hover:text-blue-600
-                  transition-colors
-                "
+            <div className="mb-6 flex items-center justify-between gap-3">
+              <h3
+                className="text-lg font-bold text-gray-900 sm:text-xl"
                 itemProp="name"
               >
                 {stack.title}
-              </h2>
+              </h3>
 
-
-              <span
-                className="
-                  text-xs
-                  font-semibold
-                  px-3
-                  py-1
-                  rounded-full
-                  bg-gray-100
-                  text-gray-500
-                "
-              >
+              <span className="shrink-0 rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
                 {stack.stacks.length} Skills
               </span>
-
             </div>
 
-
-            <div className="space-y-4">
-
-              {stack.stacks.map((item, i) => (
-
+            <div className="space-y-2">
+              {stack.stacks.map((item) => (
                 <div
-                  key={i}
+                  key={item.name}
                   className="
-                    flex
-                    items-center
-                    gap-4
-                    p-3
-                    rounded-xl
-                    hover:bg-gray-50
-                    transition-all
-                    duration-300
+                    flex items-center gap-3 rounded-xl
+                    px-3 py-3
+                    transition-colors duration-200
+                    hover:bg-blue-50/60
                   "
                   itemProp="itemListElement"
                   itemScope
                   itemType="https://schema.org/Thing"
                 >
-
-
                   <div
                     className="
-                      w-12
-                      h-12
-                      flex
-                      items-center
-                      justify-center
-                      rounded-xl
-                      bg-gray-100
+                      flex h-10 w-10 shrink-0 items-center justify-center
+                      rounded-lg bg-gray-100 text-gray-700
+                      transition-colors duration-200
                       group-hover:bg-blue-50
-                      transition-all
-                      duration-300
-                      shadow-sm
                     "
                   >
-
                     {item.icon && (
                       <item.icon
-                        className="
-                          w-6
-                          h-6
-                          text-gray-700
-                          group-hover:text-blue-600
-                          group-hover:scale-125
-                          transition-all
-                          duration-300
-                        "
+                        className="h-5 w-5"
+                        aria-hidden="true"
                       />
                     )}
-
                   </div>
 
-
-                  <div>
-
+                  <div className="min-w-0">
                     <p
-                      className="
-                        text-sm
-                        md:text-base
-                        font-semibold
-                        text-gray-800
-                      "
+                      className="text-sm font-semibold leading-6 text-gray-800 sm:text-base"
                       itemProp="name"
                     >
                       {item.name}
                     </p>
-
                     <span className="text-xs text-gray-500">
                       Technology
                     </span>
-
                   </div>
-
-
                 </div>
-
               ))}
-
             </div>
 
-
             {stack.note && (
-
-              <div
-                className="
-                  mt-8
-                  pt-5
-                  border-t
-                  border-gray-100
-                "
-              >
-
+              <div className="mt-6 border-t border-gray-100 pt-4">
                 <p
-                  className="
-                    text-sm
-                    text-gray-500
-                    italic
-                    leading-relaxed
-                  "
+                  className="text-sm leading-6 text-gray-600"
                   itemProp="description"
                 >
                   {stack.note}
                 </p>
-
               </div>
-
             )}
-
-
           </article>
         ))}
-
       </div>
 
-
-      {/* Bottom CTA */}
-      <div className="mt-14">
-
+      <div className="mt-12 px-5 sm:mt-14">
         <a
           href="#projects"
           className="
-            inline-flex
-            items-center
-            gap-2
-            px-7
-            py-3
-            rounded-full
-            bg-blue-600
-            text-white
-            font-semibold
-            shadow-lg
+            inline-flex items-center justify-center gap-2
+            rounded-full bg-blue-600 px-6 py-3
+            text-sm font-semibold text-white
+            shadow-sm transition-colors duration-200
             hover:bg-blue-700
-            hover:scale-105
-            transition-all
-            duration-300
+            focus-visible:outline-none focus-visible:ring-2
+            focus-visible:ring-blue-600 focus-visible:ring-offset-2
           "
         >
-          View My Projects →
+          View My Projects
+          <span aria-hidden="true">→</span>
         </a>
-
       </div>
-
-
     </section>
   );
 };

@@ -1,3 +1,4 @@
+
 import React from "react";
 import Services from "../stores/Services";
 
@@ -6,228 +7,109 @@ const Service = () => {
     <section
       id="services"
       style={{ backgroundColor: "var(--tertiary-blue)" }}
-      className="
-        w-full 
-        py-16 sm:py-20 md:py-24 
-        flex 
-        flex-col 
-        items-center
-      "
+      className="w-full flex flex-col items-center py-16 sm:py-20 md:py-24"
       itemScope
       itemType="https://schema.org/ItemList"
     >
-
-      <div className="text-center mb-16 px-5">
-
-        <span
-          className="
-            inline-block
-            mb-4
-            px-4
-            py-1.5
-            rounded-full
-            bg-blue-100
-            text-blue-600
-            text-sm
-            font-semibold
-          "
-        >
+      {/* Section heading */}
+      <div className="mb-12 sm:mb-16 px-5 text-center">
+        <span className="inline-block mb-4 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700">
           My Services
         </span>
 
-
-        <h1
-          className="
-            text-3xl
-            md:text-4xl
-            font-extrabold
-            text-gray-900
-          "
+        <h2
+          className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl"
           itemProp="name"
         >
           What I Can Help With
-        </h1>
-
+        </h2>
 
         <p
-          className="
-            mt-4
-            text-sm
-            md:text-base
-            text-gray-600
-            max-w-2xl
-            mx-auto
-            leading-relaxed
-          "
+          className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-gray-600 md:text-base"
           itemProp="description"
         >
           I build modern web applications and digital experiences using
           React, MERN stack technologies, and clean development practices.
         </p>
-
       </div>
 
-
-
-      <div
-        className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-4
-          gap-4 sm:gap-6 lg:gap-8
-          w-full
-          max-w-7xl
-          px-4 sm:px-6
-        "
-      >
-
+      {/* Service cards */}
+      <div className="grid w-full max-w-7xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 sm:gap-6 sm:px-6 lg:grid-cols-4">
         {Services.map((service, index) => {
-
           const Icon = service.icon;
 
           return (
-
             <article
-              key={index}
+              key={service.title || index}
               className="
                 group
-                relative
+                rounded-2xl
+                border border-gray-200/80
                 bg-white
-                rounded-3xl
-                p-8
-                text-center
-                border
-                border-gray-100
+                p-6 sm:p-7
+                text-left
                 shadow-sm
-                hover:shadow-2xl
-                hover:-translate-y-3
-                transition-all
-                duration-500
-                overflow-hidden
+                transition-colors duration-200
+                hover:border-blue-200
+                hover:shadow-md
               "
               itemProp="itemListElement"
               itemScope
-              itemType="https://schema.org/Thing"
+              itemType="https://schema.org/Service"
             >
-
-
+              {/* Icon */}
               <div
                 className="
-                  absolute
-                  inset-0
-                  bg-gradient-to-br
-                  from-blue-50
-                  to-transparent
-                  opacity-0
-                  group-hover:opacity-100
-                  transition-opacity
-                  duration-500
-                "
-              />
-
-
-              <div
-                className="
-                  relative
-                  mx-auto
-                  w-16
-                  h-16
-                  flex
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-blue-600
-                  text-white
-                  mb-7
-                  shadow-lg
-                  group-hover:scale-110
-                  group-hover:rotate-6
-                  transition-all
-                  duration-500
+                  mb-5 flex h-12 w-12 items-center justify-center
+                  rounded-xl bg-blue-50 text-blue-600
+                  transition-colors duration-200
+                  group-hover:bg-blue-100
                 "
               >
-
-                <Icon
-                  className="
-                    w-8
-                    h-8
-                  "
-                />
-
+                <Icon className="h-6 w-6" aria-hidden="true" />
               </div>
 
-
-
-              <div className="relative">
-
-
-                <h2
-                  className="
-                    text-lg
-                    font-bold
-                    text-gray-900
-                    mb-4
-                    group-hover:text-blue-600
-                    transition-colors
-                  "
+              {/* Content */}
+              <div>
+                <h3
+                  className="mb-3 text-lg font-semibold leading-snug text-gray-900 transition-colors duration-200 group-hover:text-blue-700"
                   itemProp="name"
                 >
                   {service.title}
-                </h2>
-
+                </h3>
 
                 <p
-                  className="
-                    text-sm
-                    text-gray-600
-                    leading-relaxed
-                  "
+                  className="text-sm leading-7 text-gray-600"
                   itemProp="description"
                 >
                   {service.description}
                 </p>
-
-
               </div>
-
-
             </article>
-
           );
-
         })}
-
       </div>
 
-
-      <div className="mt-14">
-
+      {/* Contact CTA */}
+      <div className="mt-12 sm:mt-14">
         <a
           href="#contact"
           className="
-            inline-flex
-            items-center
-            gap-2
-            px-8
-            py-3
-            rounded-full
-            bg-blue-600
-            text-white
-            font-semibold
-            shadow-lg
+            inline-flex items-center gap-2
+            rounded-lg bg-blue-600 px-6 py-3
+            font-semibold text-white
+            transition-colors duration-200
             hover:bg-blue-700
-            hover:scale-105
-            transition-all
-            duration-300
+            focus-visible:outline-none
+            focus-visible:ring-2
+            focus-visible:ring-blue-500
+            focus-visible:ring-offset-2
           "
         >
-          Let's Work Together →
+          Let's Work Together
+          <span aria-hidden="true">→</span>
         </a>
-
       </div>
-
-
     </section>
   );
 };

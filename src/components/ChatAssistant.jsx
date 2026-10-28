@@ -243,30 +243,14 @@ function ChatAssistant() {
     };
   }, [isOpen]);
 
-  useEffect(() => {
-    const navbar = document.querySelector("nav") || document.querySelector("header");
+ useEffect(() => {
+    if (!isOpen) return;
 
-    if (isOpen) {
-      if (navbar) {
-        navbar.style.display = "none";
-      }
-
-      const isMobile = window.innerWidth < 640;
-      if (isMobile) {
-        document.body.style.overflow = "hidden";
-      }
-    } else {
-      if (navbar) {
-        navbar.style.display = "";
-      }
-      document.body.style.overflow = "";
-    }
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
     return () => {
-      if (navbar) {
-        navbar.style.display = "";
-      }
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [isOpen]);
 
